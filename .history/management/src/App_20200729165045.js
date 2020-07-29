@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import SeoulMap from './SeoulMap.js';
+import SeoulMap from './Map.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <svg width="1280" height="1280">
-          <SeoulMap width={1280} height={1280} />
-        </svg>
+        <SeoulMap />
       </div>
     )
   }
