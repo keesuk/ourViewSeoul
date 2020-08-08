@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  user-select: none;
+}
+
+#button-container {
+  max-width: 25%;
+  min-width: 370px;
+  margin: 50px auto;
+}
+
+.toggle-button {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin: 10px;
+  background-color: dimgrey;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+  
+.toggle-button::after {
+   content: "";
+   display: inline-block;
+   height: 12px;
+   width: 12px;
+   border: 5px solid white;
+   border-radius: 5px;
+   margin-left: 15px;
+   background-color: dimgrey;
+}
+  
+.toggle-button:hover {
+ background-color: royalblue;
+}
+
+.on {
+  box-sizing: border-box;
+  padding: 3px 23px;
+  border: 7px solid royalblue;
+}
+
+.on::after {
+  background-color: royalblue;
+}
+
+.bounce {
+  background-color: royalblue;
+  animation: bounce .8s ease;
+}
+
+@keyframes bounce {
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

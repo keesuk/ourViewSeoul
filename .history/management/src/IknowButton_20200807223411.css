@@ -1,0 +1,29 @@
+
+.IknowWrap {
+    position: absolute;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 100;
+}
+
+.Iknow {
+    position: relative;
+    font-size: 42px;
+    font-weight: 900;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.IknowExplain {
+    margin-top: 20px;
+    line-height: 1.3em;
+    font-size: .6em;
+    font-weight: 500;
+    letter-spacing: 0em;
+    box-shadow: 5px 5px black;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border: 1.5px solid black;
+}
