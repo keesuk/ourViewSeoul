@@ -6,24 +6,23 @@ import IknowButton from './IknowButton';
 import Window from './Window';
 
 class App extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-      this.state = {
-        show: false,
-        setShow: false,
+      state = {
+        show, setshow
       }
   }
 
-  windowClose = () => {
-    this.setShow(true);
-  }; 
+  windowClose = () => setshow(true);
 
   render() {
     return (
       <div className="App">
         <IknowButton />
           <div className="map">
-            <button onClick={() => this.setShow(true)} className=""> <Window show={this.show} windowClose={this.windowClose}/> </button>
+            <button onClick={() => setshow(true)} className="">
+              <Window shos={show}/>
+            </button>
             <SeoulMap />
           </div>
       </div>

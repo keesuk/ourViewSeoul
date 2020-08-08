@@ -4,8 +4,8 @@ import './index.css';
 
 class Window extends Component {
     state = { 
-        show : {show},
-        windowClose : {windowClose},
+        show : show,
+        windowClose : windowClose,
     }
 
     render() {

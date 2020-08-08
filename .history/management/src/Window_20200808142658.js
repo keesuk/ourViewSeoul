@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import './Window.css';
+import 'Window.css';
 import './index.css';
 
 class Window extends Component {
-    state = { 
-        show : {show},
-        windowClose : {windowClose},
+    constructor(props) {
+        super(props);
+        this.state = { show, close}
     }
 
     render() {
-        const { show, windowClose } = this.state;   
+        const { show, close } = this.state;
+        
         return(
             <div/>
         )

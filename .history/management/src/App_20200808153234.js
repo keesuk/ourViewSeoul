@@ -6,12 +6,9 @@ import IknowButton from './IknowButton';
 import Window from './Window';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-      this.state = {
-        show: false,
-        setShow: false,
-      }
+  state = {
+    show: false,
+    setShow: false,
   }
 
   windowClose = () => {

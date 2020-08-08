@@ -3,9 +3,12 @@ import './Window.css';
 import './index.css';
 
 class Window extends Component {
-    state = { 
-        show : {show},
-        windowClose : {windowClose},
+    constructor(props) {
+        super(props);
+        this.state = { 
+            show,
+            windowClose, 
+        };
     }
 
     render() {

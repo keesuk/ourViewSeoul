@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 import './index.css';
 import SeoulMap from './SeoulMap.js';
@@ -6,16 +6,19 @@ import IknowButton from './IknowButton';
 import Window from './Window';
 
 class App extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
       this.state = {
-        show: false,
-        setShow: false,
+        show: useState(false),
+        setShow: useState(false),
       }
+      
+      this.show = this.show.bind(this);
+      this.setShow = this.setShow.bind(this);
   }
 
   windowClose = () => {
-    this.setShow(true);
+    setShow(true);
   }; 
 
   render() {
@@ -23,7 +26,7 @@ class App extends Component {
       <div className="App">
         <IknowButton />
           <div className="map">
-            <button onClick={() => this.setShow(true)} className=""> <Window show={this.show} windowClose={this.windowClose}/> </button>
+            <button onClick={() => setShow(true)} className=""> <Window show={this.show} windowClose={this.windowClose}/> </button>
             <SeoulMap />
           </div>
       </div>

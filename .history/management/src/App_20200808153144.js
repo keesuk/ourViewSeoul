@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 import './index.css';
 import SeoulMap from './SeoulMap.js';
@@ -6,12 +6,9 @@ import IknowButton from './IknowButton';
 import Window from './Window';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-      this.state = {
-        show: false,
-        setShow: false,
-      }
+  state = {
+    show: useState(false),
+    setShow: useState(false),
   }
 
   windowClose = () => {
