@@ -1,0 +1,8 @@
+.window-wrapper{
+    box-sizing: border-box;
+    width: 1000px;
+    position: absolute;
+    z-index: 1000;
+    height: 1000px;
+    background-color: honeydew;
+}

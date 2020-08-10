@@ -1,0 +1,6 @@
+.window-wrapper{
+    box-sizing: border-box;
+    width: 100px;
+    position: absolute;
+    z-index: 1000;
+}

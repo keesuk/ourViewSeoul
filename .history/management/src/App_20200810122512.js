@@ -21,13 +21,11 @@ class App extends Component {
     return (
       <div className="App">
         <IknowButton />
-        <div className="map">
-          <div>
-            <button onClick={() => this.setState({ show: true })} className="station-btn">station</button>
+          <div className="map">
+            <button onClick={() => this.setState({ show: true })} className="station-btn"></button>
             <Window show={this.state.show} windowClose={this.windowClose}/>
+            <SeoulMap />
           </div>
-          <SeoulMap />
-        </div>
       </div>
     );
   }

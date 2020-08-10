@@ -17,12 +17,6 @@ class Window extends Component {
                 <div className="answer">
                     여기는 요런 것들이 생각나요.
                 </div>
-                <div className="img-stations">
-
-                </div>
-                <button onClick={windowClose} className="input">
-                    다 했어요.
-                </button>
             </div>
         )
     }

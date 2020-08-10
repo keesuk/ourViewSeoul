@@ -11,18 +11,6 @@ class Window extends Component {
                 <button onClick={windowClose} className="close">
                     ← 
                 </button>
-                <div className="computer">
-                    오.. 어떤 곳인데요?
-                </div>
-                <div className="answer">
-                    여기는 요런 것들이 생각나요.
-                </div>
-                <div className="img-stations">
-
-                </div>
-                <button onClick={windowClose} className="input">
-                    다 했어요.
-                </button>
             </div>
         )
     }

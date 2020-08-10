@@ -1,0 +1,14 @@
+.window-wrapper{
+    position: absolute;
+    z-index: 10000;
+    width: 80vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 1.5px solid black;
+    background-color: white;
+    margin: 4rem auto;
+}
+
+.close {
+
+}

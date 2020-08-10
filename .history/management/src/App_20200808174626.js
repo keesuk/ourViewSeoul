@@ -10,24 +10,27 @@ class App extends Component {
     super(props);
       this.state = {
         show: false,
+        setshow: false,
       }
   }
 
   windowClose = () => {
-    this.setState({ show: false });
+    this.setState({ setshow: false });
   }; 
 
   render() {
     return (
       <div className="App">
         <IknowButton />
-        <div className="map">
-          <div>
-            <button onClick={() => this.setState({ show: true })} className="station-btn">station</button>
-            <Window show={this.state.show} windowClose={this.windowClose}/>
+          <div className="map">
+            <button onClick={() => this.setState({ setshow: true })} className=""> 
+              <Window 
+                show={this.show} 
+                windowClose={this.windowClose}
+              />
+            </button>
+            <SeoulMap />
           </div>
-          <SeoulMap />
-        </div>
       </div>
     );
   }
