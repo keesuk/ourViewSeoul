@@ -17,12 +17,7 @@
 }
 
 ::-webkit-scrollbar {
-    float: left;
-    margin-bottom: 25px;
-    margin-left: 22px;
-    margin-top: 40px;
-    width: 10px;
-    overflow-y: scroll;
+    width: 1px;
 }
 
 ::-webkit-scrollbar-track {
@@ -30,11 +25,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: black;
+    width: 2px;
 }
 
 .window-content {
@@ -67,9 +63,8 @@
 }
 
 .img-stations > img{
-    width: 100%;
+    width: 30vw;
     padding: 0 10px 0 0;
-    object-fit: contain;
 }
 
 .input {
@@ -88,6 +83,4 @@
     border-radius: 60px;
     cursor: pointer;
     outline: none;
-    margin-top: 30px;
-    margin-bottom: 50px;
 }

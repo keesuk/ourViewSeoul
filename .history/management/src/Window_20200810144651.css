@@ -17,11 +17,13 @@
 }
 
 ::-webkit-scrollbar {
+    background-color: #F5F5F5;
     float: left;
+    height: 300px;
     margin-bottom: 25px;
     margin-left: 22px;
     margin-top: 40px;
-    width: 10px;
+    width: 65px;
     overflow-y: scroll;
 }
 
@@ -35,6 +37,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: black;
+    width: 2px;
 }
 
 .window-content {
@@ -67,9 +70,8 @@
 }
 
 .img-stations > img{
-    width: 100%;
+    width: 30vw;
     padding: 0 10px 0 0;
-    object-fit: contain;
 }
 
 .input {
@@ -88,6 +90,4 @@
     border-radius: 60px;
     cursor: pointer;
     outline: none;
-    margin-top: 30px;
-    margin-bottom: 50px;
 }

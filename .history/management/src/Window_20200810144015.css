@@ -16,27 +16,6 @@
     overflow:auto;
 }
 
-::-webkit-scrollbar {
-    float: left;
-    margin-bottom: 25px;
-    margin-left: 22px;
-    margin-top: 40px;
-    width: 10px;
-    overflow-y: scroll;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: black;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: black;
-}
-
 .window-content {
     margin: 0 12px;
 }
@@ -67,9 +46,8 @@
 }
 
 .img-stations > img{
-    width: 100%;
+    width: 30vw;
     padding: 0 10px 0 0;
-    object-fit: contain;
 }
 
 .input {
@@ -88,6 +66,4 @@
     border-radius: 60px;
     cursor: pointer;
     outline: none;
-    margin-top: 30px;
-    margin-bottom: 50px;
 }

@@ -67,9 +67,8 @@
 }
 
 .img-stations > img{
-    width: 100%;
+    width: 40vw;
     padding: 0 10px 0 0;
-    object-fit: contain;
 }
 
 .input {
