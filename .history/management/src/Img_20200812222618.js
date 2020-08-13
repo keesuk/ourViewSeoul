@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as StackBlur from 'stackblur-canvas';
 import Worker from './Worker';
-import WebWorker from './WorkerSetup';
 
 const width = 800;
 const height = 1000;
@@ -73,7 +72,7 @@ class Img extends Component {
         const points = generatePoints({density, numPoints : 10000});
       
         Worker.onmessage = (event) => draw(event.data);
-        // Worker.postMessage({ density, points, width, height, threshold });
+        Worker.postMessage( density, points, width, height, threshold );
     }
     
     render() {

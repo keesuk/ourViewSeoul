@@ -52,6 +52,7 @@ class Img extends Component {
 
     componentDidMount() {
         this.updateCanvas();
+        this.Worker = new WebWorker(Worker)
     }
     componentDidUpdate() {
         this.updateCanvas();
@@ -73,7 +74,7 @@ class Img extends Component {
         const points = generatePoints({density, numPoints : 10000});
       
         Worker.onmessage = (event) => draw(event.data);
-        // Worker.postMessage({ density, points, width, height, threshold });
+        Worker.postMessage( density, points, width, height, threshold );
     }
     
     render() {

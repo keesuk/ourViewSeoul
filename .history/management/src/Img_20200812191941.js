@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as StackBlur from 'stackblur-canvas';
 import Worker from './Worker';
-import WebWorker from './WorkerSetup';
 
 const width = 800;
 const height = 1000;
@@ -10,6 +9,7 @@ const threshold = 0.9;
 
 function draw(props) {
     const {context, points} = props
+    console.log(context);
     context.clearRect(width, 0, width, height);
   
     points.forEach(function(point) {
@@ -49,7 +49,10 @@ function getDensityFunction(props) {
 
 
 class Img extends Component {
-
+    constructor(props){
+        super(props);
+        this.image = this.props
+    }
     componentDidMount() {
         this.updateCanvas();
     }
@@ -61,7 +64,7 @@ class Img extends Component {
         const context = this.refs.canvas.getContext('2d');
         const img = new Image();
 
-        img.src = this.props.src;
+        img.src = this.image;
 
         context.drawImage(img, 0, 0, width, height)
 
@@ -83,4 +86,4 @@ class Img extends Component {
     }
 }
 
-export default Img;
+export default Img

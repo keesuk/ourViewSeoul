@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as StackBlur from 'stackblur-canvas';
 import Worker from './Worker';
-import WebWorker from './WorkerSetup';
 
 const width = 800;
 const height = 1000;

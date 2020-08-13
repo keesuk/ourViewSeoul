@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as StackBlur from 'stackblur-canvas';
 import Worker from './Worker';
-import WebWorker from './WorkerSetup';
 
 const width = 800;
 const height = 1000;
 const threshold = 0.9;
 
-function draw(props) {
-    const {context, points} = props
+function draw(points) {
+    
     context.clearRect(width, 0, width, height);
   
     points.forEach(function(point) {
@@ -22,8 +21,8 @@ function draw(props) {
     });
 }
 
-function generatePoints(props) {
-    const {density, numPoints} = props
+function generatePoints(density, numPoints) {
+
     return d3.range(numPoints).map(function() {
         let x, y, d;
     
@@ -39,7 +38,7 @@ function generatePoints(props) {
         }
     });
 }
-
+    
 function getDensityFunction(props) {
     const {context} = props
     const data = context.getImageData(0, 0, width, height).data;
@@ -47,9 +46,11 @@ function getDensityFunction(props) {
     return d3.range(0, data.length, 4).map(i => data[i] / 255);
 }
 
-
-class Img extends Component {
-
+class Img extends React.Component {
+    constructor(props){
+        super(props);
+        this.image = this.props
+    }
     componentDidMount() {
         this.updateCanvas();
     }
@@ -61,8 +62,6 @@ class Img extends Component {
         const context = this.refs.canvas.getContext('2d');
         const img = new Image();
 
-        img.src = this.props.src;
-
         context.drawImage(img, 0, 0, width, height)
 
         StackBlur.canvasRGB(canvas, 0, 0, width, height)
@@ -70,17 +69,17 @@ class Img extends Component {
       
         context.drawImage(img, 0, 0, width, height);
       
-        const points = generatePoints({density, numPoints : 10000});
+        const points = generatePoints(density, 10000);
       
-        Worker.onmessage = (event) => draw(event.data);
-        // Worker.postMessage({ density, points, width, height, threshold });
+        Worker.onmessage = event => draw(event.data);
+      
+        Worker.postMessage({ density, points, width, height, threshold });
     }
-    
     render() {
-        return (
+         return (
              <canvas ref="canvas" />
-        );
+         );
     }
 }
 
-export default Img;
+export default Img

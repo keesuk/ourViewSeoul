@@ -1,4 +1,4 @@
-import  * as d3 from 'd3'
+importScripts("https://d3js.org/d3.v5.min.js");
 
 export default () => {
     const voronoi = d3.voronoi();
