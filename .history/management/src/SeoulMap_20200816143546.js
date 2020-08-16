@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { csv } from 'd3';
 import './SeoulMap.css';
 import seoulPlace from './data/seoul.csv';
+import  DragScroll from 'react-dragscroll';
 
 const width = 1280;
 const height = 1280;
@@ -28,10 +29,11 @@ class SeoulMap extends Component {
         
         const svgCanvas = d3.select(this.refs.canvas)
             .append("div")
+            .append(<DragScroll/>)
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 1280 720")
             .classed("svg-content-responsive", true)
         
         svgCanvas.selectAll("text")
@@ -48,9 +50,7 @@ class SeoulMap extends Component {
    
     render() { 
         return (
-            <>
-            <div ref="canvas"/>
-            </>
+                <div ref="canvas"/>
         )
     }
 }

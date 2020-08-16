@@ -13,6 +13,7 @@ class SeoulMap extends Component {
 
         this.state = {
             data : null,
+            isScorlling : false,
         }
     }
 
@@ -31,7 +32,7 @@ class SeoulMap extends Component {
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 1280 720")
             .classed("svg-content-responsive", true)
         
         svgCanvas.selectAll("text")
@@ -45,12 +46,9 @@ class SeoulMap extends Component {
                 .attr("font-size", "6px")
     }
 
-   
     render() { 
         return (
-            <>
-            <div ref="canvas"/>
-            </>
+            <div onClick={this.handleClick} ref="canvas"/>
         )
     }
 }

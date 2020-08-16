@@ -8,14 +8,10 @@ const width = 1280;
 const height = 1280;
 
 class SeoulMap extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            data : null,
-        }
+    state = {
+        data : null,
     }
-
+    
     componentDidMount() {
         csv(seoulPlace).then(data => {
             this.setState( {data} );
@@ -31,8 +27,10 @@ class SeoulMap extends Component {
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 600 400")
             .classed("svg-content-responsive", true)
+            .attr("width", width)
+            .attr("height", height);
         
         svgCanvas.selectAll("text")
             .data(dataArray)
@@ -45,13 +43,8 @@ class SeoulMap extends Component {
                 .attr("font-size", "6px")
     }
 
-   
     render() { 
-        return (
-            <>
-            <div ref="canvas"/>
-            </>
-        )
+        return <div ref="canvas"></div> 
     }
 }
 

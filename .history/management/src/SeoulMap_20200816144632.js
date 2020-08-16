@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { csv } from 'd3';
 import './SeoulMap.css';
 import seoulPlace from './data/seoul.csv';
+import  DragScroll from 'react-dragscroll';
 
 const width = 1280;
 const height = 1280;
@@ -49,7 +50,9 @@ class SeoulMap extends Component {
     render() { 
         return (
             <>
+            <DragScroll height={height} width={width}>
             <div ref="canvas"/>
+            </DragScroll>
             </>
         )
     }

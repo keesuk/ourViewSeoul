@@ -6,6 +6,7 @@ import seoulPlace from './data/seoul.csv';
 
 const width = 1280;
 const height = 1280;
+const ele = d3.select("#container")
 
 class SeoulMap extends Component {
     constructor(props) {
@@ -13,7 +14,21 @@ class SeoulMap extends Component {
 
         this.state = {
             data : null,
+            pos : {
+                top : 0,
+                left : 0,
+                x : 0,
+                y : 0,
+            }
         }
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick() {
+        this.setState( state => ({
+            pos: 
+        }));
+        
     }
 
     componentDidMount() {
@@ -31,7 +46,7 @@ class SeoulMap extends Component {
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 1280 720")
             .classed("svg-content-responsive", true)
         
         svgCanvas.selectAll("text")
@@ -45,12 +60,9 @@ class SeoulMap extends Component {
                 .attr("font-size", "6px")
     }
 
-   
     render() { 
         return (
-            <>
-            <div ref="canvas"/>
-            </>
+            <div id="container" onClick={this.handleClick} ref="canvas"/>
         )
     }
 }

@@ -6,6 +6,7 @@
     vertical-align: top;
     position:fixed;
     overflow:auto;
+    cursor: grab;
   }
   .svg-content-responsive {
     display: inline-block;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import { csv } from 'd3';
 import './SeoulMap.css';
+import  { DragScroll } from 'react-dragscroll';
 import seoulPlace from './data/seoul.csv';
 
 const width = 1280;
@@ -31,7 +32,7 @@ class SeoulMap extends Component {
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 1280 720")
             .classed("svg-content-responsive", true)
         
         svgCanvas.selectAll("text")
@@ -48,9 +49,10 @@ class SeoulMap extends Component {
    
     render() { 
         return (
-            <>
-            <div ref="canvas"/>
-            </>
+            <DragScroll>
+            <div className='container'>
+                <div ref="canvas"/>
+            </div></DragScroll>
         )
     }
 }

@@ -13,6 +13,7 @@ class SeoulMap extends Component {
 
         this.state = {
             data : null,
+            isScorlling : false,
         }
     }
 
@@ -31,7 +32,7 @@ class SeoulMap extends Component {
             .classed("svg-container", true) 
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 1280 1280")
+            .attr("viewBox", "0 0 1280 720")
             .classed("svg-content-responsive", true)
         
         svgCanvas.selectAll("text")
@@ -45,12 +46,43 @@ class SeoulMap extends Component {
                 .attr("font-size", "6px")
     }
 
-   
+    componentDidUpdate(nextProps, nextState) {
+        if(this.state.isScrolling !== nextState.isScrolling ) {this.toggleScrolling(nextState.isScrolling);}
+    }
+
+    toggleScrolling = (isEnable) => {
+        if (isEnable) {
+            window.addEventListener('mousemove', this.onMouseMove);
+            window.addEventListener('mouseup', this.onMouseUp);
+        } else {
+            window.removeEventListener('mousemove', this.onMouseMove);
+        }
+    };
+
+    onScroll = (event) => {
+    };
+  
+    onMouseMove = (event) => {
+      const {clientX, scrollLeft, scrollTop, clientY} = this.state;
+      this._scroller.scrollLeft = scrollLeft - clientX + event.clientX;
+      this._scroller.scrollTop = scrollTop - clientY + event.clientY;
+    };
+
+    onMouseUp =  () => {
+        this.setState({isScrolling: false, 
+                        scrollLeft: 0, scrollTop: 0,
+                        clientX: 0, clientY:0});
+    };
+
+    onMouseDown = (event) => {
+        const {scrollLeft, scrollTop} = this._scroller;
+        this.setState({isScrolling:true, scrollLeft, scrollTop, clientX:event.clientX, clientY:event.clientY});
+    };
+
+
     render() { 
         return (
-            <>
-            <div ref="canvas"/>
-            </>
+            <div onClick={this.handleClick} ref="canvas"/>
         )
     }
 }

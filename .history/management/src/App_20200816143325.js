@@ -5,6 +5,7 @@ import SeoulMap from './SeoulMap.js';
 import IknowButton from './IknowButton';
 import Window from './Window';
 
+import  DragScroll from 'react-dragscroll';
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +28,8 @@ class App extends Component {
             <button onClick={() => this.setState({ show: true })} className="station-btn">station</button>
             <Window show={this.state.show} windowClose={this.windowClose}/>
           </div> */}
-          <SeoulMap />
+          <DragScroll>
+          <SeoulMap /></DragScroll>
         </div>
       </div>
     );
