@@ -1,0 +1,54 @@
+import React, { Component } from 'react';
+import * as d3 from 'd3';
+import './SeoulMap.css';
+// import * as topojson from 'topojson';
+import seoulPlace from './data/seoul.csv';
+// import { csv } from 'd3';
+// import map from './data/seoul_municipalities_topo_simple.json'
+// import * as d3queue from 'd3-queue';
+
+const width = 1280;
+const height = 1280;
+const scale = 20;
+
+class SeoulMap extends Component {
+    state = {
+        data : null,
+    }
+
+    componentDidMount() {
+        this.drawSeoul()
+    }
+
+    drawSeoul()  {
+        const svgCanvas = d3.select(this.refs.canvas)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+
+        const x = d3.scaleLinear()
+            .domain([0, 4000])
+            .range([ 0, width ]);
+        svgCanvas.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        const y = d3.scaleLinear()
+            .domain([0, 500000])
+            .range([ height, 0]);
+        svgCanvas.append("g")
+            .call(d3.axisLeft(y));
+
+        d3.csv(seoulPlace, (data) => {
+            svgCanvas.selectAll("text")
+                .data(data).enter()
+                .append("text")
+                .attr("x", (d) => { return x(d.xCor);})
+                .attr("y", (d) => { return y(d.yCor);})
+                .text((d) => { return d.station })
+        });
+    }
+    render() { return <div ref="canvas"></div> }
+}
+
+export default SeoulMap;
