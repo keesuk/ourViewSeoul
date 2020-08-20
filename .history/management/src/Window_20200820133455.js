@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Img from '../../Img';
+import Img from '../../Img';
 import './Window.css';
 import './index.css';
 
