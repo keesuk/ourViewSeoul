@@ -1,0 +1,23 @@
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    max-width:100%;
+    /* position:fixed;
+    overflow:hidden; */
+  }
+  .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .station-text {
+    text-shadow: 0 0 #000; /* horizontal-offset vertical-offset 'blur' colour */
+    font-size: 7px;
+    font-weight: 900;
+  }
+
+    

@@ -1,0 +1,25 @@
+.App {}
+
+.iknow {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.iknow-btn {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: .5;
+}
+
+.map{
+  width: 50vw;
+  box-sizing: border-box;
+  border-right: 1.5px solid black;
+}
+@media all and (min-width:768px) and (max-width:1023px) {
+  .map{
+    width: 100vw;
+    box-sizing: none;
+    border-right: none;
+  }
+}

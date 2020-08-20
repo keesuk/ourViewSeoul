@@ -1,0 +1,18 @@
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* position:fixed;
+    overflow:hidden; */
+  }
+  .svg-content-responsive {
+  }
+  
+  .station-text {
+    text-shadow: 0 0 #000; /* horizontal-offset vertical-offset 'blur' colour */
+    font-size: 7px;
+    font-weight: 900;
+  }
+
+    
