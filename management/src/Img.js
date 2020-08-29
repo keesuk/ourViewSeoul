@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as StackBlur from 'stackblur-canvas';
-import Worker from './Worker';
+import worker from './Worker.js';
 import WebWorker from './WorkerSetup';
 
 const width = 800;
@@ -47,15 +47,13 @@ function getDensityFunction(props) {
     return d3.range(0, data.length, 4).map(i => data[i] / 255);
 }
 
-
 class Img extends Component {
 
     componentDidMount() {
+        this.worker = new WebWorker(worker);
         this.updateCanvas();
     }
-    componentDidUpdate() {
-        this.updateCanvas();
-    }
+
     updateCanvas() {
         const canvas = d3.select(this.refs.canvas)
         const context = this.refs.canvas.getContext('2d');
@@ -72,8 +70,8 @@ class Img extends Component {
       
         const points = generatePoints({density, numPoints : 10000});
       
-        Worker.onmessage = (event) => draw(event.data);
-        // Worker.postMessage({ density, points, width, height, threshold });
+        this.worker.onmessage = (event) => draw(event.data);
+        this.worker.postMessage({ density, points, width, height, threshold });
     }
     
     render() {

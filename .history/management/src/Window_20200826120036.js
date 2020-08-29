@@ -22,7 +22,7 @@ class Window extends Component {
                         여기는 요런 것들이 생각나요.
                     </div>
                     <div className="img-stations">
-                        <Img src={require('./data/search.pstatic.jpg')}/>
+                        <img src={require('./data/search.pstatic.jpg')}/>
                     </div>
                     <button onClick={windowClose} className="input">
                         완료
