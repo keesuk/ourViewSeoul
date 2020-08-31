@@ -1,0 +1,24 @@
+import React, { Component } from 'react';
+import './CSS/App.css';
+import './CSS/index.css';
+import SeoulMap from './App/SeoulMap.js';
+import Output from './App/Output.js';
+import IknowButton from './App/IknowButton';
+
+
+class App extends Component {
+
+  render() {
+    return (
+      <div className="App">
+        <div className="map">
+          <IknowButton />
+          <SeoulMap />
+          <Output />
+        </div>
+      </div>
+    );
+  }
+};
+
+export default App;
