@@ -7,14 +7,12 @@ import styled from 'styled-components';
 
 
 class SeoulMap extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            data : [],
-            show : false,
-            wheelValue : 2,
-        }
-        this.updateDimensions = this.updateDimensions.bind(this);
+    
+    state = {
+        data : [],
+        show : false,
+        wheelValue : 2,
+        highlighted: null,
     }
     
     componentDidMount() {
@@ -32,16 +30,23 @@ class SeoulMap extends Component {
         this.setState({ show: false })
     }
 
-    updateDimensions() {
+    updateDimensions = () => {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
         } 
     }
-    
+
+    setHighlight(territory) {
+        this.setState({
+            highlighted: territory,
+            show: true,
+        });
+    }
+
 
     render() { 
         const { data } = this.state;
-        const { wheelValue } = this.state;
+        const { wheelValue, highlighted } = this.state;
 
         return (
             <>
@@ -55,26 +60,26 @@ class SeoulMap extends Component {
                 <React.Fragment>
                     <TransformComponent>
                     <div className="svg-container">
-                        <StyledMap/>
+                        <StyledMap highlighted={highlighted} />
                     </div>
                     </TransformComponent>
                 </React.Fragment>
                 )}
             </TransformWrapper>
-            <Window show={this.state.show} windowClose={this.windowClose}/>
+            <Window onHightlight={(terr) => this.setHighlight(terr)} show={this.state.show} windowClose={this.windowClose}/>
             </>
         )
     }
 }
 
 const StyledMap = styled(Map)`
-	.st0{enable-background:new    ;}
-	.st1{font-family:'Noto Sans KR'; font-weight:900;}
-	.st2{font-size:6.5759px;}
-	.st3{font-size:4.5326px;}
-	.st4{fill:#E5E5E4;}
-    .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
+	.st0{ enable-background:new; }
+	.st1{ font-family:'Noto Sans KR'; font-weight:900; }
+    .st2{ font-size:6.5759px; }
+        .st2:hover{ font-size: 10px; }
+    .st3{ font-size:4.5326px; }
+    .st4{ fill:#E5E5E4; }
+    .st5{ font-size:9.0311px; }
 `;
 
 export default SeoulMap;   

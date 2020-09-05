@@ -189,22 +189,4 @@ updateCanvas() {
 }
 
 
-                        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 1280" className="svg-content-responsive">
-                            {data.map( (d, i) => 
-                                <text
-                                    className="station-text"
-                                    onClick={() => this.windowOn()}
-                                    key={i} 
-                                    width={10}
-                                    height={5}
-                                    x={d.xCor}
-                                    y={height - d.yCor}
-                                > {d.station}
-                                </text>
-                            )}
-                        </svg>
 
-
-        csv(seoulPlace).then( (data) => {
-            this.setState( {data} )
-        })

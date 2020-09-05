@@ -54,9 +54,7 @@ class SeoulMap extends Component {
                 {({ resetTransform, ...rest }) => (
                 <React.Fragment>
                     <TransformComponent>
-                    <div className="svg-container">
                         <StyledMap/>
-                    </div>
                     </TransformComponent>
                 </React.Fragment>
                 )}
@@ -73,8 +71,7 @@ const StyledMap = styled(Map)`
 	.st2{font-size:6.5759px;}
 	.st3{font-size:4.5326px;}
 	.st4{fill:#E5E5E4;}
-    .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
+	.st5{font-size:9.0311px;}
 `;
 
 export default SeoulMap;   

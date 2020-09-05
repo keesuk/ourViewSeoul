@@ -4,7 +4,6 @@ import '../CSS/Window.css';
 import '../CSS/index.css';
 
 class Window extends Component {
-
     render() {
         const { show, windowClose } = this.props;   
         return(
@@ -22,7 +21,7 @@ class Window extends Component {
                     <div className="answer">
                         여기는 요런 것들이 생각나요.
                     </div>
-                        {/* <Img className="img-stations" src={require('../data/search.pstatic.jpg')}/> */}
+                        <Img className="img-stations" src={require('../data/search.pstatic.jpg')}/>
                     <button onClick={windowClose} className="input">
                         완료
                     </button>

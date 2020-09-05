@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { ReactComponent as Map } from '../data/map.svg';
+import { csv } from 'd3';
 import '../CSS/SeoulMap.css';
+import seoulPlace from '../data/seoul.csv';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Window from './Window';
-import styled from 'styled-components';
 
+const width = 1280;
+const height = 1280;
 
 class SeoulMap extends Component {
     constructor(props){
@@ -18,6 +20,9 @@ class SeoulMap extends Component {
     }
     
     componentDidMount() {
+        csv(seoulPlace).then( (data) => {
+            this.setState( {data} )
+        })
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions);
     }
@@ -37,7 +42,6 @@ class SeoulMap extends Component {
           this.setState({ wheelValue : 140 });
         } 
     }
-    
 
     render() { 
         const { data } = this.state;
@@ -47,6 +51,8 @@ class SeoulMap extends Component {
             <>
             <TransformWrapper 
                 defaultScale={1}
+                defaultPositionX={width}
+                defaultPositionY={height}
                 wheel={{
                     step: wheelValue,
                 }}
@@ -55,7 +61,20 @@ class SeoulMap extends Component {
                 <React.Fragment>
                     <TransformComponent>
                     <div className="svg-container">
-                        <StyledMap/>
+                        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 1280" className="svg-content-responsive">
+                            {data.map( (d, i) => 
+                                <text
+                                    className="station-text"
+                                    onClick={() => this.windowOn()}
+                                    key={i} 
+                                    width={10}
+                                    height={5}
+                                    x={d.xCor}
+                                    y={height - d.yCor}
+                                > {d.station}
+                                </text>
+                            )}
+                        </svg>
                     </div>
                     </TransformComponent>
                 </React.Fragment>
@@ -66,15 +85,5 @@ class SeoulMap extends Component {
         )
     }
 }
-
-const StyledMap = styled(Map)`
-	.st0{enable-background:new    ;}
-	.st1{font-family:'Noto Sans KR'; font-weight:900;}
-	.st2{font-size:6.5759px;}
-	.st3{font-size:4.5326px;}
-	.st4{fill:#E5E5E4;}
-    .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
-`;
 
 export default SeoulMap;   

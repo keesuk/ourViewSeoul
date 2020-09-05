@@ -74,7 +74,7 @@ const StyledMap = styled(Map)`
 	.st3{font-size:4.5326px;}
 	.st4{fill:#E5E5E4;}
     .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
+    #{\uBB38\uD559\uACBD\uAE30\uC7A5} tspan {font-size: 100px!important;}
 `;
 
 export default SeoulMap;   

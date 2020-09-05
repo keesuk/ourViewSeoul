@@ -4,7 +4,6 @@ import '../CSS/Window.css';
 import '../CSS/index.css';
 
 class Window extends Component {
-
     render() {
         const { show, windowClose } = this.props;   
         return(

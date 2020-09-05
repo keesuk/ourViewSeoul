@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ReactComponent as Map } from '../data/map.svg';
+import Map from './Map';
 import '../CSS/SeoulMap.css';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Window from './Window';
@@ -74,7 +74,7 @@ const StyledMap = styled(Map)`
 	.st3{font-size:4.5326px;}
 	.st4{fill:#E5E5E4;}
     .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
+    #일산 tspan {font-size: 100px!important;}
 `;
 
 export default SeoulMap;   

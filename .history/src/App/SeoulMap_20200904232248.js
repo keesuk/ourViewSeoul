@@ -67,14 +67,16 @@ class SeoulMap extends Component {
     }
 }
 
-const StyledMap = styled(Map)`
+const StyledMap = styled(Map).attrs({
+    'data-section': '일산',
+})`
 	.st0{enable-background:new    ;}
 	.st1{font-family:'Noto Sans KR'; font-weight:900;}
 	.st2{font-size:6.5759px;}
 	.st3{font-size:4.5326px;}
 	.st4{fill:#E5E5E4;}
     .st5{font-size:9.0311px;}
-    # tspan {font-size: 100px!important;}
+    g[data-section='일산'] tspan {font-size: 100px!important;}
 `;
 
 export default SeoulMap;   
