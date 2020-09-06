@@ -31,7 +31,6 @@ class SeoulMap extends Component {
             data : [],
             show : false,
             wheelValue : 2,
-            text : '',
         }
         this.updateDimensions = this.updateDimensions.bind(this);
     }
@@ -48,10 +47,6 @@ class SeoulMap extends Component {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
         } 
-    }
-
-    onSearchSubmit= (text)=>{
-    	console.log(text);
     }
 
     render() { 
@@ -75,7 +70,6 @@ class SeoulMap extends Component {
                 </React.Fragment>
                 )}
             </TransformWrapper>
-            <Portal onSubmit={this.onSearchSubmit}/>
             <Window />
             </>
         )

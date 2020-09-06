@@ -11,7 +11,7 @@ const Svg = styled.svg`
 `;
 
 class Map extends PureComponent {
-  state = { id : 'default' }
+  state = { id : '하이' }
 
   render() {
     return (
@@ -1607,7 +1607,7 @@ class Map extends PureComponent {
         <text transform="translate(482.7992 818.5216)" className="st0 st1">신길</text>
       </g>
       <g id="GangnamguOffice" key="GangnamguOffice_Station" data="GangnamguOffice">
-        <text transform="translate(865.1718 817.9318)" className="st0 st1">강남구청</text>
+        <text transform="translate(865.1718 817.9318)" className="st0 st1">Gangnam-gu청</text>
       </g>
       <g id="Gunja" key="Gunja_Station" data="Gunja">
         <text transform="translate(983.4764 655.9933)" className="st0 st1">군자</text>

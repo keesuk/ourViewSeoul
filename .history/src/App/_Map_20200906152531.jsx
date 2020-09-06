@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import styled from 'styled-components';
-import Portal from './Portal';
+import Window from './Window';
 
 const Svg = styled.svg`
 	.st0{font-family:'Noto Sans KR'; font-weight:900;}
@@ -11,12 +11,11 @@ const Svg = styled.svg`
 `;
 
 class Map extends PureComponent {
-  state = { id : 'default' }
+  state = { text: '' }
 
   render() {
     return (
     <>
-    <Portal stationData = {this.state.id}/>
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       x="0"
@@ -27,11 +26,11 @@ class Map extends PureComponent {
       xmlSpace="preserve"
     >
     <g id="map" key="map_Station" data="map">
-      <g onClick={(e) => this.setState({ id : 'Ilsan'})} id="Ilsan" key="Ilsan_Station" data="Ilsan">
+      <g onClick={(e) => this.props.onEdit(event, "Ilsan")} id="Ilsan" key="Ilsan_Station" data="Ilsan">
         <text transform="translate(475.475 290.839)" className="st0 st1">일</text>
         <text transform="translate(475.475 298.739)" className="st0 st1">산</text>
       </g>
-      <g onClick={(e) => this.setState({ id : 'Pungsan'})} id="Pungsan" key="Pungsan_Station" data="Pungsan">
+      <g id="Pungsan" key="Pungsan_Station" data="Pungsan">
         <text transform="translate(458.472 290.839)" className="st0 st1">풍</text>
         <text transform="translate(458.472 298.739)" className="st0 st1">산</text>
       </g>
@@ -1607,7 +1606,7 @@ class Map extends PureComponent {
         <text transform="translate(482.7992 818.5216)" className="st0 st1">신길</text>
       </g>
       <g id="GangnamguOffice" key="GangnamguOffice_Station" data="GangnamguOffice">
-        <text transform="translate(865.1718 817.9318)" className="st0 st1">강남구청</text>
+        <text transform="translate(865.1718 817.9318)" className="st0 st1">Gangnam-gu청</text>
       </g>
       <g id="Gunja" key="Gunja_Station" data="Gunja">
         <text transform="translate(983.4764 655.9933)" className="st0 st1">군자</text>

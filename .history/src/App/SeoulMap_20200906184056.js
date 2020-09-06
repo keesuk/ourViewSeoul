@@ -50,7 +50,7 @@ class SeoulMap extends Component {
         } 
     }
 
-    onSearchSubmit= (text)=>{
+    onSearchSubmit(text){
     	console.log(text);
     }
 

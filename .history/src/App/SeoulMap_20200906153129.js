@@ -3,7 +3,6 @@ import Map from './_Map.jsx';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import styled from 'styled-components';
 import Window from './Window';
-import Portal from './Portal';
 
 const SvgContainer = styled.div`
     display: inline-block;
@@ -31,7 +30,6 @@ class SeoulMap extends Component {
             data : [],
             show : false,
             wheelValue : 2,
-            text : '',
         }
         this.updateDimensions = this.updateDimensions.bind(this);
     }
@@ -50,11 +48,8 @@ class SeoulMap extends Component {
         } 
     }
 
-    onSearchSubmit= (text)=>{
-    	console.log(text);
-    }
-
     render() { 
+        const { data } = this.state;
         const { wheelValue } = this.state;
 
         return (
@@ -75,7 +70,6 @@ class SeoulMap extends Component {
                 </React.Fragment>
                 )}
             </TransformWrapper>
-            <Portal onSubmit={this.onSearchSubmit}/>
             <Window />
             </>
         )
