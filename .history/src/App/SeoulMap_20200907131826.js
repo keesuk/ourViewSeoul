@@ -75,7 +75,7 @@ class SeoulMap extends Component {
             {/* <Route path="/"> */}
                 <Window />
             {/* </Route> */}
-            <OutPut />
+            <Output />
             </>
         )
     }
