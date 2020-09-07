@@ -9,10 +9,8 @@ const Svg = styled.svg`
   .st4{font-size:9.0311px;}
 `;
 
-class Map extends PureComponent {
-  state = { id : 'default' }
+function Map() {
 
-  render() {
     return (
     <>
     <Svg
@@ -25,11 +23,11 @@ class Map extends PureComponent {
       xmlSpace="preserve"
     >
     <g id="map" key="map_Station" data="map">
-      <g onClick={() => this.setState({ id : 'Ilsan'})} id="Ilsan" key="Ilsan_Station" data="Ilsan">
+      <g  id="Ilsan" key="Ilsan_Station" data="Ilsan">
         <text transform="translate(475.475 290.839)" className="st0 st1">일</text>
         <text transform="translate(475.475 298.739)" className="st0 st1">산</text>
       </g>
-      <g onClick={() => this.setState({ id : 'Pungsan'})} id="Pungsan" key="Pungsan_Station" data="Pungsan">
+      <g id="Pungsan" key="Pungsan_Station" data="Pungsan">
         <text transform="translate(458.472 290.839)" className="st0 st1">풍</text>
         <text transform="translate(458.472 298.739)" className="st0 st1">산</text>
       </g>
@@ -1847,7 +1845,7 @@ class Map extends PureComponent {
   </Svg>
   </>
   )}
-}
+
   
   
 

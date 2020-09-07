@@ -4,7 +4,6 @@ import './CSS/index.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import { createMuiTheme } from '@material-ui/core/styles';
-import {Router} from 'react-router'
 
 createMuiTheme({
   typography: {
@@ -15,7 +14,7 @@ createMuiTheme({
 
 ReactDOM.render(
   // <React.StrictMode>
-    <Router><App /></Router>,
+    <App />,
   // </React.StrictMode>,
   document.getElementById('root')
 );
