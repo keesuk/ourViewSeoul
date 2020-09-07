@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import '../CSS/Output.css';
 
 const OutputWrapper = styled.div`
     display: none;

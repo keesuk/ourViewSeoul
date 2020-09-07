@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import '../CSS/Output.css';
 
-const OutputWrapper = styled.div`
+const IknowWrapDiv = styled.div`
     display: none;
 
     @media all and (min-width:0px) and (max-width:1023px) {
@@ -26,62 +27,26 @@ const OutputWrapper = styled.div`
     }
 `;
 
-const OutputClose = styled.div`
-    position: relative;
-    font-size: 40px;
-    font-weight: 200;
-    color: black;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    padding-bottom: 50px;
-
-    @media all and (min-width:0px) and (max-width:1023px) {
-        font-size: 36x;
-        padding-bottom: 20px;
-    }
-`;
-
-const Up = styled.div`
-    position: relative;
-    text-align: center;
-    font-weight: 800;
-    color: black;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    padding-bottom: 50px;
-
-    @media all and (min-width:0px) and (max-width:1023px) {
-        font-size: 40px;
-        padding-bottom: 20px;
-    }
-`;
-
 class Output extends Component {
 
     render() {
         const { show, outputClose } = this.props;   
         return(
-            <OutputWrapper style={{ 
+            <div className="output-wrapper" style={{ 
                 transform: show ? 'translateY(-100vh)' : 'translateY(-22vh)'
                 }} >
-                <div>
+                <div className="output-content">
                     { show ? 
-                        <OutputClose onClick={outputClose}>
+                        <div onClick={outputClose} className="output-close">
                             ← 
-                        </OutputClose>
+                        </div>
                         :
-                        <Up onClick={{}} >
+                        <div onClick={{}} className="up">
                             ￣ 
-                        </Up>
+                        </div>
                     }
                 </div>
-            </OutputWrapper>
+            </div>
         )
     }
 }
