@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Map from './_Map.jsx';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import styled from 'styled-components';
-import Output from './Output';
 import Window from './Window';
+import Output from './Output';
 import { Route, withRouter } from 'react-router'
 
 const SvgContainer = styled.div`
@@ -75,7 +75,6 @@ class SeoulMap extends Component {
             {/* <Route path="/"> */}
                 <Window />
             {/* </Route> */}
-            <Output/>
             </>
         )
     }

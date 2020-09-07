@@ -1,12 +1,15 @@
+
 .IknowWrap {
     position: absolute;
     width: 50vw;
-    margin-top: 30px;
+    margin-top: 20px;
     z-index: 100;
 }
 @media all and (min-width:0px) and (max-width:1023px) {
     .IknowWrap {
         width: 100vw;
+        font-size: 30px;
+        line-height: 1.3em;
     }
   }
 
@@ -20,12 +23,10 @@
     border: none;
     cursor: pointer;
     outline: none;
-    padding: 0;
-    white-space:nowrap;
 }
 @media all and (min-width:0px) and (max-width:1023px) {
     .Iknow {
-        font-size: 34px;
+        font-size: 30px;
         line-height: 1.3em;
     }
   }

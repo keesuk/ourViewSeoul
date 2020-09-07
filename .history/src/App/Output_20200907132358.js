@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../CSS/Output.css';
 import '../CSS/index.css';
 
-class Output extends Component {
+class Outpur extends Component {
 
     render() {
         const { show, outputClose } = this.props;   
@@ -26,4 +26,4 @@ class Output extends Component {
     }
 }
 
-export default Output;
+export default Outpur;
