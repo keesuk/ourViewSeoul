@@ -10,7 +10,7 @@ createMuiTheme({
   useNextVariants: true,
   fontFamily: '"Noto Sans KR"'
   }
-});
+  });
 
 ReactDOM.render(
   // <React.StrictMode>

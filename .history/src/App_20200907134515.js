@@ -22,12 +22,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
         <MapDiv>
           <IknowButton />
           <SeoulMap />
         </MapDiv>
-        </Router>
       </>
     );
   }

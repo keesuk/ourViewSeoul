@@ -72,7 +72,7 @@ class SeoulMap extends Component {
                 </React.Fragment>
                 )}
             </TransformWrapper>
-                <Route path="/"><Window /></Route>
+            <Route path="/"><Window /></Route>
             <Output/>
             </>
         )
