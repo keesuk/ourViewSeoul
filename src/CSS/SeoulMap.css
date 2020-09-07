@@ -14,8 +14,13 @@
       position: relative;
       width: 100vw;
       height: 50vh;
+<<<<<<< HEAD
+      margin-top: 20vh;
+      margin-bottom: 30vh;
+=======
       margin-top: 14vh;
       margin-bottom: 32vh;
+>>>>>>> master
       max-width:100%;
     }
   }
@@ -23,12 +28,6 @@
   .svg-content-responsive {
     display: inline-block;
     position: absolute;
-  }
-  
-  .station-text {
-    text-shadow: 0 0 #000; /* horizontal-offset vertical-offset 'blur' colour */
-    font-size: 7px;
-    font-weight: 900;
   }
 
     

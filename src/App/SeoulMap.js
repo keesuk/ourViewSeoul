@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
-import { csv } from 'd3';
-import '../CSS/SeoulMap.css';
-import seoulPlace from '../data/seoul.csv';
+import Map from './_Map.jsx';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+<<<<<<< HEAD
+import styled from 'styled-components';
+=======
 import Output from './Output';
+>>>>>>> master
 import Window from './Window';
+import { Route, withRouter } from 'react-router'
 
-const width = 1280;
-const height = 1280;
+const SvgContainer = styled.div`
+    display: inline-block;
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 10vh;
+    margin-bottom: 40vh;
+
+    @media all and (min-width:0px) and (max-width:1023px) {
+        display: inline-block;
+        position: relative;
+        width: 100vw;
+        height: 50vh;
+        margin-top: 20vh;
+        margin-bottom: 30vh;
+        max-width:100%;
+    }
+`;
 
 class SeoulMap extends Component {
     constructor(props){
@@ -17,14 +36,12 @@ class SeoulMap extends Component {
             winShow : false,
             outShow : false,
             wheelValue : 2,
+            text : '',
         }
         this.updateDimensions = this.updateDimensions.bind(this);
     }
     
     componentDidMount() {
-        csv(seoulPlace).then( (data) => {
-            this.setState( {data} )
-        })
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions);
     }
@@ -32,6 +49,8 @@ class SeoulMap extends Component {
         window.removeEventListener("resize", this.updateDimensions);
     }
 
+<<<<<<< HEAD
+=======
     windowOn = () => {
         this.setState({ winShow: true })
     }
@@ -39,6 +58,7 @@ class SeoulMap extends Component {
         this.setState({ winShow: false })
     }
 
+>>>>>>> master
     updateDimensions() {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
@@ -46,15 +66,12 @@ class SeoulMap extends Component {
     }
 
     render() { 
-        const { data } = this.state;
         const { wheelValue } = this.state;
 
         return (
             <>
             <TransformWrapper 
                 defaultScale={1}
-                defaultPositionX={width}
-                defaultPositionY={height}
                 wheel={{
                     step: wheelValue,
                 }}
@@ -62,31 +79,25 @@ class SeoulMap extends Component {
                 {({ resetTransform, ...rest }) => (
                 <React.Fragment>
                     <TransformComponent>
-                    <div className="svg-container">
-                        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 1280" className="svg-content-responsive">
-                            {data.map( (d, i) => 
-                                <text
-                                    className="station-text"
-                                    onClick={() => this.windowOn()}
-                                    key={i} 
-                                    width={10}
-                                    height={5}
-                                    x={d.xCor}
-                                    y={height - d.yCor}
-                                > {d.station}
-                                </text>
-                            )}
-                        </svg>
-                    </div>
+                        <SvgContainer>
+                            <Map />
+                        </SvgContainer>
                     </TransformComponent>
                 </React.Fragment>
                 )}
             </TransformWrapper>
+<<<<<<< HEAD
+            <Route path="/">
+                <Window />
+            </Route>
+=======
             <Window show={this.state.winShow} windowClose={this.windowClose}/>
             <Output />
+>>>>>>> master
             </>
         )
     }
 }
+
 
 export default SeoulMap;   
