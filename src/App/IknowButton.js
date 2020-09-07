@@ -75,14 +75,23 @@ class IknowButton extends Component {
     
     render() {
         return(
+<<<<<<< HEAD
             <IknowWrapDiv>
                 <IknowBtn onClick={this.intro}>
+=======
+            <div className="IknowWrap">
+                <div className="Iknow" onClick={this.intro}>
+>>>>>>> master
                 {this.state.ButtonOn ? 
                     <div>저는 여기 조금 알아요.</div>
                     : 
                     <div>저는 여기 조금 알아요.</div>
                 }
+<<<<<<< HEAD
                 </IknowBtn>
+=======
+                </div>
+>>>>>>> master
                 {this.state.ButtonOn ? 
                     <IknowExplainDiv>잘 아는 지역이 있나요? 그 곳을 클릭해서 저에게 알려주세요.</IknowExplainDiv>
                     : 
