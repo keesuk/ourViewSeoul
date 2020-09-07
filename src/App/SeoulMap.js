@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Map from './_Map.jsx';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+<<<<<<< HEAD
 import styled from 'styled-components';
+=======
+import Output from './Output';
+>>>>>>> master
 import Window from './Window';
 import { Route, withRouter } from 'react-router'
 
@@ -29,7 +33,8 @@ class SeoulMap extends Component {
         super(props);
         this.state = {
             data : [],
-            show : false,
+            winShow : false,
+            outShow : false,
             wheelValue : 2,
             text : '',
         }
@@ -44,6 +49,16 @@ class SeoulMap extends Component {
         window.removeEventListener("resize", this.updateDimensions);
     }
 
+<<<<<<< HEAD
+=======
+    windowOn = () => {
+        this.setState({ winShow: true })
+    }
+    windowClose = () => {
+        this.setState({ winShow: false })
+    }
+
+>>>>>>> master
     updateDimensions() {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
@@ -71,9 +86,14 @@ class SeoulMap extends Component {
                 </React.Fragment>
                 )}
             </TransformWrapper>
+<<<<<<< HEAD
             <Route path="/">
                 <Window />
             </Route>
+=======
+            <Window show={this.state.winShow} windowClose={this.windowClose}/>
+            <Output />
+>>>>>>> master
             </>
         )
     }
