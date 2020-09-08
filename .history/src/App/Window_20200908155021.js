@@ -9,7 +9,7 @@ class Window extends Component {
         const { show, windowClose } = this.props;   
         return(
             <div className="window-wrapper" style={{ 
-                transform: show ? 'translateY(-90vh)' : 'translateY(0vh)',
+                transform: show ? 'translateY(10vh)' : 'translateY(0vh)',
                 }} >
                 <div className="window-content">
                     <div onClick={windowClose} className="close">

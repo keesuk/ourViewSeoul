@@ -14,8 +14,8 @@ class SeoulMap extends Component {
         super(props);
         this.state = {
             data : [],
-            winShow : true,
-            outShow : true,
+            winShow : false,
+            outShow : false,
             wheelValue : 2,
         }
         this.updateDimensions = this.updateDimensions.bind(this);
@@ -32,12 +32,12 @@ class SeoulMap extends Component {
         window.removeEventListener("resize", this.updateDimensions);
     }
 
-    // windowOn = () => {
-    //     this.setState({ winShow: true })
-    // }
-    // windowClose = () => {
-    //     this.setState({ winShow: false })
-    // }
+    windowOn = () => {
+        this.setState({ winShow: true })
+    }
+    windowClose = () => {
+        this.setState({ winShow: false })
+    }
 
     updateDimensions() {
         if(window.innerWidth < 1023) {
