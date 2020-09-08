@@ -3,11 +3,11 @@ import * as d3 from 'd3';
 import styled from 'styled-components';
 import Worker from 'worker-loader!./Worker.js'; // eslint-disable-line import/no-webpack-loader-syntax
 
-const width = 900;
+const width = 400;
 
 const SvgImg = styled.canvas`
     width = 100%;
-    object-fit: contain;
+    height = 100%;
 `;
 
 class Img extends Component {
@@ -63,7 +63,7 @@ class Img extends Component {
     render() {
         
         return (
-             <SvgImg viewBox="0 0 1280 1280" width={1280} height={1280} ref="canvas" />
+             <SvgImg width={width} height={width} ref="canvas" />
         );
     }
 }

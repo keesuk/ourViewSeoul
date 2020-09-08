@@ -33,7 +33,8 @@ class Window extends Component {
                         이 곳은 요런 것들이 생각나요.
                     </div>
                         <Img 
-                            className="img-stations" src={require('../data/search.pstatic.jpg')}
+                            className="img-stations" 
+                            src={require('../data/search.pstatic.jpg')}
                         />
                     <div className="input">
                         완료
