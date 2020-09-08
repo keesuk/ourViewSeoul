@@ -19,8 +19,8 @@ class Window extends Component {
         return(
             <div className="window-wrapper" style={{ 
                 transform: show ? 'translateY(-100vh)' : 'translateY(10vh)',
-                width: show ? '100vw' : '80vw',
-                boxShadow: show ? '10px -10px black' : '0px 0px 0px black'
+                width: show ? '100vw' : '85vw',
+                boxShadow: show ? '0px -5px black' : '0px 0px 0px black'
                 }} >
                 <div className="window-content">
                     <div onClick={this.goBack} className="close" >
@@ -32,13 +32,13 @@ class Window extends Component {
                     <div className="answer">
                         이 곳은 요런 것들이 생각나요.
                     </div>
-                        <Img 
+                        {/* <Img 
                             className="img-stations" 
                             src={require('../data/search.pstatic.jpg')}
                         />
                     <div className="input">
                         완료
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

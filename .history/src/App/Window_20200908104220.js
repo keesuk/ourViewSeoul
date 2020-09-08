@@ -32,13 +32,13 @@ class Window extends Component {
                     <div className="answer">
                         이 곳은 요런 것들이 생각나요.
                     </div>
-                        <Img 
+                        {/* <Img 
                             className="img-stations" 
                             src={require('../data/search.pstatic.jpg')}
                         />
                     <div className="input">
                         완료
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

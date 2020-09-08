@@ -56,7 +56,7 @@ class Img extends Component {
       
     render() {
         return (
-             <canvas width={1280} height={1280} ref="canvas" />
+             <canvas width={1280} height={1280} style="width:100%;" ref="canvas" />
         );
     }
 }
