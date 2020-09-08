@@ -61,9 +61,9 @@ class Img extends Component {
     }
       
     render() {
-        
+        const { width, height } = this.state
         return (
-             <SvgImg viewBox="0 0 1280 1280" width={1280} height={1280} ref="canvas" />
+             <SvgImg width={width} height={widht} ref="canvas" />
         );
     }
 }

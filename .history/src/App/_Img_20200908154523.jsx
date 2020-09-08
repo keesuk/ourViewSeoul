@@ -63,7 +63,7 @@ class Img extends Component {
     render() {
         
         return (
-             <SvgImg viewBox="0 0 1280 1280" width={1280} height={1280} ref="canvas" />
+             <SvgImg width={1280} height={1280} ref="canvas" />
         );
     }
 }

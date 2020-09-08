@@ -7,7 +7,7 @@ const width = 900;
 
 const SvgImg = styled.canvas`
     width = 100%;
-    object-fit: contain;
+    height = 100%;
 `;
 
 class Img extends Component {
@@ -61,9 +61,8 @@ class Img extends Component {
     }
       
     render() {
-        
         return (
-             <SvgImg viewBox="0 0 1280 1280" width={1280} height={1280} ref="canvas" />
+             <canvas width={1280} height={1280} ref="canvas" />
         );
     }
 }
