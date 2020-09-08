@@ -36,14 +36,6 @@ class Window extends Component {
                             className="img-stations" 
                             src={require('../data/search.pstatic.jpg')}
                         />
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
                     <div className="input">
                         완료
                     </div>

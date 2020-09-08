@@ -19,7 +19,7 @@ class Window extends Component {
         return(
             <div className="window-wrapper" style={{ 
                 transform: show ? 'translateY(-100vh)' : 'translateY(10vh)',
-                width: show ? '99vw' : '80vw',
+                width: show ? '98vw' : '80vw',
                 boxShadow: show ? '10px -10px black' : '0px 0px 0px black'
                 }} >
                 <div className="window-content">
@@ -27,19 +27,11 @@ class Window extends Component {
                         ← 
                     </div>
                     <div className="computer">
-                        오, 어떤 곳인데요?
+                        오.. 어떤 곳인데요?
                     </div>
                     <div className="answer">
-                        저 이곳 알아요!
+                        이 곳은 요런 것들이 생각나요.
                     </div>
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
                         <Img 
                             className="img-stations" 
                             src={require('../data/search.pstatic.jpg')}

@@ -27,19 +27,11 @@ class Window extends Component {
                         ← 
                     </div>
                     <div className="computer">
-                        오, 어떤 곳인데요?
+                        오.. 어떤 곳인데요?
                     </div>
                     <div className="answer">
-                        저 이곳 알아요!
+                        나 이곳 알아요!
                     </div>
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
-                        <Img 
-                            className="img-stations" 
-                            src={require('../data/search.pstatic.jpg')}
-                        />
                         <Img 
                             className="img-stations" 
                             src={require('../data/search.pstatic.jpg')}

@@ -72,13 +72,14 @@
 
 .input {
     position: relative;
-    text-align: center;
+    vertical-align: center;
     line-height: 1.3em;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     color: black;
     letter-spacing: 0em;
     cursor: pointer;
+    outline: none;
     margin-top: 30px;
     margin-bottom: 100px;
 }
