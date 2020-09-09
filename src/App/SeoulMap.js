@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Map from './_Map.jsx';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-<<<<<<< HEAD
 import styled from 'styled-components';
-=======
-import Output from './Output';
->>>>>>> master
 import Window from './Window';
-import { Route, withRouter } from 'react-router'
+import IknowButton from './IknowButton';
+import Output from './Output';
+import { csv } from 'd3';
+import csvCor from '../data/seoul.csv';
+import { Route, withRouter } from 'react-router-dom'
 
 const SvgContainer = styled.div`
     display: inline-block;
@@ -28,48 +28,51 @@ const SvgContainer = styled.div`
     }
 `;
 
-class SeoulMap extends Component {
+class SeoulMap extends PureComponent {
     constructor(props){
         super(props);
         this.state = {
             data : [],
-            winShow : false,
-            outShow : false,
+            imgShow : false,
             wheelValue : 2,
-            text : '',
+            station : ':station',
         }
-        this.updateDimensions = this.updateDimensions.bind(this);
+        this._updateDimensions = this._updateDimensions.bind(this);
     }
     
     componentDidMount() {
-        this.updateDimensions();
-        window.addEventListener("resize", this.updateDimensions);
+        csv(csvCor).then( (data) => {
+            this.setState( {data} )
+        })
+        this._updateDimensions();
+        window.addEventListener("resize", this._updateDimensions);
     }
     componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
+        window.removeEventListener("resize", this._updateDimensions);
     }
-
-<<<<<<< HEAD
-=======
-    windowOn = () => {
-        this.setState({ winShow: true })
-    }
-    windowClose = () => {
-        this.setState({ winShow: false })
-    }
-
->>>>>>> master
-    updateDimensions() {
+    _updateDimensions() {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
         } 
     }
 
+    componentDidUpdate() {
+        const station = this.props.match.params.station;
+
+        if (this.state.station !== station) {
+            this._windowOpener(station)
+        } 
+    }
+
+    _windowOpener(station) {
+        this.setState({station: station, imgShow: !this.state.imgShow} )
+    }
     render() { 
-        const { wheelValue } = this.state;
+        const { data, wheelValue, imgShow, station } = this.state;
 
         return (
             <>
+            <IknowButton />
             <TransformWrapper 
                 defaultScale={1}
                 wheel={{
@@ -86,18 +89,11 @@ class SeoulMap extends Component {
                 </React.Fragment>
                 )}
             </TransformWrapper>
-<<<<<<< HEAD
-            <Route path="/">
-                <Window />
-            </Route>
-=======
-            <Window show={this.state.winShow} windowClose={this.windowClose}/>
-            <Output />
->>>>>>> master
+            <Window data={data} show={imgShow} station={station}/>
+            <Output imgShow={imgShow}/>
             </>
         )
     }
 }
 
-
-export default SeoulMap;   
+export default withRouter(SeoulMap);   
