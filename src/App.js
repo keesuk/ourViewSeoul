@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SeoulMap from './App/SeoulMap.js';
-import IknowButton from './App/IknowButton';
+import SeoulMap from './App/SeoulMap';
 import styled from 'styled-components';
+import {BrowserRouter, Route, Redirect} from 'react-router-dom'
 
 const MapDiv = styled.div`
 
@@ -16,15 +16,17 @@ const MapDiv = styled.div`
   }
 `;
 
+
 class App extends Component {
 
   render() {
     return (
       <>
+        <BrowserRouter>
         <MapDiv>
-          <IknowButton />
-          <SeoulMap />
+          <Route path='/:station' component={SeoulMap}></Route>
         </MapDiv>
+        </BrowserRouter>
       </>
     );
   }

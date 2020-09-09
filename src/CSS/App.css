@@ -1,5 +1,4 @@
 .map{
-  position: relative;
   width: 50vw;
   box-sizing: border-box;
   border-right: 1.5px solid black;
@@ -9,16 +8,5 @@
     width: 100vw;
     box-sizing: none;
     border-right: none;
-  }
-}
-
-.poster{
-  position: relative;
-  width: 50vw;
-  box-sizing: border-box;
-}
-@media all and (min-width:0px) and (max-width:1023px) {
-  .poster{
-    width: 100vw;
   }
 }

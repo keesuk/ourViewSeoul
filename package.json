@@ -10,28 +10,14 @@
     "@testing-library/user-event": "^7.1.2",
     "d3": "^5.16.0",
     "d3-delaunay": "^5.3.0",
-<<<<<<< HEAD
-=======
-    "d3-geo": "^1.12.1",
-    "d3-geo-projection": "^2.9.0",
-    "d3-scale": "^3.2.1",
-    "d3.canvas": "^0.1.0",
-    "elliptic": "^6.5.3",
->>>>>>> master
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-zoom-pan-pinch": "^1.6.1",
-<<<<<<< HEAD
     "start": "^5.1.0",
     "styled-components": "^5.1.1"
-=======
-    "serialize-javascript": "^4.0.0",
-    "stackblur-canvas": "^2.3.0",
-    "start": "^5.1.0",
-    "websocket-extensions": "^0.1.4"
->>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
