@@ -57,10 +57,10 @@ class SeoulMap extends PureComponent {
             this._windowOpener(station)
         } 
     }
+
     _windowOpener(station) {
         this.setState({station: station, imgShow: !this.state.imgShow} )
     }
-    
     render() { 
         const { wheelValue, imgShow, station } = this.state;
 

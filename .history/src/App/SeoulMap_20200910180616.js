@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Window from './Window';
 import IknowButton from './IknowButton';
 import Output from './Output';
+import csvCor from '../data/seoul.csv';
 import { Route, withRouter } from 'react-router-dom'
 
 const SvgContainer = styled.div`
@@ -30,6 +31,7 @@ class SeoulMap extends PureComponent {
     constructor(props){
         super(props);
         this.state = {
+            data : [],
             imgShow : false,
             wheelValue : 2,
             station : ':station',
@@ -57,12 +59,12 @@ class SeoulMap extends PureComponent {
             this._windowOpener(station)
         } 
     }
+
     _windowOpener(station) {
         this.setState({station: station, imgShow: !this.state.imgShow} )
     }
-    
     render() { 
-        const { wheelValue, imgShow, station } = this.state;
+        const { data, wheelValue, imgShow, station } = this.state;
 
         return (
             <>
@@ -83,7 +85,7 @@ class SeoulMap extends PureComponent {
                 </React.Fragment>
                 )}
             </TransformWrapper>
-            <Window show={imgShow} station={station}/>
+            <Window data={data} show={imgShow} station={station}/>
             <Output imgShow={imgShow}/>
             </>
         )
