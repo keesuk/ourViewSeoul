@@ -23,11 +23,10 @@ class Img extends Component {
             const height = Math.round(width * image.height / image.width);
             const context = this.refs.canvas.getContext('2d');
             context.drawImage(image, 0, 0, image.width, image.height, 0, 0, width, height);
-            console.log(context.getImageData(0, 0, width, height))
             const {data: rgba} = context.getImageData(0, 0, width, height);
             const data = new Float64Array(width * height);
             for (let i = 0, n = rgba.length / 4; i < n; ++i) {
-                data[i] = Math.max(0, 1 - rgba[i * 4] / 200)
+                data[i] = Math.max(0, 1 - rgba[i * 4] / 240)
             };
             this.setState({ width, height, data })
             this.updateCanvas();
@@ -37,7 +36,7 @@ class Img extends Component {
     updateCanvas() {
         const { width, height, data, clickValue } = this.state
         const context = this.refs.canvas.getContext('2d');
-        const n = Math.round(width * height / 40)
+        const n = Math.round(width * height / )
 
         function messaged({ data: points}) {
             context.fillStyle = "#fff";

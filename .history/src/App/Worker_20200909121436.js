@@ -46,6 +46,6 @@ onmessage = event => {
     postMessage(points);
     voronoi.update();
   }
-  
+
   close();
 };

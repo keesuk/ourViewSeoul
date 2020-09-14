@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
+import Value from '../data/value.csv'
 import Worker from 'worker-loader!./Worker'; // eslint-disable-line import/no-webpack-loader-syntax
 
 const width = 600;
   
 class Img extends Component {
     state = {
-            width : null,
             height : null,
             data : [],
             clickValue : .6,
@@ -29,13 +29,13 @@ class Img extends Component {
             for (let i = 0, n = rgba.length / 4; i < n; ++i) {
                 data[i] = Math.max(0, 1 - rgba[i * 4] / 200)
             };
-            this.setState({ width, height, data })
+            this.setState({ height, data })
             this.updateCanvas();
         })
     }
 
     updateCanvas() {
-        const { width, height, data, clickValue } = this.state
+        const { height, data, clickValue } = this.state
         const context = this.refs.canvas.getContext('2d');
         const n = Math.round(width * height / 40)
 

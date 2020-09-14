@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import Worker from 'worker-loader!./Worker'; // eslint-disable-line import/no-webpack-loader-syntax
 
-const width = 600;
+const width = 500;
   
 class Img extends Component {
     state = {

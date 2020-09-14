@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import Worker from 'worker-loader!./Worker'; // eslint-disable-line import/no-webpack-loader-syntax
 
-const width = 600;
+const width = 400;
   
 class Img extends Component {
     state = {
@@ -23,11 +23,10 @@ class Img extends Component {
             const height = Math.round(width * image.height / image.width);
             const context = this.refs.canvas.getContext('2d');
             context.drawImage(image, 0, 0, image.width, image.height, 0, 0, width, height);
-            console.log(context.getImageData(0, 0, width, height))
             const {data: rgba} = context.getImageData(0, 0, width, height);
             const data = new Float64Array(width * height);
             for (let i = 0, n = rgba.length / 4; i < n; ++i) {
-                data[i] = Math.max(0, 1 - rgba[i * 4] / 200)
+                data[i] = Math.max(0, 1 - rgba[i * 4] / 220)
             };
             this.setState({ width, height, data })
             this.updateCanvas();

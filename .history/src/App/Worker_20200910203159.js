@@ -9,7 +9,7 @@ onmessage = event => {
   // Initialize the points using rejection sampling.
   for (let i = 0; i < n; ++i) {
     for (let j = 0; j < 30; ++j) {
-      const x = points[i * 2] = Math.floor(Math.random() * width);
+      const x = points[i * 10] = Math.floor(Math.random() * width);
       const y = points[i * 2 + 1] = Math.floor(Math.random() * height);
       if (Math.random() < data[y * width + x]) break;
     }
@@ -46,6 +46,6 @@ onmessage = event => {
     postMessage(points);
     voronoi.update();
   }
-  
+
   close();
 };
