@@ -28,14 +28,15 @@
 
 .window-header {
     position: sticky;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
     top: 0;
 }
+@media all and (min-width:0px) and (max-width:1023px) {
+    .window-header {
+    }
+  }
 
 .header-content {
     margin: 0 40px;
-    height: 18vh;
 }
 @media all and (min-width:0px) and (max-width:1023px) {
     .header-content {
@@ -43,7 +44,7 @@
     }
   }
 
-.header-close {
+.content-close {
     position: relative;
     font-size: 50px;
     font-weight: 600;
@@ -57,10 +58,10 @@
     padding-bottom: 36px;
 }
 @media all and (min-width:0px) and (max-width:1023px) {
-    .header-close {
+    .content-close {
         font-size: 36x;
         padding-top: 0px;
-        padding-bottom: 5px;
+        padding-bottom: 20px;
     }
   }
 
@@ -73,14 +74,14 @@
     }
   }
 
-.content-computer {
+.content-answer {
     padding-bottom: 20px;
     font-size: 40px;
     font-weight: 900;
     margin-left: -2px;
 }
 @media all and (min-width:0px) and (max-width:1023px) {
-    .content-computer {
+    .content-answer {
         font-size: 28px;
         letter-spacing: 0px;
         margin-left: 0px;
@@ -93,7 +94,7 @@
 }
 
 .content-input {
-    position: sticky;
+    position: relative;
     text-align: center;
     line-height: 1.3em;
     font-size: 24px;
@@ -101,6 +102,6 @@
     color: black;
     letter-spacing: 0em;
     cursor: pointer;
-    background-color: white;
-    bottom: 110px
+    margin-top: 30px;
+    margin-bottom: 100px;
 }

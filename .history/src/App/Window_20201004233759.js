@@ -16,6 +16,7 @@ class Window extends PureComponent {
         this.state = {
             stationDatas : [],
             show : false,
+            ok : 0,
             okArray : []
         }
         this.goBack = this.goBack.bind(this);
@@ -41,14 +42,18 @@ class Window extends PureComponent {
     }
 
     handleOk(childOk) {
-        this.setState(state => ({
-            okArray: [...state.okArray, childOk]
+        this.setState(prev=>({ok : prev.ok + childOk}))
+
+        this.setState(state=> ({
+            okArray: [...state.okArray, this.state.ok]
         }))
     }
 
 
     render(){
-        const { stationDatas, show, okArray } = this.state;
+        const { stationDatas, show, ok, okArray } = this.state;
+        console.log(ok)
+        console.log(okArray)
 
         return(
             <div className="window-wrapper" style={{ 
@@ -62,7 +67,7 @@ class Window extends PureComponent {
                         <div>
                             {stationDatas.map((stationData, i) =>
                                 stationData && stationData.station === '불광' 
-                                ? <Circle key={i} on={okArray.filter(value => value === i)}/> 
+                                ? <Circle key={i}/> 
                                 :(stationData && stationData.station === '망원' 
                                 ? <Rectangular key={i}/> 
                                 :(stationData && stationData.station === '합정' 
@@ -75,18 +80,17 @@ class Window extends PureComponent {
                     </div>
                 </header>
                 <div className="window-content">
-                    <div className="content-computer">
+                    <div className="content-answer">
                         아는 만큼 눌러보세요!
                     </div>
                         { stationDatas[0] && stationDatas[0].locationData
-                            ? stationDatas.map((stationData,i) =>  
+                            ? stationDatas.map(stationData =>  
                                 <Img 
                                     key={stationData && stationData.locationName} 
                                     points={stationData && stationData.locationData}
                                     onOk={this.handleOk}
-                                    chilcOk={i}
                                     locationId={locationTagId}
-                                    className="img-stations"                            
+                                    className="img-stations"
                                 />)
                             : null }
                     <div className="content-input">

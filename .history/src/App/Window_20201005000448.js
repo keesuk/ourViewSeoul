@@ -49,6 +49,7 @@ class Window extends PureComponent {
 
     render(){
         const { stationDatas, show, okArray } = this.state;
+        const ok = okArray.filter((value) => value)
 
         return(
             <div className="window-wrapper" style={{ 
@@ -62,7 +63,7 @@ class Window extends PureComponent {
                         <div>
                             {stationDatas.map((stationData, i) =>
                                 stationData && stationData.station === '불광' 
-                                ? <Circle key={i} on={okArray.filter(value => value === i)}/> 
+                                ? <Circle key={i} on={ok === i ? true : false} /> 
                                 :(stationData && stationData.station === '망원' 
                                 ? <Rectangular key={i}/> 
                                 :(stationData && stationData.station === '합정' 

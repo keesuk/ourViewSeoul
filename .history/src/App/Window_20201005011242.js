@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import Img from './Img';
-import { Circle, Triangle, Rhombus, Ellipse, Rectangular } from './_Diagram.jsx';
+import { Circle } from './_Diagram.jsx';
 import '../CSS/Window.css';
 
 const API = axios.create({

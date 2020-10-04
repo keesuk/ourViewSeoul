@@ -8,7 +8,6 @@ import '../CSS/Window.css';
 const API = axios.create({
     baseURL: 'https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/station_image_data/station_image/'
 })
-const locationTagId = 1;
 
 class Window extends PureComponent {
     constructor(props){
@@ -16,7 +15,7 @@ class Window extends PureComponent {
         this.state = {
             stationDatas : [],
             show : false,
-            okArray : []
+            ok : 0,
         }
         this.goBack = this.goBack.bind(this);
         this.show = this.show.bind(this);
@@ -24,7 +23,7 @@ class Window extends PureComponent {
         this.getLocation();
     }
 
-    
+
     getLocation = async() => {
         let data = await API.get('/'+ this.props.station).then(({data}) => data);
         this.setState({ stationDatas : data.list })
@@ -41,14 +40,12 @@ class Window extends PureComponent {
     }
 
     handleOk(childOk) {
-        this.setState(state => ({
-            okArray: [...state.okArray, childOk]
-        }))
+        this.setState(prev => ({ok : prev.ok + childOk}));
     }
 
 
     render(){
-        const { stationDatas, show, okArray } = this.state;
+        const { stationDatas, show } = this.state;
 
         return(
             <div className="window-wrapper" style={{ 
@@ -62,7 +59,7 @@ class Window extends PureComponent {
                         <div>
                             {stationDatas.map((stationData, i) =>
                                 stationData && stationData.station === '불광' 
-                                ? <Circle key={i} on={okArray.filter(value => value === i)}/> 
+                                ? <Circle key={i}/> 
                                 :(stationData && stationData.station === '망원' 
                                 ? <Rectangular key={i}/> 
                                 :(stationData && stationData.station === '합정' 
@@ -75,18 +72,17 @@ class Window extends PureComponent {
                     </div>
                 </header>
                 <div className="window-content">
-                    <div className="content-computer">
+                    <div className="content-answer">
                         아는 만큼 눌러보세요!
                     </div>
                         { stationDatas[0] && stationDatas[0].locationData
-                            ? stationDatas.map((stationData,i) =>  
+                            ? stationDatas.map(stationData =>  
                                 <Img 
                                     key={stationData && stationData.locationName} 
                                     points={stationData && stationData.locationData}
                                     onOk={this.handleOk}
-                                    chilcOk={i}
                                     locationId={locationTagId}
-                                    className="img-stations"                            
+                                    className="img-stations"
                                 />)
                             : null }
                     <div className="content-input">

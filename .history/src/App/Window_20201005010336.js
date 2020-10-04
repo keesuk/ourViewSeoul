@@ -16,7 +16,7 @@ class Window extends PureComponent {
         this.state = {
             stationDatas : [],
             show : false,
-            okArray : []
+            okArray : null,
         }
         this.goBack = this.goBack.bind(this);
         this.show = this.show.bind(this);

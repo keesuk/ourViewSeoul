@@ -10,6 +10,15 @@ const API = axios.create({
 })
 const locationTagId = 1;
 
+function filterByIndex(value, i) {
+    if(value === i){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 class Window extends PureComponent {
     constructor(props){
         super(props);
@@ -62,7 +71,7 @@ class Window extends PureComponent {
                         <div>
                             {stationDatas.map((stationData, i) =>
                                 stationData && stationData.station === '불광' 
-                                ? <Circle key={i} on={okArray.filter(value => value === i)}/> 
+                                ? <Circle key={i} on={okArray.filter(value => filterByIndex(value, i))}/> 
                                 :(stationData && stationData.station === '망원' 
                                 ? <Rectangular key={i}/> 
                                 :(stationData && stationData.station === '합정' 

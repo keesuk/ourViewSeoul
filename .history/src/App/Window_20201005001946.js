@@ -62,7 +62,7 @@ class Window extends PureComponent {
                         <div>
                             {stationDatas.map((stationData, i) =>
                                 stationData && stationData.station === '불광' 
-                                ? <Circle key={i} on={okArray.filter(value => value === i)}/> 
+                                ? <Circle key={i} /> 
                                 :(stationData && stationData.station === '망원' 
                                 ? <Rectangular key={i}/> 
                                 :(stationData && stationData.station === '합정' 
