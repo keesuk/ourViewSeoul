@@ -14,7 +14,6 @@ const TriangleDiv = styled.div`
 export class Triangle extends React.PureComponent {
     render() {
         const on = this.props.on
-        console.log(on)
         return(
             <>
             <TriangleDiv
