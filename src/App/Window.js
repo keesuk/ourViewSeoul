@@ -8,7 +8,7 @@ import '../CSS/Window.css';
 const API = axios.create({
     baseURL: 'https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/station_image_data/station_image/'
 })
-const locationTagId = '1';
+const locationTagId = '0';
 const passLimit = 3; //5번
 const textLimit = 6;
 const scrollLimit = 1300;

@@ -24,6 +24,7 @@ const IknowBtn = styled.button`
     font-weight: 900;
     background-color: transparent;
     border: none;
+    cursor: pointer;
     outline: none;
     padding: 0;
     white-space:nowrap;
@@ -45,7 +46,6 @@ const IknowExplainDiv = styled.div`
     border: 1.5px solid black;
     background-color: white;
     left: 50%;
-    cursor: pointer;
     transform: translateX(-50%);
     
     @media all and (min-width:0px) and (max-width:1023px) {
@@ -59,55 +59,60 @@ const IknowExplainDiv = styled.div`
 
 class IknowButton extends PureComponent {
     state = { 
-        buttonOn : false,
+        ButtonOn : false,
         choose : null,
     }
 
-
     componentDidUpdate() {
-        if( this.state.buttonOn === false){
+        if( this.state.ButtonOn === false){
             clearTimeout(this.timeout)
             clearInterval(this.interval)
             this.setState({choose: null})
-            i = 0
+        }else if( this.state.ButtonOn === true ){
+            this.timeout = setTimeout( ()=> {
+                this.setState({ButtonOn: false})
+            }, 2000);
         }
     }
 
     intro = () => {
-        this.setState(state => ({buttonOn: !state.buttonOn}))
-        this.props.sendButtonOn(true)
-        this.interval = setInterval(()=>{
-            this.setState({choose : this.change(colorList)})
-        }, 300)
-        this.timeout = setTimeout( ()=> {
-            this.setState({buttonOn: false})
-            this.props.sendButtonOn(false)
-        }, 2000)
-    }
-
-    change = (items) => {
-        i = (i+1) % items.length
-        return items[i]
-    }
+        if(this.state.choose === null){
+            this.interval = setInterval(()=>{
+                this.setState({choose : change(colorList)})
+            }, 500);
+        }else{
+            clearInterval(this.interval)
+            this.setState({choose: null})
+        }
+        this.setState(state => ({ButtonOn: !state.ButtonOn}))
+    };
+    
     
     render() {
+        // console.log(this.state.choose)
+        // console.log(this.state.ButtonOn)
+        // console.log(this.interval)
         return(
             <IknowWrapDiv>
-                {this.state.buttonOn 
-                    ? <IknowBtn
-                        style={{ pointerEvents : 'none'}}>
-                        <div>혹시 여기 알아요?
-                            <Pin choose={this.state.choose} width={32} height={39}/>
-                        </div>
-                    </IknowBtn>
-                    : <IknowBtn 
-                        onClick={this.intro}>
-                        <div>혹시 여기 알아요?
-                            <Pin choose={colorList[0]} width={32} height={39}/>
-                        </div>
-                    </IknowBtn>
-                    }
-                {this.state.buttonOn 
+                <IknowBtn onClick={this.intro}>
+                {this.state.ButtonOn 
+                    ? <div>혹시 여기 알아요?
+                        <Pin
+                            choose={this.state.choose}
+                            width={32}
+                            height={39}
+                        />
+                    </div>
+                    : <div>혹시 여기 알아요?
+                        <Pin
+                            choose={colorList[0]}
+                            width={32}
+                            height={39}
+                        />
+                    </div>
+                }
+                </IknowBtn>
+                {this.state.ButtonOn 
                     ? <IknowExplainDiv>잘 아는 지역이 있나요? 그 곳을 클릭해서 저에게 알려주세요.</IknowExplainDiv>
                     : <div/>
                 } 
@@ -117,3 +122,8 @@ class IknowButton extends PureComponent {
 }
 
 export default IknowButton;
+
+function change(items) {
+    i = (i + 1) % items.length;
+    return items[i]
+}

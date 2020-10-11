@@ -34,18 +34,21 @@ class SeoulMap extends PureComponent {
             imgShow : false,
             wheelValue : 2,
             station : ':station',
+            ask : null,
         }
-        this._updateDimensions = this._updateDimensions.bind(this);
+        this.updateDimensions = this.updateDimensions.bind(this);
+        this.windowOpener = this.windowOpener.bind(this);
+        this.getButtonOn = this.getButtonOn.bind(this);
     }
     
     componentDidMount() {
-        this._updateDimensions();
-        window.addEventListener("resize", this._updateDimensions);
+        this.updateDimensions();
+        window.addEventListener("resize", this.updateDimensions);
     }
     componentWillUnmount() {
-        window.removeEventListener("resize", this._updateDimensions);
+        window.removeEventListener("resize", this.updateDimensions);
     }
-    _updateDimensions() {
+    updateDimensions() {
         if(window.innerWidth < 1023) {
           this.setState({ wheelValue : 140 });
         } 
@@ -55,19 +58,23 @@ class SeoulMap extends PureComponent {
         const station = this.props.match.params.station;
 
         if (this.state.station !== station) {
-            this._windowOpener(station)
+            this.windowOpener(station)
         } 
     }
-    _windowOpener(station) {
+    windowOpener(station) {
         this.setState({station: station, imgShow: !this.state.imgShow} )
     }
+    getButtonOn(value) {
+        console.log(value)
+    }
+
     
     render() { 
         const { wheelValue, imgShow, station } = this.state;
 
         return (
             <>
-            <IknowButton />
+            <IknowButton sendButtonOn={this.getButtonOn}/>
             <TransformWrapper 
                 defaultScale={1}
                 wheel={{

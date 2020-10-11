@@ -115,3 +115,88 @@ export class Ellipse extends React.PureComponent {
         )
     }  
 };
+
+
+const PinSvg = styled.svg`
+    padding-left: 6px;
+`;
+const PinContainer = styled.div`
+    position: relative;
+    display: inline-block;
+`;
+export class Pin extends React.PureComponent {
+    render() {
+        return (
+            <PinContainer>
+            <PinSvg width={this.props.width} height={this.props.height} viewBox='0 -5 70 80' fill="none">
+                <g clipPath="url(#prefix__clip0)">
+                    <path
+                        opacity={0.3}
+                        d={this.props.choose==='red'
+                            ? "M68.9 74.2H3L.1 77.5h68.8v-3.3z" : (this.props.choose==='blue' 
+                            ? "M.571 74.2h65.9l2.9 3.3H.571v-3.3z" : (this.props.choose==='green' 
+                            ? "M68.9 74.3H3L.1 77.6h68.8v-3.3z" : (this.props.choose==='purple' 
+                            ? "M.571 74.2h65.9l2.9 3.3H.571v-3.3z" : "M68.9 74.2H3L.1 77.5h68.8v-3.3z")))}
+                        fill="url(#prefix__paint0_linear)"
+                    />
+                    <path
+                        d={this.props.choose==='red'
+                            ? "M26.7 37.4l3.5 2.6-25 34.4L0 77.8l1.6-6 25.1-34.4z" : (this.props.choose==='blue' 
+                            ? "M42.771 37.4l-3.5 2.6 25 34.4 5.2 3.4-1.6-6-25.1-34.4z" : (this.props.choose==='green' 
+                            ? "M26.7 37.5l3.5 2.6-25 34.4L0 77.9l1.6-6 25.1-34.4z" : (this.props.choose==='purple' 
+                            ? "M42.771 37.4l-3.5 2.6 25 34.4 5.2 3.4-1.6-6-25.1-34.4z" : "M26.7 37.4l3.5 2.6-25 34.4L0 77.8l1.6-6 25.1-34.4z")))}
+                        fill="url(#prefix__paint1_linear)"
+                    />
+                    
+                    {this.props.choose==='red'
+                            ? <path fill="#E20000" d="M39.4 47.4c13.09 0 23.7-10.61 23.7-23.7S52.49 0 39.4 0 15.7 10.61 15.7 23.7s10.61 23.7 23.7 23.7z"/> 
+                    : (this.props.choose==='blue' 
+                            ? <path fill="#087A0D" d="M13.095-.162l50.713 22.599L18.88 55.056 13.095-.162z"/> 
+                    : (this.props.choose==='green' 
+                            ? <path fill="#006CC4" d="M25.116.1H68.9v43.784H25.116z"/> 
+                    : (this.props.choose==='purple' 
+                            ? <path fill="#7B2E8E" d="M6.236 0l34.21 14.355 8.992 35.993L15.23 35.992 6.236 0z"/> 
+                    :  <ellipse rx={16.689} ry={28.97} transform="scale(-1 1) rotate(-32.844 25.414 76.846)" fill="#EFC820"/>)))}
+                </g>
+                <defs>
+                    <linearGradient
+                        id="prefix__paint0_linear"
+                        x1={this.props.choose==='red'? 60.788 : (this.props.choose==='blue' ? 8.683: (this.props.choose==='green' ? 60.788 : (this.props.choose==='purple' ? 8.683 : 60.788)))}
+                        y1={75.863}
+                        x2={this.props.choose==='red'? 17.936 : (this.props.choose==='blue' ? 51.535: (this.props.choose==='green' ? 17.936 : (this.props.choose==='purple' ? 51.535 : 17.936)))}
+                        y2={75.863}
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#fff" />
+                        <stop offset={1} />
+                    </linearGradient>
+                    <linearGradient
+                        id="prefix__paint1_linear"
+                        x1={this.props.choose==='red'? 15.979 : (this.props.choose==='blue' ? 53.492: (this.props.choose==='green' ? 15.979 : (this.props.choose==='purple' ? 53.492 : 15.979)))}
+                        y1={59.527}
+                        x2={this.props.choose==='red'? 13.483 : (this.props.choose==='blue' ? 55.988: (this.props.choose==='green' ? 13.483 : (this.props.choose==='purple' ? 55.988 : 13.483)))}
+                        y2={57.709}
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#313131" />
+                        <stop offset={1} stopColor="#E9E9E9" />
+                    </linearGradient>
+                    <clipPath id="prefix__clip0">
+                        <path
+                            fill="#fff"
+                            transform="matrix(-1 0 0 1 69.753 .567)"
+                            d="M0 0h68.9v77.8H0z"
+                        />
+                    </clipPath>
+                </defs>
+            </PinSvg>
+            </PinContainer>
+        )
+    }
+}
+
+export function randomize(items) {
+    const item = items[Math.floor(Math.random() * items.length)]
+    return item
+}
+

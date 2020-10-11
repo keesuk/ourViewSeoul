@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {randomize} from './_Diagram'
 
 const width  = 500;
 const height = width;
@@ -26,9 +25,10 @@ class Img extends Component {
             finalOn : false,
             ImgProp : [],
         };
-        this.finalCanvas = this.finalCanvas.bind(this);
+        
         this.clickPoint = this.clickPoint.bind(this);
         this.sendCount = this.sendCount.bind(this);
+        this.finalCanvas = this.finalCanvas.bind(this);
     }
 
 
@@ -66,20 +66,32 @@ class Img extends Component {
         }
     }
 
-    finalCanvas() {
-        const ImgProp = this.state.ImgProp
-        const context = this.refs.canvas.getContext('2d')
-        
-        context.fillStyle = 'white'
-        context.fillRect(0, 0, width, height)
+    componentDidUpdate(){
+        if(this.state.count === sendCountLimit){
+            const ImgProp = this.state.ImgProp
+            const context = this.refs.canvas.getContext('2d')
+            context.fillStyle = 'white'
+            context.fillRect(0, 0, width, height)
 
-        context.font = '400px sans'
-        context.textAlign = 'center'
-        context.fillStyle = ImgProp[1]
-        context.fillText(ImgProp[2], 250, 350)
-        context.font = '600 45px Noto Sans KR'
-        context.textAlign = 'center'
-        context.fillText(this.props.locationName, 250, 420)
+            context.save()
+            context.font = '0px sans'
+            context.textAlign = 'center'
+            context.fillStyle = ImgProp[1]
+            context.fillText(ImgProp[2], 250, 350)
+            context.restore()
+
+            context.save()
+            context.font = '400px sans'
+            context.textAlign = 'center'
+            context.fillStyle = ImgProp[1]
+            context.fillText(ImgProp[2], 250, 350)
+            context.restore()
+
+            context.font = '600 45px Noto Sans KR'
+            context.textAlign = 'center'
+            context.fillText(this.props.locationName, 250, 420)
+        }
+
     }
 
     clickPoint() {
@@ -120,6 +132,11 @@ class Img extends Component {
 }
 
 export default Img;
+
+function randomize(items) {
+    const item = items[Math.floor(Math.random() * items.length)]
+    return item
+}
 
 function imgMaker(id, ImgProp, count, context, x, y){
 

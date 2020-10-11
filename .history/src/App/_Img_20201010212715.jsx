@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {randomize} from './_Diagram'
 
 const width  = 500;
 const height = width;
@@ -26,9 +25,10 @@ class Img extends Component {
             finalOn : false,
             ImgProp : [],
         };
-        this.finalCanvas = this.finalCanvas.bind(this);
+        
         this.clickPoint = this.clickPoint.bind(this);
         this.sendCount = this.sendCount.bind(this);
+        this.finalCanvas = this.finalCanvas.bind(this);
     }
 
 
@@ -66,10 +66,9 @@ class Img extends Component {
         }
     }
 
-    finalCanvas() {
+    finalCanvas(){
         const ImgProp = this.state.ImgProp
         const context = this.refs.canvas.getContext('2d')
-        
         context.fillStyle = 'white'
         context.fillRect(0, 0, width, height)
 
@@ -77,9 +76,11 @@ class Img extends Component {
         context.textAlign = 'center'
         context.fillStyle = ImgProp[1]
         context.fillText(ImgProp[2], 250, 350)
+
         context.font = '600 45px Noto Sans KR'
         context.textAlign = 'center'
         context.fillText(this.props.locationName, 250, 420)
+
     }
 
     clickPoint() {
@@ -112,7 +113,7 @@ class Img extends Component {
                 height={height}
                 onClick={this.clickPoint}
                 style={{width:'100%', height:'100%', cursor:'pointer'}} 
-                ref="canvas" 
+                ref={this.canvasRef} 
             />}
             </>
         );
@@ -120,6 +121,11 @@ class Img extends Component {
 }
 
 export default Img;
+
+function randomize(items) {
+    const item = items[Math.floor(Math.random() * items.length)]
+    return item
+}
 
 function imgMaker(id, ImgProp, count, context, x, y){
 
