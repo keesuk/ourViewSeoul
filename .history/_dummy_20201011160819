@@ -1,0 +1,1199 @@
+  
+drawSeoul() {
+
+    const svgCanvas = d3.select(this.refs.canvas)
+        .append("div")
+        .classed("svg-container", true) 
+        .append("svg")
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "0 0 1280 1280")
+        .classed("svg-content-responsive", true)
+    
+    svgCanvas.selectAll("text")
+        .data(dataArray)
+        .enter()
+            .append("text")
+            .classed("text", true)
+            .attr("x", d => { return d.xCor})
+            .attr("y", d => { return height - d.yCor})
+            .text(d => { return d.station})
+            .attr("font-size", "6px")
+} 
+
+const addLineBreaks = string =>
+  string.split('n').map((text, index) => (
+    <React.Fragment key={`${text}-${index}`}>
+      {text}
+      <div/>
+    </React.Fragment>
+));
+
+//---------------------------------------
+
+import * as d3 from 'd3';
+
+const voronoi = d3.voronoi();
+
+const minRadius = 0.5,
+  maxRadius = 3.5;
+
+const radius = d3
+  .scaleLinear()
+  .range([maxRadius, minRadius])
+  .clamp(true);
+
+let iterations = 0;
+
+const quadtree = d3.quadtree();
+
+onmessage = function(event) {
+  const { points, width, height, density, threshold } = event.data;
+
+  voronoi.extent([[0, 0], [width, height]]);
+  radius.domain([0, threshold]);
+  compute();
+
+  function compute() {
+    if (iterations < 12) {
+      voronoi(points)
+        .polygons()
+        .map(d3.polygonCentroid)
+        .forEach(function(centroid, i) {
+          points[i] = [
+            ...centroid,
+            density[width * Math.floor(centroid[1]) + Math.floor(centroid[0])]
+          ];
+          points[i].r = points[i][2] > threshold ? 0 : radius(points[i][2]);
+        });
+    } else if (!shrink(points)) {
+      return;
+    }
+    iterations++;
+    postMessage(points);
+    setTimeout(compute, 0);
+  }
+};
+
+function shrink(points) {
+  if (!quadtree.size()) {
+    quadtree.addAll(points);
+  }
+
+  points.forEach(function(point) {
+    point.shrink = false;
+    quadtree.visit(function(node, x0, y0, x1, y1) {
+      if (
+        point.shrink ||
+        (!node.data &&
+          (node.x0 > point[0] + point.r ||
+            node.x1 < point[0] - point.r ||
+            (node.y0 > point[1] + point.r || node.y1 < point[1] - point.r)))
+      ) {
+        return true;
+      }
+      if (node.data && node.data !== point) {
+        const diff = collides(node.data, point);
+        if (diff > 0) {
+          [point, node.data].forEach(function(p) {
+            p.shrink = true;
+          });
+        }
+      }
+    });
+  });
+
+  let collision = false;
+
+  points.forEach(function(point) {
+    if (point.shrink && point.r > minRadius) {
+      point.r = Math.max(minRadius, point.r * 0.9);
+      collision = true;
+    }
+  });
+
+  return collision;
+}
+
+function collides(a, b) {
+  const dx = a[0] - b[0],
+    dy = a[1] - b[1],
+    dr = a.r + b.r;
+
+  return dr - Math.sqrt(dx * dx + dy * dy);
+}
+// ------------------------------------------
+const width = 800;
+const height = 500;
+const threshold = 0.9;
+
+function getDensityFunction(props) {
+    const {context} = props
+    const data = context.getImageData(0, 0, width, height).data;
+
+    return d3.range(0, data.length, 4).map(i => data[i] / 255);
+}
+
+function generatePoints(props) {
+    const {density, numPoints} = props
+    return d3.range(numPoints).map(function() {
+        let x, y, d;
+    
+        while (true) {
+            x = Math.random() * width;
+            y = Math.random() * height;
+    
+            d = density[width * Math.floor(y) + Math.floor(x)];
+    
+            if (Math.random() > d) {
+                return [x, y, d];
+            }
+        }
+    });
+}
+
+updateCanvas() {
+  const canvas = d3.select(this.refs.canvas)
+  const context = this.refs.canvas.getContext('2d');
+  const img = new Image();
+
+  context.fillStyle = "#000";
+
+  img.onload = () => {
+      context.drawImage(img, 0, 0, width, height);
+
+      StackBlur.canvasRGB(canvas, 0, 0, width, height)
+      const density = getDensityFunction({context});
+    
+    
+      const points = generatePoints({density, numPoints : 5000});
+
+      this.worker.postMessage({ density, points, width, height, threshold });
+      this.worker.onmessage = (event) => this.draw(event.data);
+  }
+  img.src = this.props.src;
+
+  this.draw = (props) => {
+      const points = props
+      context.clearRect(width, 0, width, height);
+  
+      points.forEach(function(point) {
+          context.beginPath();
+  
+          if (point.r) {
+              context.arc(width + point[0], point[1], point.r, 0, 2 * Math.PI);
+              context.fill();
+          }
+      });
+  }
+  console.log(canvas);
+}
+
+
+                        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 1280" className="svg-content-responsive">
+                            {data.map( (d, i) => 
+                                <text
+                                    className="station-text"
+                                    onClick={() => this.windowOn()}
+                                    key={i} 
+                                    width={10}
+                                    height={5}
+                                    x={d.xCor}
+                                    y={height - d.yCor}
+                                > {d.station}
+                                </text>
+                            )}
+                        </svg>
+
+
+        csv(seoulPlace).then( (data) => {
+            this.setState( {data} )
+        })
+
+
+        import React, { Component } from 'react';
+
+class Portal extends Component {
+    state = {  
+        id : '',
+    }
+
+    onFormSubmit = () => {
+        this.props.onSubmit(this.state.id)
+    	console.log(this.state.id);
+    }
+
+    render() { 
+        console.log(this.props.stationData);
+        return null
+    }
+}
+ 
+export default Portal;
+
+
+//----------------- image.jsx
+
+import React, { Component } from 'react';
+import * as d3 from 'd3';
+import data from '../data/seoul.json'
+import Worker from 'worker-loader!./Worker'; // eslint-disable-line import/no-webpack-loader-syntax
+
+const width = 600;
+  
+class Img extends Component {
+    state = {
+            width : null,
+            height : null,
+            data : [],
+            clickValue : .6,
+        }
+
+
+    componentDidMount() {
+        this.worker = new Worker();
+        this.imageData();
+    }
+
+    imageData() {
+        d3.image(this.props.src,  {crossOrigin: "anonymous"}).then(image => {
+            const height = Math.round(width * image.height / image.width);
+            const context = this.refs.canvas.getContext('2d');
+            context.drawImage(image, 0, 0, image.width, image.height, 0, 0, width, height);
+            console.log(context.getImageData(0, 0, width, height))
+            const {data: rgba} = context.getImageData(0, 0, width, height);
+            const data = new Float64Array(width * height);
+            for (let i = 0, n = rgba.length / 4; i < n; ++i) {
+                data[i] = Math.max(0, 1 - rgba[i * 4] / 200)
+            };
+            this.setState({ width, height, data })
+            this.updateCanvas();
+        })
+    }
+
+    updateCanvas() {
+        const { width, height, data, clickValue } = this.state
+        const context = this.refs.canvas.getContext('2d');
+        const n = Math.round(width * height / 40)
+
+        function messaged({ data: points}) {
+            context.fillStyle = "#fff";
+            context.fillRect(0, 0, width, height);
+            context.beginPath();
+            for (let i = 0, n = points.length; i < n; i += 2) {
+                const x = points[i], y = points[i + 1];
+                context.moveTo(x + 1.5, y);
+                context.arc(x, y, 2+clickValue, 0, 2 * Math.PI);
+            }
+            context.fillStyle = "#000";
+            context.fill();
+        }
+
+        this.worker.addEventListener("message", messaged);
+        this.worker.postMessage({data, width, height, n});
+    }
+      
+    render() {
+        return (
+            <canvas width={width} height={width} style={{width:'100%', height:'100%'}} ref="canvas" />
+        );
+    }
+}
+
+export default Img;
+
+
+//------------mapping img
+
+
+
+        // const { imgList } = stationDatas.map(stationData => { 
+        //     return (
+        //         <Img points = {stationData.locationData} className="img-stations"/>
+        //     )}
+        // )
+
+        {/* {imgList} */}
+
+
+        json.list.map(data => this.state.locationDatas.push(data))
+
+
+//----------- worker
+
+
+import {Delaunay} from "d3-delaunay";
+
+onmessage = event => {
+  const {data: {data, width, height, n}} = event;
+  const points = new Float64Array(n * 2);
+  const c = new Float64Array(n * 2);
+  const s = new Float64Array(n);
+
+  // Initialize the points using rejection sampling.
+  for (let i = 0; i < n; ++i) {
+    for (let j = 0; j < 30; ++j) {
+      const x = points[i * 2] = Math.floor(Math.random() * width);
+      const y = points[i * 2 + 1] = Math.floor(Math.random() * height);
+      if (Math.random() < data[y * width + x]) break;
+    }
+  }
+
+  const delaunay = new Delaunay(points);
+  const voronoi = delaunay.voronoi([0, 0, width, height]);
+
+  for (let k = 0; k < 80; ++k) {
+
+    // Compute the weighted centroid for each Voronoi cell.
+    c.fill(0);
+    s.fill(0);
+    for (let y = 0, i = 0; y < height; ++y) {
+      for (let x = 0; x < width; ++x) {
+        const w = data[y * width + x];
+        i = delaunay.find(x + 0.5, y + 0.5, i);
+        s[i] += w;
+        c[i * 2] += w * (x + 0.5);
+        c[i * 2 + 1] += w * (y + 0.5);
+      }
+    }
+
+    // Relax the diagram by moving points to the weighted centroid.
+    // Wiggle the points a little bit so they don’t get stuck.
+    const w = Math.pow(k + 1, -0.8) * 10;
+    for (let i = 0; i < n; ++i) {
+      const x0 = points[i * 2], y0 = points[i * 2 + 1];
+      const x1 = s[i] ? c[i * 2] / s[i] : x0, y1 = s[i] ? c[i * 2 + 1] / s[i] : y0;
+      points[i * 2] = x0 + (x1 - x0) * 1.8 + (Math.random() - 0.5) * w;
+      points[i * 2 + 1] = y0 + (y1 - y0) * 1.8 + (Math.random() - 0.5) * w;
+    }
+
+    postMessage(points);
+    voronoi.update();
+  }
+  
+  close();
+};
+
+//-------
+
+json.list.map(data => this.state.locationDatas.push(data))
+
+
+
+        if(this.props.station !== ':station'){
+            fetch(API+ this.props.station )
+                .then(response => response.json())
+                .then(json => json.list.map(data => this.state.locationDatas.push(data)))
+        }
+    }
+
+//----------
+
+,
+                // width: show ? '99vw' : '60vw',
+                // boxShadow: show ? '10px -10px black' : '0px 0px 0px black'
+
+
+//---------- scroll
+
+
+::-webkit-scrollbar {
+  float: left;
+  margin-bottom: 25px;
+  margin-left: 22px;
+  margin-top: 40px;
+  width: 10px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+
+//---------
+
+// const { imgList } = stationDatas.map(stationData => { 
+        //     return (
+        //         <Img 
+        //             key={stationData.location} 
+        //             points={stationData.locationData} 
+        //             className="img-stations"
+        //         />
+        //     )}
+        // )
+
+
+//---------ㅎㅔ더
+
+
+                    <div className="computer">
+                        <strong>{stationDatas[0] && stationDatas[0].station}</strong>
+                    </div>
+
+
+/* 
+.computer {
+    padding-bottom: 0px;
+    font-size: 23px;
+    font-weight: 600;
+}
+@media all and (min-width:0px) and (max-width:1023px) {
+    .computer {
+        font-size: 17px;
+        padding-bottom: 2px;
+    }
+  } */
+
+
+//---------------- 
+
+function chooseShape(whatImgWillBe, items, id) {
+    if(id === '0')whatImgWillBe.push(items[circle], randomize(circleItems), items[circle], randomize(circleItems)) 
+    else if(id === '1')whatImgWillBe.push(items[rect], randomize(rectItems), items[rect], randomize(rectItems)) 
+    else if(id === '2')whatImgWillBe.push(items[ellipse], randomize(ellipseItems), items[ellipse], randomize(ellipseItems)) 
+    else if(id === '3')whatImgWillBe.push(items[triangle], randomize(triangleItems), items[triangle], randomize(triangleItems)) 
+    else if(id === '4')whatImgWillBe.push(items[rhombus], randomize(rhombusItems), items[rhombus], randomize(rhombusItems)) 
+
+    return whatImgWillBe
+}
+
+//----------
+
+
+import React, { Component } from 'react';
+
+const width  = 500;
+const height = width;
+
+const sendCountLimit = 6;
+
+const colorItems    = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+const colorList     = ['#E20000','#006CC4','#EFC820','#087A0D','#7B2E8E']
+const shapeItems    = ['●', '◼︎', '⬬', '▲', '♦︎']
+
+const ItemsList = [
+    ['🟥', '😁', '🟣', '🕚', '😎'],
+    ['🩳', '🟥', '📺', '💾', '⏹'],
+    ['🌀', '🏮', '💊', '🏈', '🪐'],
+    ['💜', '🔺', '⛱', '💩', '🙏'],
+    ['💋', '💎', '🪁', '🔷', '💠']
+]
+
+class Img extends Component {
+    constructor() {
+        super();
+        this.state = { 
+            count : 0,
+            finalOn : false,
+            ImgProp : [],
+        };
+        this.clickPoint = this.clickPoint.bind(this);
+        this.sendCount = this.sendCount.bind(this);
+        this.finalCanvas = this.finalCanvas.bind(this);
+    }
+
+
+    componentDidMount() {
+        this.updateCanvas()
+        this.chooseShape()
+        this.clickPoint()
+    }
+
+    chooseShape() {
+        const { locationId, locationName } = this.props
+        this.setState(state => ({ImgProp : [...state.ImgProp, 
+            locationId, //태그 번호
+            colorList[locationId], //도형별 고유 컬러
+            shapeItems[locationId], //도형
+            randomize(ItemsList[locationId]), //랜덤화 
+            randomize(ItemsList[locationId]), 
+            randomize(ItemsList[locationId]) 
+        ]}))
+    }
+
+    updateCanvas() {
+        const points = this.props.points
+        const { count, ImgProp } = this.state
+        const context = this.refs.canvas.getContext('2d')
+        
+        context.fillStyle = 'white'
+        context.fillRect(0, 0, width, height)
+
+        for(let i = 0, n = points && points.length; i < n; i += 2){
+            context.beginPath()
+            const x = points[i]
+            const y = points[i + 1]
+            imgMaker(this.props.locationId, ImgProp, count, context, x, y)
+        }
+    }
+
+    finalCanvas(){
+        const ImgProp = this.state.ImgProp
+        const context = this.refs.canvas.getContext('2d')
+        context.fillStyle = 'white'
+        context.fillRect(0, 0, width, height)
+
+        context.font = '90px sans'
+        context.fillStyle = ImgProp[1];
+        context.fillText(shapeItems[this.props.locationId], 100, 300)
+    }
+
+    clickPoint() {
+        this.setState(state => ({count : state.count + 1}))
+        if(this.state.count === sendCountLimit){
+            this.setState({finalOn : true})
+            this.sendCount()
+            this.finalCanvas()
+        }else{
+            this.updateCanvas()
+        }
+    }
+
+    sendCount() {
+        this.props.onOk(this.props.chilcOk)
+    }
+
+      
+    render() {
+        return (
+            <>{this.state.finalOn 
+            ?<canvas
+                width={width} 
+                height={height}
+                style={{width:'100%', height:'100%'}} 
+                ref="canvas" 
+            />
+            :<canvas 
+                width={width} 
+                height={height}
+                onClick={this.clickPoint}
+                style={{width:'100%', height:'100%', cursor:'pointer'}} 
+                ref="canvas" 
+            />}
+            </>
+        );
+    }
+}
+
+export default Img;
+
+
+function randomize(items) {
+    const item = items[Math.floor(Math.random() * items.length)]
+    return item
+}
+
+function imgMaker(id, ImgProp, count, context, x, y){
+
+    function colorMaker(items) {
+        const item = []
+        for(let i = 0; i < 6; i++)item.push(randomize(items))
+        return item[0]+item[1]+item[2]+item[3]+item[4]+item[5];
+    }
+
+    if(count === 0){
+        context.font = '8.8px sans'
+        context.fillStyle = "#000";
+        context.fillText(shapeItems[id], x+1.5, y)
+        context.fill();
+    }else if(count === 1){
+        context.font = '10px sans'
+        context.fillText(ImgProp[3], x, y)
+    }else if(count === 2){
+        context.font = '8.8px sans'
+        context.fillStyle = '#' + colorMaker(colorItems)
+        context.fillText(ImgProp[2], x+1.5, y)
+        context.fill();
+    }else if(count === 3){
+        context.font = '10px sans'
+        context.fillText(ImgProp[4], x-1, y)
+    }else if(count === 4){
+        context.font = '11px sans'
+        context.fillStyle = '#' + colorMaker(colorItems)
+        context.fillText(ImgProp[2], x, y)
+        context.fill();
+    }else if(count === 5){
+        context.font = '11px sans'
+        context.fillStyle = ImgProp[1]
+        context.fillText(ImgProp[2], x, y)
+        context.fill();
+    }
+}
+
+
+//--------------
+
+{"0 0 "+ this.props.width + " " + this.props.height}
+
+//----------
+
+// function change(items) {
+//     i = (i + 1) % items.length;
+//     return items[i]
+// }
+
+//-----
+
+
+onClick={()=>history.push(match.path.replace(':station', "Ilsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Pungsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Baengma"))}
+onClick={()=>history.push(match.path.replace(':station', "Hwajeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Wondang"))}
+onClick={()=>history.push(match.path.replace(':station', "Wonheung"))}
+onClick={()=>history.push(match.path.replace(':station', "Samsong"))}
+onClick={()=>history.push(match.path.replace(':station', "Tanhyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Unjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Geumneung"))}
+onClick={()=>history.push(match.path.replace(':station', "Geumchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Wollong"))}
+onClick={()=>history.push(match.path.replace(':station', "Paju"))}
+onClick={()=>history.push(match.path.replace(':station', "Munsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Bugae"))}
+onClick={()=>history.push(match.path.replace(':station', "Songnae"))}
+onClick={()=>history.push(match.path.replace(':station', "Jungdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Bucheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sosa"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeokgok"))}
+onClick={()=>history.push(match.path.replace(':station', "Technopark"))}
+onClick={()=>history.push(match.path.replace(':station', "BITZone"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonNatlUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "CentralPark"))}
+onClick={()=>history.push(match.path.replace(':station', "IntlBusinessDistrict"))}
+onClick={()=>history.push(match.path.replace(':station', "SingilonCheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinchang"))}
+onClick={()=>history.push(match.path.replace(':station', "OnyangonCheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Baebang"))}
+onClick={()=>history.push(match.path.replace(':station', "Asan"))}
+onClick={()=>history.push(match.path.replace(':station', "Ssangyong"))}
+onClick={()=>history.push(match.path.replace(':station', "Bongmyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonan"))}
+onClick={()=>history.push(match.path.replace(':station', "Dujeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Jiksan"))}
+onClick={()=>history.push(match.path.replace(':station', "Seonghwan"))}
+onClick={()=>history.push(match.path.replace(':station', "Pyeongtaek"))}
+onClick={()=>history.push(match.path.replace(':station', "Jije"))}
+onClick={()=>history.push(match.path.replace(':station', "Seojeongri"))}
+onClick={()=>history.push(match.path.replace(':station', "Songtan"))}
+onClick={()=>history.push(match.path.replace(':station', "Osan"))}
+onClick={()=>history.push(match.path.replace(':station', "OsanCollege"))}
+onClick={()=>history.push(match.path.replace(':station', "Sema"))}
+onClick={()=>history.push(match.path.replace(':station', "Seodongtan"))}
+onClick={()=>history.push(match.path.replace(':station', "Jinwi"))}
+onClick={()=>history.push(match.path.replace(':station', "Ansan"))}
+onClick={()=>history.push(match.path.replace(':station', "Choji"))}
+onClick={()=>history.push(match.path.replace(':station', "Gojan"))}
+onClick={()=>history.push(match.path.replace(':station', "Jungang"))}
+onClick={()=>history.push(match.path.replace(':station', "HanyangUnivatAnsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangnoksu"))}
+onClick={()=>history.push(match.path.replace(':station', "Banwol"))}
+onClick={()=>history.push(match.path.replace(':station', "Daeyami"))}
+onClick={()=>history.push(match.path.replace(':station', "Surisan"))}
+onClick={()=>history.push(match.path.replace(':station', "SuwonCityHall1"))}
+onClick={()=>history.push(match.path.replace(':station', "SuwonCityHall"))}
+onClick={()=>history.push(match.path.replace(':station', "MaetanGwonseon"))}
+onClick={()=>history.push(match.path.replace(':station', "Mangpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeongtong"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheongmyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sanggal"))}
+onClick={()=>history.push(match.path.replace(':station', "Singal"))}
+onClick={()=>history.push(match.path.replace(':station', "Guseong"))}
+onClick={()=>history.push(match.path.replace(':station', "Bojeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Jukjeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Ori"))}
+onClick={()=>history.push(match.path.replace(':station', "MyongjiUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Samga1"))}
+onClick={()=>history.push(match.path.replace(':station', "Samga"))}
+onClick={()=>history.push(match.path.replace(':station', "Chodang"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongbaek"))}
+onClick={()=>history.push(match.path.replace(':station', "Eojeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Jiseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Gulpocheon"))}
+onClick={()=>history.push(match.path.replace(':station', "SamsanGymnasium"))}
+onClick={()=>history.push(match.path.replace(':station', "BucheonCityHall"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinjungdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Songdo"))}
+onClick={()=>history.push(match.path.replace(':station', "Jeongwang"))}
+onClick={()=>history.push(match.path.replace(':station', "Ungilsan1"))}
+onClick={()=>history.push(match.path.replace(':station', "Ungilsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangsu"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinwon"))}
+onClick={()=>history.push(match.path.replace(':station', "Guksu"))}
+onClick={()=>history.push(match.path.replace(':station', "Asin"))}
+onClick={()=>history.push(match.path.replace(':station', "Obin"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangpyeong1"))}
+onClick={()=>history.push(match.path.replace(':station', "Wondeok"))}
+onClick={()=>history.push(match.path.replace(':station', "Yongmun"))}
+onClick={()=>history.push(match.path.replace(':station', "Paldang"))}
+onClick={()=>history.push(match.path.replace(':station', "CampusTown"))}
+onClick={()=>history.push(match.path.replace(':station', "KangnamUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Sanbon"))}
+onClick={()=>history.push(match.path.replace(':station', "Mullae"))}
+onClick={()=>history.push(match.path.replace(':station', "Beomgye"))}
+onClick={()=>history.push(match.path.replace(':station', "Pyeongchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Indeogwon"))}
+onClick={()=>history.push(match.path.replace(':station', "GovernmentComplexGwacheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwacheon"))}
+onClick={()=>history.push(match.path.replace(':station', "SeoulGrandPark"))}
+onClick={()=>history.push(match.path.replace(':station', "SeoulRacecoursePark"))}
+onClick={()=>history.push(match.path.replace(':station', "Seonbawi"))}
+onClick={()=>history.push(match.path.replace(':station', "Namtaeryeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Geomam"))}
+onClick={()=>history.push(match.path.replace(':station', "Gyulhyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Bakchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Imhak"))}
+onClick={()=>history.push(match.path.replace(':station', "Gyesan"))}
+onClick={()=>history.push(match.path.replace(':station', "GyeonginNatlUnivofEducation"))}
+onClick={()=>history.push(match.path.replace(':station', "CheongnaIntlCityStation"))}
+onClick={()=>history.push(match.path.replace(':station', "Yongmasan"))}
+onClick={()=>history.push(match.path.replace(':station', "Sagajeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Myeonmok"))}
+onClick={()=>history.push(match.path.replace(':station', "Jungnang"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinnae"))}
+onClick={()=>history.push(match.path.replace(':station', "Changsin"))}
+onClick={()=>history.push(match.path.replace(':station', "Apgujeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Saejeol"))}
+onClick={()=>history.push(match.path.replace(':station', "Eungam"))}
+onClick={()=>history.push(match.path.replace(':station', "Gupabal"))}
+onClick={()=>history.push(match.path.replace(':station', "SookmyungWomensUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Namyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Seryu"))}
+onClick={()=>history.push(match.path.replace(':station', "GachonUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Jangji"))}
+onClick={()=>history.push(match.path.replace(':station', "Dandaeogeori"))}
+onClick={()=>history.push(match.path.replace(':station', "Taepyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Banghak"))}
+onClick={()=>history.push(match.path.replace(':station', "Dobong"))}
+onClick={()=>history.push(match.path.replace(':station', "Dokbawi"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinheung"))}
+onClick={()=>history.push(match.path.replace(':station', "Geumho"))}
+onClick={()=>history.push(match.path.replace(':station', "Hyehwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Achasan"))}
+onClick={()=>history.push(match.path.replace(':station', "Jichuk"))}
+onClick={()=>history.push(match.path.replace(':station', "Gusan"))}
+onClick={()=>history.push(match.path.replace(':station', "Munjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Mangwolsa"))}
+onClick={()=>history.push(match.path.replace(':station', "NamdongInduspark"))}
+onClick={()=>history.push(match.path.replace(':station', "Hogupo"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonNonhyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwanak"))}
+onClick={()=>history.push(match.path.replace(':station', "Anyang"))}
+onClick={()=>history.push(match.path.replace(':station', "Myeonghak"))}
+onClick={()=>history.push(match.path.replace(':station', "Gunpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Dangjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Uiwang"))}
+onClick={()=>history.push(match.path.replace(':station', "SungkyunkwanUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Sindaebang"))}
+onClick={()=>history.push(match.path.replace(':station', "Bongcheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Euljiro1ilga"))}
+onClick={()=>history.push(match.path.replace(':station', "Jonggak"))}
+onClick={()=>history.push(match.path.replace(':station', "Jongno5oga"))}
+onClick={()=>history.push(match.path.replace(':station', "Daebang"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinpung"))}
+onClick={()=>history.push(match.path.replace(':station', "Namguro"))}
+onClick={()=>history.push(match.path.replace(':station', "Boramae"))}
+onClick={()=>history.push(match.path.replace(':station', "YangcheonHyanggyo"))}
+onClick={()=>history.push(match.path.replace(':station', "Magongnaru"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinbanghwa"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonIntlAirportCargoTerminal1"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonIntlAirportCargoTerminal"))}
+onClick={()=>history.push(match.path.replace(':station', "Songjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Magok"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Mokdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Omokgyo"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangpyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwanghwamun"))}
+onClick={()=>history.push(match.path.replace(':station', "Itaewon"))}
+onClick={()=>history.push(match.path.replace(':station', "Noksapyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Seobinggo"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwangheungchang"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangsu"))}
+onClick={()=>history.push(match.path.replace(':station', "Baekseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Gyeongbokgung"))}
+onClick={()=>history.push(match.path.replace(':station', "Anguk"))}
+onClick={()=>history.push(match.path.replace(':station', "Myeongdong"))}
+onClick={()=>history.push(match.path.replace(':station', "LrtUijeongbu"))}
+onClick={()=>history.push(match.path.replace(':station', "Beomgol"))}
+onClick={()=>history.push(match.path.replace(':station', "EwhaWomansUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinchon"))}
+onClick={()=>history.push(match.path.replace(':station', "SeoulNatlUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "SportsComplex"))}
+onClick={()=>history.push(match.path.replace(':station', "Sincheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Guui"))}
+onClick={()=>history.push(match.path.replace(':station', "Yongdu"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangwangsimni"))}
+onClick={()=>history.push(match.path.replace(':station', "Baegun"))}
+onClick={()=>history.push(match.path.replace(':station', "Anam"))}
+onClick={()=>history.push(match.path.replace(':station', "Bomun"))}
+onClick={()=>history.push(match.path.replace(':station', "Sujin"))}
+onClick={()=>history.push(match.path.replace(':station', "DonggukUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Unseo"))}
+onClick={()=>history.push(match.path.replace(':station', "Balgok"))}
+onClick={()=>history.push(match.path.replace(':station', "YangcheonguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Oryudong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gaebong"))}
+onClick={()=>history.push(match.path.replace(':station', "Guil"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeongdeungpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Nakseongdae"))}
+onClick={()=>history.push(match.path.replace(':station', "Jangseungbaegi"))}
+onClick={()=>history.push(match.path.replace(':station', "Seocho"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeoksam"))}
+onClick={()=>history.push(match.path.replace(':station', "Samseong"))}
+onClick={()=>history.push(match.path.replace(':station', "Naebang"))}
+onClick={()=>history.push(match.path.replace(':station', "Maebong"))}
+onClick={()=>history.push(match.path.replace(':station', "Daechi"))}
+onClick={()=>history.push(match.path.replace(':station', "Hangnyeoul"))}
+onClick={()=>history.push(match.path.replace(':station', "Gaepodong"))}
+onClick={()=>history.push(match.path.replace(':station', "Banpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Nonhyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinnonhyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinbanpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Gubanpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Hakdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinsa"))}
+onClick={()=>history.push(match.path.replace(':station', "Jamwon"))}
+onClick={()=>history.push(match.path.replace(':station', "Ssangmun"))}
+onClick={()=>history.push(match.path.replace(':station', "Sanggye"))}
+onClick={()=>history.push(match.path.replace(':station', "Dolgoji"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangwolgok"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonwang"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwangmyeongsageori"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheolsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Dapsimni"))}
+onClick={()=>history.push(match.path.replace(':station', "Janghanpyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwangnaru"))}
+onClick={()=>history.push(match.path.replace(':station', "Heukseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Nodeul"))}
+onClick={()=>history.push(match.path.replace(':station', "YeongdeungpoMarket"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonggyesan"))}
+onClick={()=>history.push(match.path.replace(':station', "Pangyo"))}
+onClick={()=>history.push(match.path.replace(':station', "Gaerong"))}
+onClick={()=>history.push(match.path.replace(':station', "Geoyeo"))}
+onClick={()=>history.push(match.path.replace(':station', "Jegidong"))}
+onClick={()=>history.push(match.path.replace(':station', "Hwarangdae"))}
+onClick={()=>history.push(match.path.replace(':station', "Gaehwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Daemosan"))}
+onClick={()=>history.push(match.path.replace(':station', "Namhansanseong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sanseong"))}
+onClick={()=>history.push(match.path.replace(':station', "Godeok"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangildong"))}
+onClick={()=>history.push(match.path.replace(':station', "Bangbae"))}
+onClick={()=>history.push(match.path.replace(':station', "Sindaebangsamgeori"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheongdam"))}
+onClick={()=>history.push(match.path.replace(':station', "Guryong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sapyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Daeheung"))}
+onClick={()=>history.push(match.path.replace(':station', "Hyochangpark"))}
+onClick={()=>history.push(match.path.replace(':station', "Hoehyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Ahyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Ttukseom"))}
+onClick={()=>history.push(match.path.replace(':station', "HanyangUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Seonyudo"))}
+onClick={()=>history.push(match.path.replace(':station', "Bonghwasan"))}
+onClick={()=>history.push(match.path.replace(':station', "HankukUnivofForeignStudies"))}
+onClick={()=>history.push(match.path.replace(':station', "HansungUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "SungshinWomensUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Gireum"))}
+onClick={()=>history.push(match.path.replace(':station', "Uijeongbu"))}
+onClick={()=>history.push(match.path.replace(':station', "Ganeung"))}
+onClick={()=>history.push(match.path.replace(':station', "Nogyang"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangju"))}
+onClick={()=>history.push(match.path.replace(':station', "Deokgye"))}
+onClick={()=>history.push(match.path.replace(':station', "Deokjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Jihaeng"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongducheonjungang"))}
+onClick={()=>history.push(match.path.replace(':station', "Bosan"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongducheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Soyosan"))}
+onClick={()=>history.push(match.path.replace(':station', "Tapseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Songsan"))}
+onClick={()=>history.push(match.path.replace(':station', "eoryong"))}
+onClick={()=>history.push(match.path.replace(':station', "gonjae"))}
+onClick={()=>history.push(match.path.replace(':station', "hyoja"))}
+onClick={()=>history.push(match.path.replace(':station', "GyeonggiProvincialGovernmentNorthernOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "saemal"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongo"))}
+onClick={()=>history.push(match.path.replace(':station', "UijeongbuJungang"))}
+onClick={()=>history.push(match.path.replace(':station', "Heungseon"))}
+onClick={()=>history.push(match.path.replace(':station', "UijeongbuCityHall"))}
+onClick={()=>history.push(match.path.replace(':station', "Yatap"))}
+onClick={()=>history.push(match.path.replace(':station', "Imae"))}
+onClick={()=>history.push(match.path.replace(':station', "Dunjeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Bopyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gojin"))}
+onClick={()=>history.push(match.path.replace(':station', "Gimnyangjang"))}
+onClick={()=>history.push(match.path.replace(':station', "StadiumSongdamCollege"))}
+onClick={()=>history.push(match.path.replace(':station', "Seohyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Migeum"))}
+onClick={()=>history.push(match.path.replace(':station', "JeondaeEverland"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeouinaru"))}
+onClick={()=>history.push(match.path.replace(':station', "Mapo"))}
+onClick={()=>history.push(match.path.replace(':station', "Haengdang"))}
+onClick={()=>history.push(match.path.replace(':station', "Jeungsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeokchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangdo"))}
+onClick={()=>history.push(match.path.replace(':station', "SoongsilUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Namseong"))}
+onClick={()=>history.push(match.path.replace(':station', "Saetgang"))}
+onClick={()=>history.push(match.path.replace(':station', "NationalAssembly"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinmokdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeomchang"))}
+onClick={()=>history.push(match.path.replace(':station', "Deungchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Jeungmi"))}
+onClick={()=>history.push(match.path.replace(':station', "Gayang"))}
+onClick={()=>history.push(match.path.replace(':station', "Soraepogu"))}
+onClick={()=>history.push(match.path.replace(':station', "Wolgot"))}
+onClick={()=>history.push(match.path.replace(':station', "Dalwol"))}
+onClick={()=>history.push(match.path.replace(':station', "Songpa"))}
+onClick={()=>history.push(match.path.replace(':station', "Mangwon"))}
+onClick={()=>history.push(match.path.replace(':station', "MapoguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Muakjae"))}
+onClick={()=>history.push(match.path.replace(':station', "Hongje"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongnimmun"))}
+onClick={()=>history.push(match.path.replace(':station', "Aeogae"))}
+onClick={()=>history.push(match.path.replace(':station', "WorldCupStadium"))}
+onClick={()=>history.push(match.path.replace(':station', "Sunae"))}
+onClick={()=>history.push(match.path.replace(':station', "Dorimcheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Gangmae"))}
+onClick={()=>history.push(match.path.replace(':station', "Susaek"))}
+onClick={()=>history.push(match.path.replace(':station', "Hannam"))}
+onClick={()=>history.push(match.path.replace(':station', "Eungbong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sillim"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongam"))}
+onClick={()=>history.push(match.path.replace(':station', "Singeumho"))}
+onClick={()=>history.push(match.path.replace(':station', "Majang"))}
+onClick={()=>history.push(match.path.replace(':station', "AirportMarket"))}
+onClick={()=>history.push(match.path.replace(':station', "Seodaemun"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinimun"))}
+onClick={()=>history.push(match.path.replace(':station', "Miasamgeori"))}
+onClick={()=>history.push(match.path.replace(':station', "Macheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Chunui"))}
+onClick={()=>history.push(match.path.replace(':station', "Hwaseo"))}
+onClick={()=>history.push(match.path.replace(':station', "Gajwa"))}
+onClick={()=>history.push(match.path.replace(':station', "SogangUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "TtukseomPark"))}
+onClick={()=>history.push(match.path.replace(':station', "ChildrensGrandPark"))}
+onClick={()=>history.push(match.path.replace(':station', "Junggok"))}
+onClick={()=>history.push(match.path.replace(':station', "Galmae"))}
+onClick={()=>history.push(match.path.replace(':station', "Toegyewon"))}
+onClick={()=>history.push(match.path.replace(':station', "Byeollae"))}
+onClick={()=>history.push(match.path.replace(':station', "Wolgok"))}
+onClick={()=>history.push(match.path.replace(':station', "KoreaUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Beotigogae"))}
+onClick={()=>history.push(match.path.replace(':station', "Mongchontoseong"))}
+onClick={()=>history.push(match.path.replace(':station', "GangdongguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Amsa"))}
+onClick={()=>history.push(match.path.replace(':station', "Hangangjin"))}
+onClick={()=>history.push(match.path.replace(':station', "Gildong"))}
+onClick={()=>history.push(match.path.replace(':station', "Dunchondong"))}
+onClick={()=>history.push(match.path.replace(':station', "OlympicPark"))}
+onClick={()=>history.push(match.path.replace(':station', "Bangi"))}
+onClick={()=>history.push(match.path.replace(':station', "Gubeundari"))}
+onClick={()=>history.push(match.path.replace(':station', "Myeongil"))}
+onClick={()=>history.push(match.path.replace(':station', "Banghwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Gaehwasan"))}
+onClick={()=>history.push(match.path.replace(':station', "Suyu"))}
+onClick={()=>history.push(match.path.replace(':station', "Daehwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Juyeop"))}
+onClick={()=>history.push(match.path.replace(':station', "Jeongbalsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Madu"))}
+onClick={()=>history.push(match.path.replace(':station', "Goksan"))}
+onClick={()=>history.push(match.path.replace(':station', "Neunggok"))}
+onClick={()=>history.push(match.path.replace(':station', "Haengsin"))}
+onClick={()=>history.push(match.path.replace(':station', "Hwajeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Jangam"))}
+onClick={()=>history.push(match.path.replace(':station', "Guri"))}
+onClick={()=>history.push(match.path.replace(':station', "Donong"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Deokso"))}
+onClick={()=>history.push(match.path.replace(':station', "Dosim"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangwon"))}
+onClick={()=>history.push(match.path.replace(':station', "Chuncheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Namchuncheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Gimyujeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gangchon"))}
+onClick={()=>history.push(match.path.replace(':station', "Baegyangri"))}
+onClick={()=>history.push(match.path.replace(':station', "Gulbongsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Gapyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangcheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheongpyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Daeseongri"))}
+onClick={()=>history.push(match.path.replace(':station', "Maseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonmasan"))}
+onClick={()=>history.push(match.path.replace(':station', "PyeongnaeHopyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Geumgok"))}
+onClick={()=>history.push(match.path.replace(':station', "Wolgye"))}
+onClick={()=>history.push(match.path.replace(':station', "Nokcheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Danggogae"))}
+onClick={()=>history.push(match.path.replace(':station', "Kkachiul"))}
+onClick={()=>history.push(match.path.replace(':station', "BucheonStadium"))}
+onClick={()=>history.push(match.path.replace(':station', "Doksan"))}
+onClick={()=>history.push(match.path.replace(':station', "Incheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongincheon"))}
+onClick={()=>history.push(match.path.replace(':station', "Dowon"))}
+onClick={()=>history.push(match.path.replace(':station', "Jemulpo"))}
+onClick={()=>history.push(match.path.replace(':station', "Dohwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Juan"))}
+onClick={()=>history.push(match.path.replace(':station', "Ganseok"))}
+onClick={()=>history.push(match.path.replace(':station', "Galsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongsu"))}
+onClick={()=>history.push(match.path.replace(':station', "Bupyeongsamgeori"))}
+onClick={()=>history.push(match.path.replace(':station', "Ganseogogeori"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonCityHall"))}
+onClick={()=>history.push(match.path.replace(':station', "ArtsCenter"))}
+onClick={()=>history.push(match.path.replace(':station', "IncheonBusTerminal"))}
+onClick={()=>history.push(match.path.replace(':station', "MunhakSportsComplex"))}
+onClick={()=>history.push(match.path.replace(':station', "Seonhak"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinyeonsu"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongchun"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongmak"))}
+onClick={()=>history.push(match.path.replace(':station', "BupyeongMarket"))}
+onClick={()=>history.push(match.path.replace(':station', "Balsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Ujangsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Hwagok"))}
+onClick={()=>history.push(match.path.replace(':station', "NambuBusTerminal"))}
+onClick={()=>history.push(match.path.replace(':station', "Hanti"))}
+onClick={()=>history.push(match.path.replace(':station', "Seonjeongneung"))}
+onClick={()=>history.push(match.path.replace(':station', "Nokbeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Junghwa"))}
+onClick={()=>history.push(match.path.replace(':station', "Meokgol"))}
+onClick={()=>history.push(match.path.replace(':station', "Hagye"))}
+onClick={()=>history.push(match.path.replace(':station', "Junggye"))}
+onClick={()=>history.push(match.path.replace(':station', "Madeul"))}
+onClick={()=>history.push(match.path.replace(':station', "Suraksan"))}
+onClick={()=>history.push(match.path.replace(':station', "Gongneung"))}
+onClick={()=>history.push(match.path.replace(':station', "Jamsillaru"))}
+onClick={()=>history.push(match.path.replace(':station', "Gangbyeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Yongdap"))}
+onClick={()=>history.push(match.path.replace(':station', "Sindap"))}
+onClick={()=>history.push(match.path.replace(':station', "Sareung"))}
+onClick={()=>history.push(match.path.replace(':station', "Mia"))}
+onClick={()=>history.push(match.path.replace(':station', "SeokchonHansolHospital"))}
+onClick={()=>history.push(match.path.replace(':station', "NationalPoliceHospital"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinyongsan"))}
+onClick={()=>history.push(match.path.replace(':station', "YangjaeCitizensForest"))}
+onClick={()=>history.push(match.path.replace(':station', "Daecheong"))}
+onClick={()=>history.push(match.path.replace(':station', "Irwon"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinjeongnegeori"))}
+onClick={()=>history.push(match.path.replace(':station', "Jakjeon"))}
+onClick={()=>history.push(match.path.replace(':station', "Seoulforest"))}
+onClick={()=>history.push(match.path.replace(':station', "Gwangmyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Seoksu"))}
+onClick={()=>history.push(match.path.replace(':station', "Apgujeongrodeo"))}
+onClick={()=>history.push(match.path.replace(':station', "HongikUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Hapjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Dangsan"))}
+onClick={()=>history.push(match.path.replace(':station', "YeongdeungpoguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Daerim"))}
+onClick={()=>history.push(match.path.replace(':station', "GasanDigitalComplex"))}
+onClick={()=>history.push(match.path.replace(':station', "GeumcheonGuOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Guro"))}
+onClick={()=>history.push(match.path.replace(':station', "Kkachisan"))}
+onClick={()=>history.push(match.path.replace(':station', "GimpoIntlAirport"))}
+onClick={()=>history.push(match.path.replace(':station', "BupyeongguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Bupyeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Woninjae"))}
+onClick={()=>history.push(match.path.replace(':station', "Gyeyang"))}
+onClick={()=>history.push(match.path.replace(':station', "Sindorim"))}
+onClick={()=>history.push(match.path.replace(':station', "Sadang"))}
+onClick={()=>history.push(match.path.replace(':station', "SeoulNatlUnivofEducation"))}
+onClick={()=>history.push(match.path.replace(':station', "Gangnam"))}
+onClick={()=>history.push(match.path.replace(':station', "Seolleung"))}
+onClick={()=>history.push(match.path.replace(':station', "KonkukUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Wangsimni"))}
+onClick={()=>history.push(match.path.replace(':station', "Jamsil"))}
+onClick={()=>history.push(match.path.replace(':station', "Euljiro3samga"))}
+onClick={()=>history.push(match.path.replace(':station', "Euljiro4saga"))}
+onClick={()=>history.push(match.path.replace(':station', "ExpressBusTerminal1"))}
+onClick={()=>history.push(match.path.replace(':station', "ExpressBusTerminal"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongjak"))}
+onClick={()=>history.push(match.path.replace(':station', "Noryangjin"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeouido"))}
+onClick={()=>history.push(match.path.replace(':station', "Singil"))}
+onClick={()=>history.push(match.path.replace(':station', "GangnamguOffice"))}
+onClick={()=>history.push(match.path.replace(':station', "Gunja"))}
+onClick={()=>history.push(match.path.replace(':station', "Sangbong"))}
+onClick={()=>history.push(match.path.replace(':station', "Mangu"))}
+onClick={()=>history.push(match.path.replace(':station', "Hoegi"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheongnyangni"))}
+onClick={()=>history.push(match.path.replace(':station', "Sinseoldong"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongdaemun"))}
+onClick={()=>history.push(match.path.replace(':station', "Changdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Taereung"))}
+onClick={()=>history.push(match.path.replace(':station', "Seokgye"))}
+onClick={()=>history.push(match.path.replace(':station', "KwangwoonUniv"))}
+onClick={()=>history.push(match.path.replace(':station', "Dongmyo"))}
+onClick={()=>history.push(match.path.replace(':station', "Sindang"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonggu"))}
+onClick={()=>history.push(match.path.replace(':station', "Yaksu"))}
+onClick={()=>history.push(match.path.replace(':station', "Oksu"))}
+onClick={()=>history.push(match.path.replace(':station', "Yangjae"))}
+onClick={()=>history.push(match.path.replace(':station', "Dogok"))}
+onClick={()=>history.push(match.path.replace(':station', "Suseo"))}
+onClick={()=>history.push(match.path.replace(':station', "Bokjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Moran"))}
+onClick={()=>history.push(match.path.replace(':station', "Jeongja"))}
+onClick={()=>history.push(match.path.replace(':station', "Seongsu"))}
+onClick={()=>history.push(match.path.replace(':station', "GarakMarket"))}
+onClick={()=>history.push(match.path.replace(':station', "Cheonho"))}
+onClick={()=>history.push(match.path.replace(':station', "Gangdong"))}
+onClick={()=>history.push(match.path.replace(':station', "Gongdeok"))}
+onClick={()=>history.push(match.path.replace(':station', "DigitalMediaCity"))}
+onClick={()=>history.push(match.path.replace(':station', "Yeonsinnae"))}
+onClick={()=>history.push(match.path.replace(':station', "Daegok"))}
+onClick={()=>history.push(match.path.replace(':station', "Jongno3samga"))}
+onClick={()=>history.push(match.path.replace(':station', "Chungmuro"))}
+onClick={()=>history.push(match.path.replace(':station', "SeoulStation"))}
+onClick={()=>history.push(match.path.replace(':station', "CityHall"))}
+onClick={()=>history.push(match.path.replace(':station', "Chungjeongno"))}
+onClick={()=>history.push(match.path.replace(':station', "Ichon"))}
+onClick={()=>history.push(match.path.replace(':station', "Yongsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Samgakji"))}
+onClick={()=>history.push(match.path.replace(':station', "Bulgwang"))}
+onClick={()=>history.push(match.path.replace(':station', "Nowon"))}
+onClick={()=>history.push(match.path.replace(':station', "Dobongsan"))}
+onClick={()=>history.push(match.path.replace(':station', "Hoeryong"))}
+onClick={()=>history.push(match.path.replace(':station', "Ogeum"))}
+onClick={()=>history.push(match.path.replace(':station', "Onsu"))}
+onClick={()=>history.push(match.path.replace(':station', "Oido"))}
+onClick={()=>history.push(match.path.replace(':station', "Geumjeong"))}
+onClick={()=>history.push(match.path.replace(':station', "Suwon"))}
+onClick={()=>history.push(match.path.replace(':station', "Byeongjeom"))}
+onClick={()=>history.push(match.path.replace(':station', "Giheung"))}
+onClick={()=>history.push(match.path.replace(':station', "DongdaemunHistoryCulturePark"))}
+onClick={()=>history.push(match.path.replace(':station', "GuroDigitalComplex"))}
+onClick={()=>history.push(match.path.replace(':station', "GangnamGu"))}
+onClick={()=>history.push(match.path.replace(':station', "SeochoGu"))}
+onClick={()=>history.push(match.path.replace(':station', "SongpaGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GangdongGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GwanakGu"))}
+onClick={()=>history.push(match.path.replace(':station', "DongjakGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GeumcheonGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GuroGu"))}
+onClick={()=>history.push(match.path.replace(':station', "YangcheonGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GangseoGu"))}
+onClick={()=>history.push(match.path.replace(':station', "MapoGu"))}
+onClick={()=>history.push(match.path.replace(':station', "EunpyeongGu"))}
+onClick={()=>history.push(match.path.replace(':station', "SeodaemunGu"))}
+onClick={()=>history.push(match.path.replace(':station', "JongnoGu"))}
+onClick={()=>history.push(match.path.replace(':station', "JungGu"))}
+onClick={()=>history.push(match.path.replace(':station', "SeongdongGu"))}
+onClick={()=>history.push(match.path.replace(':station', "DongdaemunGu"))}
+onClick={()=>history.push(match.path.replace(':station', "JungnangGu"))}
+onClick={()=>history.push(match.path.replace(':station', "DobongGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GangbukGu"))}
+onClick={()=>history.push(match.path.replace(':station', "SeongbukGu"))}
+onClick={()=>history.push(match.path.replace(':station', "GwangjinGu"))}
+onClick={()=>history.push(match.path.replace(':station', "YongsanGu"))}
+onClick={()=>history.push(match.path.replace(':station', "YeongdeungpoGu"))}
+onClick={()=>history.push(match.path.replace(':station', "NowonGu"))}
