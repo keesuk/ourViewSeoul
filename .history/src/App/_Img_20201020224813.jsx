@@ -39,7 +39,7 @@ class Img extends Component {
     }
 
     chooseShape() {
-        const id = this.props.locationTagID
+        const id = Number(this.props.locationTagID) - 1
 
         this.setState(state => ({ImgProp : [...state.ImgProp, 
             id, //태그 번호

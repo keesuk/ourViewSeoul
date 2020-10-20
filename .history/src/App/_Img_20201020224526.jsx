@@ -39,7 +39,7 @@ class Img extends Component {
     }
 
     chooseShape() {
-        const id = this.props.locationTagID
+        const id = Number(this.props.locationTagID) - 1
 
         this.setState(state => ({ImgProp : [...state.ImgProp, 
             id, //태그 번호
@@ -63,7 +63,7 @@ class Img extends Component {
             context.beginPath()
             const x = points[i]
             const y = points[i + 1]
-            imgMaker(this.props.locationTagID, ImgProp, count, context, x, y)
+            imgMaker(this.props.locationId, ImgProp, count, context, x, y)
         }
     }
 
@@ -123,6 +123,8 @@ class Img extends Component {
 export default Img;
 
 function imgMaker(id, ImgProp, count, context, x, y){
+
+    console.log(id)
 
     function colorMaker(items) {
         const item = []

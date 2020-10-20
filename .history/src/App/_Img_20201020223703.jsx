@@ -39,8 +39,7 @@ class Img extends Component {
     }
 
     chooseShape() {
-        const id = this.props.locationTagID
-
+        const id = Number(this.props.locationTagID)
         this.setState(state => ({ImgProp : [...state.ImgProp, 
             id, //태그 번호
             colorList[id], //도형별 고유 컬러
@@ -63,7 +62,7 @@ class Img extends Component {
             context.beginPath()
             const x = points[i]
             const y = points[i + 1]
-            imgMaker(this.props.locationTagID, ImgProp, count, context, x, y)
+            imgMaker(this.props.locationId, ImgProp, count, context, x, y)
         }
     }
 
