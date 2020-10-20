@@ -143,7 +143,7 @@ class Window extends PureComponent {
                                     points={stationData && stationData.locationData}
                                     onOk={this.handleOk}
                                     chilcOk={i}
-                                    locationTagID={stationData && stationData.locationTagID}
+                                    locationId={locationTagID}
                                     locationName={stationData && stationData.locationName}
                                     className="img-stations"                            
                                 />)

@@ -8,6 +8,7 @@ import '../CSS/Window.css';
 const API = axios.create({
     baseURL: 'https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/station_image_data/station_image/'
 })
+const locationTagId = '0';
 const passLimit = 3; //5번
 const textLimit = 6;
 const scrollLimit = 1300;
@@ -105,7 +106,7 @@ class Window extends PureComponent {
     render(){
         const { stationDatas, show, okArray, inputOn, sendTextOn, windowUp, value, textOn, nonPass } = this.state;
         const stationName = stationDatas[0] && stationDatas[0].station
-        console.log(stationDatas)
+        console.log(stationData)
 
         return(
             <div 
@@ -143,7 +144,7 @@ class Window extends PureComponent {
                                     points={stationData && stationData.locationData}
                                     onOk={this.handleOk}
                                     chilcOk={i}
-                                    locationTagID={stationData && stationData.locationTagID}
+                                    locationId={locationTagId}
                                     locationName={stationData && stationData.locationName}
                                     className="img-stations"                            
                                 />)
