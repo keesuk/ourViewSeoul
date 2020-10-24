@@ -35,7 +35,6 @@ class Img extends Component {
     componentDidMount() {
         this.updateCanvas()
         this.chooseShape()
-        this.clickPoint()
     }
 
     chooseShape() {
@@ -151,7 +150,7 @@ function imgMaker(id, ImgProp, count, context, x, y){
         context.fillText(shapeItems[id], x+1.5, y)
         context.fill();
     }else if(count === 1){
-        context.font = '10px sans'
+        context.font = '100px sans'
         context.fillText(ImgProp[3], x, y)
     }else if(count === 2){
         context.font = '8.8px sans'

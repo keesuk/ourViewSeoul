@@ -114,7 +114,6 @@ class Img extends Component {
 
       
     render() {
-        console.log(this.state.count)
         return (
             <>{this.state.finalOn 
             ?<canvas

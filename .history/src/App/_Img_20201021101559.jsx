@@ -35,7 +35,6 @@ class Img extends Component {
     componentDidMount() {
         this.updateCanvas()
         this.chooseShape()
-        this.clickPoint()
     }
 
     chooseShape() {
@@ -114,7 +113,6 @@ class Img extends Component {
 
       
     render() {
-        console.log(this.state.count)
         return (
             <>{this.state.finalOn 
             ?<canvas

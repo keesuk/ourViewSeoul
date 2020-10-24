@@ -126,7 +126,7 @@ class Img extends Component {
             :<canvas 
                 width={width} 
                 height={height}
-                onClick={() => this.clickPoint()}
+                onClick={this.clickPoint}
                 style={{width:'100%', height:'100%', cursor:'pointer'}} 
                 ref="canvas" 
             />}

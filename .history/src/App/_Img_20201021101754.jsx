@@ -35,7 +35,6 @@ class Img extends Component {
     componentDidMount() {
         this.updateCanvas()
         this.chooseShape()
-        this.clickPoint()
     }
 
     chooseShape() {
