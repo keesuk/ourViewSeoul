@@ -151,7 +151,7 @@ function imgMaker(id, ImgProp, count, context, x, y){
         context.fillText(shapeItems[id], x+1.5, y)
         context.fill();
     }else if(count === 1){
-        context.font = '70px sans'
+        context.font = '60px sans'
         context.fillText(randomize(ItemsList[0]), x, y)
     }else if(count === 2){
         context.font = '8.8px sans'
@@ -159,7 +159,7 @@ function imgMaker(id, ImgProp, count, context, x, y){
         context.fillText(ImgProp[2], x+1.5, y)
         context.fill();
     }else if(count === 3){
-        context.font = '12px sans'
+        context.font = '14px sans'
         context.fillText(ImgProp[4], x-1, y)
     }else if(count === 4){
         context.font = '11px sans'
