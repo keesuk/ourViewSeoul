@@ -211,7 +211,7 @@ class MapShow extends PureComponent {
                                     pointer={pointer ? 1 : 0}
                                 >
                                 {stroke 
-                                ? <g transform={pageUp ? 'translate(10, 30) scale(.7)':'translate(0, 0) scale(1)'}>
+                                ? <g transform={pageUp ? 'translate(10, 10) scale(.7)':'translate(0, 0) scale(1)'}>
                                     <text transform="translate(80 30)" className="purple">&#9670; 박물관 갤러리</text>
                                     <text transform="translate(80 90)" className="green">▲ 자연 휴양지</text>
                                     <text transform="translate(80 150)" className="blue">■ 쇼핑 마켓</text>

@@ -30,7 +30,7 @@ const Logo = styled.img`
     padding-top: 15vw;
 
     @media all and (min-width:0px) and (max-width:1023px) {
-        padding-top: 4vw;
+        padding-top: 3vw;
         padding-bottom: 3vw;
         width: 76%;
 `;

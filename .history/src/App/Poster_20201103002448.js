@@ -31,8 +31,7 @@ const Logo = styled.img`
 
     @media all and (min-width:0px) and (max-width:1023px) {
         padding-top: 4vw;
-        padding-bottom: 3vw;
-        width: 76%;
+        width: 80%;
 `;
 const QuestionDiv = styled.div`
     
