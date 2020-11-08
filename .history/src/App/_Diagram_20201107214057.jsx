@@ -316,7 +316,7 @@ export function infoGraphic(location, corArr, i){
         }
 
         function checkSize(id){
-            if(id.number > 50) return id.id === 4 ?'100px': (id.id === 3 ?'140px': (id.id === 2 ?'76px' :'68px'))
+            if(id.number > 50) return id.id === 4 ?'100px': (id.id === 3 ?'135px': (id.id === 2 ?'80px' :'70px'))
             else if(id.number >= 10 
                 && id.number <= 50) return id.id === 4 ?'140px': (id.id === 3 ?'200px':'100px')
             else if(id.number < 10) return id.id === 4 ?'290px': (id.id === 3 ?'400px':'200px')
@@ -339,13 +339,13 @@ export function infoGraphic(location, corArr, i){
         }
 
         function copyToMakeShape(num){
-            const shape = randomize(['circle', 'horizon', 'vertical', 'cross'])
+            const shape = randomize(['vertical', 'horizon', 'cross'])
             const corList = []
             const numToMultiply = 40
             let length = num.length
 
             if(shape === 'cross'){
-                let crossOne = length/4
+                let crossOne = num.length/4
 
                 corList.push([0, 0])
 
@@ -356,7 +356,6 @@ export function infoGraphic(location, corArr, i){
                 }else num.push(num[0])
 
                 for(let i = 0; i < length; i = i + crossOne){
-
                     for(let j = 1; j < crossOne + 1; j++){
                         if(crossOne > i) corList.push([numToMultiply*j,0])
                         else if(crossOne*2 > i && i >= crossOne) corList.push([0,numToMultiply*j])
@@ -398,26 +397,8 @@ export function infoGraphic(location, corArr, i){
                 }
             }
 
-            if(shape === 'circle'){
-                let r = length * 10
+            if(shape === 'cricle'){
 
-                for(let i = 0; i < length; i++){
-                    let x = (r * Math.cos(2 * Math.PI * i / length))
-                    let y = (r * Math.sin(2 * Math.PI * i / length))
-
-                    corList.push([x, y])
-                }
-            }
-
-            if(shape === 'stairs'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                    else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                    else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                    else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
-                }
             }
 
             return num.map((v, i) => 

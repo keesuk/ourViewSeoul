@@ -339,7 +339,7 @@ export function infoGraphic(location, corArr, i){
         }
 
         function copyToMakeShape(num){
-            const shape = randomize(['circle', 'horizon', 'vertical', 'cross'])
+            const shape = randomize(['circle'])
             const corList = []
             const numToMultiply = 40
             let length = num.length
@@ -406,17 +406,6 @@ export function infoGraphic(location, corArr, i){
                     let y = (r * Math.sin(2 * Math.PI * i / length))
 
                     corList.push([x, y])
-                }
-            }
-
-            if(shape === 'stairs'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                    else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                    else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                    else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
                 }
             }
 

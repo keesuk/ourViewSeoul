@@ -409,17 +409,6 @@ export function infoGraphic(location, corArr, i){
                 }
             }
 
-            if(shape === 'stairs'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                    else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                    else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                    else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
-                }
-            }
-
             return num.map((v, i) => 
                 <g  style={{mixBlendMode: 'multiply'}}
                     transform={`translate(

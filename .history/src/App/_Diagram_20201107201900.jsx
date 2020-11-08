@@ -295,144 +295,103 @@ export class PinUp extends React.PureComponent {
 
 
 //-------------------------------------   INFOGRAPHIC FUNCTION   ------------------------------------------------------------------
-//마스터피스로의 길-------------------------   INFOGRAPHIC FUNCTION   ------------------------------------------------------------------
+//---마스터피스로의 길----------------------   INFOGRAPHIC FUNCTION   ------------------------------------------------------------------
 
 export function infoGraphic(location, corArr, i){
 
-    function startWithOrnamentType(id, corA, corB, i){ 
+    function typeCheck(id, corA, corB, i){ 
 
+        function checkSize(id){
+            if(id.number > 50){
+                return id.id === 4 ?'100px': (id.id === 3 ?'150px':'70px')
+            }else if(10 <= id.number <= 50){
+                return id.id === 4 ?'140px': (id.id === 3 ?'200px':'100px')
+            }else if(id.number < 10){
+                return id.id === 4 ?'290px': (id.id === 3 ?'400px':'200px')
+            }
+        }
+
+        function copyMachine(id, value){
+            const moreFifty = [8, 10, 12, 14, 16, 18, 20]
+            const underFifty = [2, 3, 4, 5, 6]
+            const shapeList = ['cross']
+
+            function shapeChoose(num){
+                const shape = randomize(shapeList)
+                const numToMultiply = 40
+                const corList = []
+
+                if(shape === 'cross'){
+                    let crossOne = num.length/4
+                    let length = num.length
+
+                    if(!Number.isInteger(crossOne)) {
+                        num.splice(num.length-1, 1)
+                        crossOne = crossOne - 0.5
+                        length = length - 2
+                    }else num.push(num[0])
+ 
+                    corList.push([0, 0])
+                    for(let i = 0; i < length; i = i + crossOne){
+                        for(let j = 1; j < crossOne + 1; j++){
+                            if(crossOne > i) corList.push([numToMultiply*j,0])
+                            else if(crossOne*2 > i && i >= crossOne) corList.push([0,numToMultiply*j])
+                            else if(crossOne*3 > i && i >= crossOne*2) corList.push([-numToMultiply*j,0])
+                            else if(i >= crossOne*3) corList.push([0, -numToMultiply*j])
+                        }
+                    }
+                    console.log(corList)
+                }
+
+                return num.map((v, i) => 
+                        <g 
+                            style={{mixBlendMode: 'multiply'}}
+                            transform={`translate(
+                                ${corList[i]&&corList[i][0]}, 
+                                ${corList[i]&&corList[i][1]})`
+                                } 
+                            key={i}
+                        >{v}
+                        </g>
+                )
+            }
+
+            if(id.number > 50){
+                const num = new Array(randomize(moreFifty)).fill(value)
+                
+                return shapeChoose(num)
+
+            }// else if(10 <= id.number <= 50){
+            //     const num = new Array(randomize(moreFifty)).fill(value)
+            //     return(
+            //         num.map((v, i) => 
+            //             <g transform={`translate(${i}, ${i})`} key={i}>
+            //                 {v}
+            //             </g>
+            //         )
+            //     )
+            // }else if(id.number < 10){
+            //     return value
+            // }
+        }
+        
         if(id.id === 0){
-            return copyHowMany(id, circlePin(checkSize(id), `translate(${corA}, ${corB})`, i))
+            return copyMachine(id, circlePin(checkSize(id), `translate(${corA}, ${corB})`, i))
         }else if(id.id === 1){
-            return copyHowMany(id, rectPin(checkSize(id), corA, corB, i))
+            return copyMachine(id, rectPin(checkSize(id), corA, corB, i))
         }else if(id.id === 2){
-            return copyHowMany(id, trianglePin(checkSize(id), `translate(${corA}, ${corB})`, i))
+            return copyMachine(id, trianglePin(checkSize(id), `translate(${corA}, ${corB})`, i))
         }else if(id.id === 3){
-            return copyHowMany(id, rhombusPin(null, checkSize(id), corA, corB, i))
+            return copyMachine(id, rhombusPin(null, checkSize(id), corA, corB, i))
         }else if(id.id === 4){
             corA = corA + 100
             corB = corB - 530
-            return copyHowMany(id, ellipsePin(checkSize(id), corA, corB, `rotate(30, 0, 0)`, i))
-        }
-
-        function checkSize(id){
-            if(id.number > 50) return id.id === 4 ?'100px': (id.id === 3 ?'140px': (id.id === 2 ?'76px' :'68px'))
-            else if(id.number >= 10 
-                && id.number <= 50) return id.id === 4 ?'140px': (id.id === 3 ?'200px':'100px')
-            else if(id.number < 10) return id.id === 4 ?'290px': (id.id === 3 ?'400px':'200px')
-        } 
-
-        function copyHowMany(id, value){
-            const moreFifty = [8, 10, 12, 14, 16, 18, 20]
-            const underFifty = [2, 3, 4, 5, 6]
-
-            if(id.number > 50){
-                const num = new Array(randomize(moreFifty)).fill(value) 
-                return copyToMakeShape(num)
-
-            }else if(id.number >= 10 && id.number <= 50){
-                return null
-                
-            }else if(id.number < 10){
-                return null
-            }
-        }
-
-        function copyToMakeShape(num){
-            const shape = randomize(['circle', 'horizon', 'vertical', 'cross'])
-            const corList = []
-            const numToMultiply = 40
-            let length = num.length
-
-            if(shape === 'cross'){
-                let crossOne = length/4
-
-                corList.push([0, 0])
-
-                if(!Number.isInteger(crossOne)) {
-                    num.splice(num.length-1, 1)
-                    crossOne = crossOne - 0.5
-                    length = length - 2
-                }else num.push(num[0])
-
-                for(let i = 0; i < length; i = i + crossOne){
-
-                    for(let j = 1; j < crossOne + 1; j++){
-                        if(crossOne > i) corList.push([numToMultiply*j,0])
-                        else if(crossOne*2 > i && i >= crossOne) corList.push([0,numToMultiply*j])
-                        else if(crossOne*3 > i && i >= crossOne*2) corList.push([-numToMultiply*j,0])
-                        else if(i >= crossOne*3) corList.push([0, -numToMultiply*j])
-                    }
-                }
-            }
-
-            if(shape === 'horizon'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(lengthHalf < 6){
-                        if(i < lengthHalf) corList.push([i*numToMultiply ,0])
-                        else corList.push([-(length-i)*numToMultiply ,0])
-                    }else{
-                        if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                        else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                        else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                        else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
-                    }
-                }
-            }
-
-            if(shape === 'vertical'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(lengthHalf < 6){
-                        if(i < lengthHalf) corList.push([0, i*numToMultiply ])
-                        else corList.push([0, -(length-i)*numToMultiply])
-                    }else{
-                        if(i < lengthHalf/2) corList.push([0, i*numToMultiply])
-                        else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([0, -(lengthHalf-i)*numToMultiply])
-                        else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([numToMultiply, (i-lengthHalf)*numToMultiply])
-                        else if(i >= lengthHalf + lengthHalf/2)corList.push([numToMultiply, (i-length)*numToMultiply])
-                    }
-                }
-            }
-
-            if(shape === 'circle'){
-                let r = length * 10
-
-                for(let i = 0; i < length; i++){
-                    let x = (r * Math.cos(2 * Math.PI * i / length))
-                    let y = (r * Math.sin(2 * Math.PI * i / length))
-
-                    corList.push([x, y])
-                }
-            }
-
-            if(shape === 'stairs'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                    else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                    else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                    else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
-                }
-            }
-
-            return num.map((v, i) => 
-                <g  style={{mixBlendMode: 'multiply'}}
-                    transform={`translate(
-                        ${corList[i]&&corList[i][0]}, 
-                        ${corList[i]&&corList[i][1]})`} 
-                    key={i}>
-                    {v}
-                </g>
-            )
+            return copyMachine(id, ellipsePin(checkSize(id), corA, corB, `rotate(30, 0, 0)`, i))
         }
     }
+
     
-    if(corArr!==undefined) return startWithOrnamentType(location, corArr && corArr[0], corArr && corArr[1], i)
+    if(corArr!==undefined) return typeCheck(location, corArr && corArr[0], corArr && corArr[1], i)
 }
 
 

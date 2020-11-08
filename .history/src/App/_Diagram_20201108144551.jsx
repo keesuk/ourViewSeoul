@@ -323,7 +323,8 @@ export function infoGraphic(location, corArr, i){
         } 
 
         function copyHowMany(id, value){
-            const moreFifty = [8, 10, 12, 14, 16, 18, 20]
+            const moreFifty = [8, 10,]
+            //  14, 16, 18, 20
             const underFifty = [2, 3, 4, 5, 6]
 
             if(id.number > 50){
@@ -339,7 +340,7 @@ export function infoGraphic(location, corArr, i){
         }
 
         function copyToMakeShape(num){
-            const shape = randomize(['circle', 'horizon', 'vertical', 'cross'])
+            const shape = randomize(['circle'])
             const corList = []
             const numToMultiply = 40
             let length = num.length
@@ -399,25 +400,21 @@ export function infoGraphic(location, corArr, i){
             }
 
             if(shape === 'circle'){
-                let r = length * 10
+                let r = length * length // 100
+                if(length > 16) r = r/3
+                else if(length <= 16 && length > 12) r = r/2
+                else r = r/.5
+                let y
+                let x 
+
 
                 for(let i = 0; i < length; i++){
-                    let x = (r * Math.cos(2 * Math.PI * i / length))
-                    let y = (r * Math.sin(2 * Math.PI * i / length))
+                    x = Math.sin(i) * (r + length)
+                    y = Math.cos(i) * (r + length)
 
                     corList.push([x, y])
                 }
-            }
-
-            if(shape === 'stairs'){
-                let lengthHalf = length/2
-
-                for(let i = 0; i < length; i++){
-                    if(i < lengthHalf/2) corList.push([i*numToMultiply ,0])
-                    else if(i >= lengthHalf/2 && i < lengthHalf) corList.push([-(lengthHalf-i)*numToMultiply ,0])
-                    else if(i >= lengthHalf && i < lengthHalf + lengthHalf/2)corList.push([(i-lengthHalf)*numToMultiply ,numToMultiply])
-                    else if(i >= lengthHalf + lengthHalf/2)corList.push([(i-length)*numToMultiply , numToMultiply])
-                }
+                console.log(corList)
             }
 
             return num.map((v, i) => 
