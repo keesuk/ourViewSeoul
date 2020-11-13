@@ -159,7 +159,7 @@ class MapShow extends PureComponent {
 
     componentDidUpdate(){
         if(this.props.rerender === true){
-            this.timeoutPoster = setTimeout(()=> {this.posterUpdate()}, 100)
+            setTimeout(()=> {this.posterUpdate()}, 100)
         }
     }
     
@@ -182,7 +182,7 @@ class MapShow extends PureComponent {
         this.setState({locationed : locationed})
         this.setState({do: true})
   
-        this.timeoutParse = setTimeout(() => {this.parsingCor()},200)
+        setTimeout(() => {this.parsingCor()},100)
     }
 
     parsingCor(){

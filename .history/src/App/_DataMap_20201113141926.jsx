@@ -152,14 +152,14 @@ class MapShow extends PureComponent {
             return res.json()
         }).then(data => {
             this.setState({dataLocation : data})
-            setTimeout(()=> {this.posterUpdate()}, 100)
+            setTimeout(()=> {this.posterUpdate()}, 200)
         })
         
     }
 
     componentDidUpdate(){
         if(this.props.rerender === true){
-            this.timeoutPoster = setTimeout(()=> {this.posterUpdate()}, 100)
+            setTimeout(()=> {this.posterUpdate()}, 200)
         }
     }
     
@@ -182,14 +182,14 @@ class MapShow extends PureComponent {
         this.setState({locationed : locationed})
         this.setState({do: true})
   
-        this.timeoutParse = setTimeout(() => {this.parsingCor()},200)
+        setTimeout(() => {this.parsingCor()},100)
     }
 
     parsingCor(){
         const parseCor = this.state.locationed.map(station => this.cor[station.name])
-        .map(station => station.innerHTML
-        .split('(').pop().split(')')[0].split(' '))
-        .map(station => [parseInt(station[0]),parseInt(station[1])])
+            .map(station => station.innerHTML
+            .split('(').pop().split(')')[0].split(' '))
+            .map(station => [parseInt(station[0]),parseInt(station[1])])
         this.setState({ corArr : parseCor })
     }
 

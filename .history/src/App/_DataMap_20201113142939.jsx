@@ -158,12 +158,14 @@ class MapShow extends PureComponent {
     }
 
     componentDidUpdate(){
+        clearTimeout(this.timeoutPoster)
         if(this.props.rerender === true){
             this.timeoutPoster = setTimeout(()=> {this.posterUpdate()}, 100)
         }
     }
     
     posterUpdate(){
+        clearTimeout(this.timeoutParse)
         const dataLocation = this.state.dataLocation
 
         let zero = randomProp(dataLocation)
@@ -182,7 +184,7 @@ class MapShow extends PureComponent {
         this.setState({locationed : locationed})
         this.setState({do: true})
   
-        this.timeoutParse = setTimeout(() => {this.parsingCor()},200)
+        this.timeoutParse = setTimeout(() => {this.parsingCor()},100)
     }
 
     parsingCor(){

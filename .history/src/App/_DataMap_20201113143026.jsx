@@ -182,7 +182,7 @@ class MapShow extends PureComponent {
         this.setState({locationed : locationed})
         this.setState({do: true})
   
-        this.timeoutParse = setTimeout(() => {this.parsingCor()},200)
+        this.timeoutParse = setTimeout(() => {this.parsingCor()},100)
     }
 
     parsingCor(){
