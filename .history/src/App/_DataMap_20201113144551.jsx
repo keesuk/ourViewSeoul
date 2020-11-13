@@ -186,11 +186,9 @@ class MapShow extends PureComponent {
     }
 
     parsingCor(){
-        const parseCor = this.state.locationed.map(station => {
-            let item = this.cor[station.name]
-            if(!item) return this.cor['Bulgwang']
-            else return item
-            })
+        
+        console.log(this.cor)
+        const parseCor = this.state.locationed.map(station => this.cor[station.name])
         .map(station => station.innerHTML
         .split('(').pop().split(')')[0].split(' '))
         .map(station => [parseInt(station[0]),parseInt(station[1])])
