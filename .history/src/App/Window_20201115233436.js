@@ -72,22 +72,18 @@ class Window extends Component {
     }
 
     _post(okArray, filtered, value) {
-        
-        const data = { 
-            stationName : this.props.station, 
-            okNumber : okArray[0],
-            whatIsOkay : filtered,
-            value : value
-        }
-
-        return fetch(`${databaseURL}data/.json`, {
+        return fetch(`${databaseURL}test/.json`, {
             method : 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify(value)
         }).then(res => {
             if(res.status !==200){
                 throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
             }
             return res.json()
+        }).then(data => {
+            let nextState = this.state.words
+            nextState[data.name] = words
+            this.setState({words: nextState})
         })
     }
 
@@ -210,7 +206,7 @@ class Window extends Component {
             return filtered.push(obj)
         })
 
-        this.props.whatsOk([okArray, filtered, value])
+        this.props.whatsOk(okArray, filtered, value)
         this._post(okArray, filtered, value)
         this.goBack()
     }

@@ -180,7 +180,7 @@ class MapShow extends PureComponent {
     _get(go) {
         fetch(`${databaseURL}testWindow/.json`).then(res => {
             if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
+                throw new Error(res.statusText)
             }
             return res.json()
         }).then(data => {
@@ -188,6 +188,7 @@ class MapShow extends PureComponent {
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){
@@ -339,7 +340,7 @@ class MapShow extends PureComponent {
                                                         textAnchor={'middle'}
                                                         fill={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}
                                                     >
-                                                        {slicer(this.state.locationed && this.state.locationed[i].nameKor)}
+                                                            {slicer(this.state.locationed && this.state.locationed[i].nameKor)}
                                                     </text>
                                                 </g>
                                             )}

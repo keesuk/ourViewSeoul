@@ -188,6 +188,7 @@ class MapShow extends PureComponent {
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){

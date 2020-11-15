@@ -80,7 +80,7 @@ class Window extends Component {
             value : value
         }
 
-        return fetch(`${databaseURL}data/.json`, {
+        return fetch(`${databaseURL}test/.json`, {
             method : 'POST',
             body: JSON.stringify(data)
         }).then(res => {

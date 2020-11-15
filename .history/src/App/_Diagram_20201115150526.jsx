@@ -10,11 +10,6 @@ export function randomize(items) {
     return item
 }
 
-export function slicer(str){
-    if(str.length > 6)return str = str.slice(0, 7)
-    else return str
-}
-
 export function pxStringfier(value) {
     const valueFix = value / 3
     const valuePx = valueFix.toString() + 'vw' 
@@ -27,15 +22,10 @@ export function colorChooser(value) {
     else if(value === '#006CC4'){answer = 'blue'}
     else if(value === '#E20000'){answer = 'red'}
     else if(value === '#087A0D'){answer = 'green'}
-    else if(value === '#00bfb3'){answer = 'mint'}
+    else if(value === '#00bfb3'){answer = 'yellow'}
 
     return answer
 }
-
-export function percentage(partialValue, totalValue) {
-   let answer = (100 * partialValue) / totalValue
-   return parseInt(answer);
-} 
 
 export function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
@@ -318,9 +308,20 @@ export class PinUp extends React.PureComponent {
 //-------------------------------------   INFOGRAPHIC FUNCTION   ------------------------------------------------------------------
 //시간되면 verti, cross, hori 수정---------   INFOGRAPHIC FUNCTION   ------------------------------------------------------------------
 
-export function infoGraphic(location, corArr, i){
+export function infoGraphic(location, corArr, i, changeBackground){
     
     function startWithOrnamentType(id, corA, corB, i){ 
+        if(corA > 0 && corA < 320){
+            corA = corA + 200 
+        }else if(corA > 960 && corA <= 1280){
+            corA = corA - 200
+        }
+
+        if(corB > 0 && corB < 320){
+            corB = corB + 200 
+        }else if(corB > 960 && corB <= 1280){
+            corB = corB - 200
+        }
 
         if(id.id === 0){
             return copyHowMany(id, circlePin(checkSize(id), `translate(${corA}, ${corB})`, i))
@@ -331,7 +332,10 @@ export function infoGraphic(location, corArr, i){
         }else if(id.id === 3){
             return copyHowMany(id, rhombusPin(null, checkSize(id), corA, corB, i))
         }else if(id.id === 4){
-            return copyHowMany(id, ellipsePin(checkSize(id), corA, corB, `rotate(0, 0, 0)`, i))
+            corA = corA + 100
+            corB = corB - 530
+            // console.log(corA, corB)
+            return copyHowMany(id, ellipsePin(checkSize(id), corA, corB, `rotate(30, 0, 0)`, i))
         }
 
         function checkSize(id){
@@ -458,6 +462,7 @@ export function infoGraphic(location, corArr, i){
             return num.map((v, i) => 
                 <g
                     style={{mixBlendMode: 'multiply'}}
+                    onMouseOver={() => changeBackground(id.nameKor)}
                     transform={`translate(
                         ${corList[i]&&corList[i][0]}, 
                         ${corList[i]&&corList[i][1]})`} 

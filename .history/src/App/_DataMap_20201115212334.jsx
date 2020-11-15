@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import styled from 'styled-components';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { pxStringfier, colorChooser, randomize, mapDrawer, infoGraphic, randomProp, percentage, slicer } from "./_Diagram.jsx";
+import { pxStringfier, colorChooser, randomize, mapDrawer, infoGraphic, randomProp } from "./_Diagram.jsx";
 
 const databaseURL = "https://station-db.firebaseio.com/";
 
@@ -11,7 +11,7 @@ const ExplainDiv = styled.div`
     margin-top: 2vw;
     box-shadow: 5px 5px #333;
     box-sizing: border-box;
-    border: 2.3px solid #333;
+    border: 1.5px solid #333;
     background-color: white;
     
     @media all and (min-width:0px) and (max-width:1023px) {
@@ -105,7 +105,7 @@ const Svg = styled.svg`
         fill:#087A0D;
         font-size: 30px;
     }
-    .mint{
+    .yellow{
         font-family:'Noto Sans KR'; 
         font-weight:900; 
         fill:#00bfb3;
@@ -139,7 +139,7 @@ class MapShow extends PureComponent {
             blue: null,
             red: null,
             green: null,
-            mint: null,
+            yellow: null,
             location: '',
             dataLocation : {},
             locationed : [],
@@ -154,40 +154,30 @@ class MapShow extends PureComponent {
 
     componentDidMount(){
         if(this.props.posterPin){
-            this._get('posterPin')
+            this._get()
+            this.setState({location : this.props.posterPin})
         }
         if(this.props.rerender === false){
-            this._get('rerender')
+            this._get(1)
         }
     }
 
     getLocation(value){
-        let spot = this.state.dataLocation[value]
-        if(!spot)spot['kor'] = '값이 없습니다'
-        if(spot){
-            const total = spot['0'] + spot['1'] + spot['2'] + spot['3'] + spot['4']
-            this.setState({ 
-                location : spot['kor'],
-                purple : percentage(spot['0'], total),
-                blue : percentage(spot['1'], total),
-                red : percentage(spot['2'], total),
-                green : percentage(spot['3'], total),
-                mint : percentage(spot['4'], total)
-            })
-        }
+        const spot = this.state.dataLocation[value].nameKor
+        this.setState({ location : spot})
     }
 
-    _get(go) {
+    _get(i) {
         fetch(`${databaseURL}testWindow/.json`).then(res => {
             if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
+                throw new Error(res.statusText)
             }
             return res.json()
         }).then(data => {
             this.setState({dataLocation : data})
-            if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
-            else this.getLocation(this.props.posterPin)
+            if(i === 1)setTimeout(()=> {this.posterUpdate()}, 100)
         })
+        
     }
 
     componentDidUpdate(){
@@ -241,13 +231,13 @@ class MapShow extends PureComponent {
 
     render() {
         const { scale, panOff, stroke, pointer, posterOn } = this.props
-        
+
         return (
                 <>
                 {stroke ? null :
                     <ExplainDiv>
                         <ExplainTitle>
-                                {slicer(this.state.location)}
+                            {this.state.location}
                         </ExplainTitle>
                         <ExplainNumber>
                             {colorList.map(item => 
@@ -300,7 +290,7 @@ class MapShow extends PureComponent {
                                     <text transform="translate(80 90)" className="green">▲ 자연 휴양지</text>
                                     <text transform="translate(80 150)" className="blue">■ 쇼핑 마켓</text>
                                     <text transform="translate(80 210)" className="red">● 랜드마크</text>
-                                    <text transform="translate(80 270)" className="mint">⬮  음식점</text>
+                                    <text transform="translate(80 270)" className="yellow">⬮  음식점</text>
                                 </g>
                                 : null}
                                 {mapDrawer(this.getLocation, this.cor)}
@@ -323,23 +313,31 @@ class MapShow extends PureComponent {
                                                     <rect 
                                                         width={300}
                                                         height={100}
-                                                        x={20} y={20}
-                                                        style={{mixBlendMode: 'multiply'}}
-                                                        fill={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}/>
-                                                    <rect 
-                                                        width={300}
-                                                        height={100}
+                                                        fill={'#fff'}
                                                         x={0} y={0}
                                                         strokeWidth={6}
-                                                        fill={'#fff'}
-                                                        stroke={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}/>
+                                                        stroke={
+                                                            i === 0 ? '#E20000'
+                                                            :( i === 1 ? '#006CC4'
+                                                            :( i === 2 ? '#087A0D'
+                                                            :( i === 3 ? '#e90087'
+                                                            :( i === 4 ? '#00bfb3'
+                                                            :null
+                                                        ))))}/>
                                                     <text  
                                                         x={150} y={65}
                                                         fontSize={50}
                                                         textAnchor={'middle'}
-                                                        fill={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}
+                                                        fill={
+                                                            i === 0 ? '#E20000'
+                                                            :( i === 1 ? '#006CC4'
+                                                            :( i === 2 ? '#087A0D'
+                                                            :( i === 3 ? '#e90087'
+                                                            :( i === 4 ? '#00bfb3'
+                                                            :null
+                                                        ))))}
                                                     >
-                                                        {slicer(this.state.locationed && this.state.locationed[i].nameKor)}
+                                                        {this.state.locationed && this.state.locationed[i].nameKor}
                                                     </text>
                                                 </g>
                                             )}

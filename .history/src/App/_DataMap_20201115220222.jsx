@@ -180,7 +180,7 @@ class MapShow extends PureComponent {
     _get(go) {
         fetch(`${databaseURL}testWindow/.json`).then(res => {
             if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
+                throw new Error(res.statusText)
             }
             return res.json()
         }).then(data => {
@@ -188,6 +188,7 @@ class MapShow extends PureComponent {
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){
@@ -323,23 +324,31 @@ class MapShow extends PureComponent {
                                                     <rect 
                                                         width={300}
                                                         height={100}
-                                                        x={20} y={20}
-                                                        style={{mixBlendMode: 'multiply'}}
-                                                        fill={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}/>
-                                                    <rect 
-                                                        width={300}
-                                                        height={100}
+                                                        fill={'#fff'}
                                                         x={0} y={0}
                                                         strokeWidth={6}
-                                                        fill={'#fff'}
-                                                        stroke={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}/>
+                                                        stroke={
+                                                            i === 0 ? '#E20000'
+                                                            :( i === 1 ? '#006CC4'
+                                                            :( i === 2 ? '#087A0D'
+                                                            :( i === 3 ? '#e90087'
+                                                            :( i === 4 ? '#00bfb3'
+                                                            :null
+                                                        ))))}/>
                                                     <text  
                                                         x={150} y={65}
                                                         fontSize={50}
                                                         textAnchor={'middle'}
-                                                        fill={i === 0 ? '#E20000':( i === 1 ? '#006CC4':( i === 2 ? '#087A0D':( i === 3 ? '#e90087':( i === 4 ? '#00bfb3':null))))}
+                                                        fill={
+                                                            i === 0 ? '#E20000'
+                                                            :( i === 1 ? '#006CC4'
+                                                            :( i === 2 ? '#087A0D'
+                                                            :( i === 3 ? '#e90087'
+                                                            :( i === 4 ? '#00bfb3'
+                                                            :null
+                                                        ))))}
                                                     >
-                                                        {slicer(this.state.locationed && this.state.locationed[i].nameKor)}
+                                                            {slicer(this.state.locationed && this.state.locationed[i].nameKor)}
                                                     </text>
                                                 </g>
                                             )}

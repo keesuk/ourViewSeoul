@@ -1,9 +1,10 @@
 import React, {PureComponent} from "react";
 import styled from 'styled-components';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import axios from 'axios';
 import { pxStringfier, colorChooser, randomize, mapDrawer, infoGraphic, randomProp, percentage, slicer } from "./_Diagram.jsx";
 
-const databaseURL = "https://station-db.firebaseio.com/";
+const API = axios.create({baseURL: "https://station-db.firebaseio.com/testWindow/.json"});
 
 const ExplainDiv = styled.div`
     position: absolute;
@@ -178,7 +179,7 @@ class MapShow extends PureComponent {
     }
 
     _get(go) {
-        fetch(`${databaseURL}testWindow/.json`).then(res => {
+        fetch(API).then(res => {
             if(res.status !== 200){
                 throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
             }
@@ -188,6 +189,7 @@ class MapShow extends PureComponent {
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){

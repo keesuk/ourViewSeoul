@@ -69,26 +69,11 @@ class Window extends Component {
 
     componentDidMount(){
         this.show()
+        this._get()
     }
 
-    _post(okArray, filtered, value) {
-        
-        const data = { 
-            stationName : this.props.station, 
-            okNumber : okArray[0],
-            whatIsOkay : filtered,
-            value : value
-        }
+    _get(){
 
-        return fetch(`${databaseURL}data/.json`, {
-            method : 'POST',
-            body: JSON.stringify(data)
-        }).then(res => {
-            if(res.status !==200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
-            }
-            return res.json()
-        })
     }
 
     show(){
@@ -210,8 +195,9 @@ class Window extends Component {
             return filtered.push(obj)
         })
 
-        this.props.whatsOk([okArray, filtered, value])
-        this._post(okArray, filtered, value)
+        const dataArray = [ okArray, filtered, value ]
+
+        this.props.whatsOk(dataArray)
         this.goBack()
     }
 
@@ -285,18 +271,7 @@ class Window extends Component {
                                         locationTagID={oneArr && oneArr.locationTagID}
                                         locationName={oneArr && oneArr.locationName}                           
                                     />)) 
-                                :<div style={{ 
-                                    width:'100%', 
-                                    height:'100vh', 
-                                    backgroundColor:'#333', 
-                                    color:'white',
-                                    textAlign: 'center',
-                                    fontWeight: '900',
-                                    fontSize: '30px',
-                                    paddingTop: '100px'
-                                }}>
-                                    시간이 걸리오니, <br/> 조금만 기다려주세요.
-                                </div>
+                                :<div style={{ width:'100%', height:'100vh', backgroundColor:'#333'}}/>
                             }
                         </div>
                         { sendTextOn 

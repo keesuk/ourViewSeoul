@@ -74,13 +74,13 @@ class Window extends Component {
     _post(okArray, filtered, value) {
         
         const data = { 
-            stationName : this.props.station, 
-            okNumber : okArray[0],
-            whatIsOkay : filtered,
-            value : value
+            stationName = this.props.station, 
+            okNumber = okArray[0],
+            whatIsOkay = filtered,
+            value = value
         }
 
-        return fetch(`${databaseURL}data/.json`, {
+        return fetch(`${databaseURL}test/.json`, {
             method : 'POST',
             body: JSON.stringify(data)
         }).then(res => {

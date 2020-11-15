@@ -146,6 +146,7 @@ class MapShow extends PureComponent {
             corArr: [],
             do: false,
             locName : '',
+            showFailAlert: false,
         }
         this.cor = []
         this.posterUpdate = this.posterUpdate.bind(this)
@@ -178,16 +179,17 @@ class MapShow extends PureComponent {
     }
 
     _get(go) {
-        fetch(`${databaseURL}testWindow/.json`).then(res => {
-            if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
-            }
+        fetch(`${databaseURL}testWndow/.json`).catch( err => {
+            console.log(err)
+            this.setState({showFailAlert: true})
+        }).then(res => {
             return res.json()
         }).then(data => {
             this.setState({dataLocation : data})
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){
@@ -241,6 +243,8 @@ class MapShow extends PureComponent {
 
     render() {
         const { scale, panOff, stroke, pointer, posterOn } = this.props
+
+        if(this.state.showFailAlert === true)return alert('err')
         
         return (
                 <>

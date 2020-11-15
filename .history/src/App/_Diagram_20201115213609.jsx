@@ -10,11 +10,6 @@ export function randomize(items) {
     return item
 }
 
-export function slicer(str){
-    if(str.length > 6)return str = str.slice(0, 7)
-    else return str
-}
-
 export function pxStringfier(value) {
     const valueFix = value / 3
     const valuePx = valueFix.toString() + 'vw' 
@@ -31,11 +26,6 @@ export function colorChooser(value) {
 
     return answer
 }
-
-export function percentage(partialValue, totalValue) {
-   let answer = (100 * partialValue) / totalValue
-   return parseInt(answer);
-} 
 
 export function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

@@ -178,9 +178,10 @@ class MapShow extends PureComponent {
     }
 
     _get(go) {
-        fetch(`${databaseURL}testWindow/.json`).then(res => {
+        fetch(`${databaseURL}testWndow/.json`).then(res => {
             if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
+                alert('에러가 났어요 ㅠ 새로고침 해주세요')
+                throw new Error(res.statusText)
             }
             return res.json()
         }).then(data => {
@@ -188,6 +189,7 @@ class MapShow extends PureComponent {
             if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
             else this.getLocation(this.props.posterPin)
         })
+        
     }
 
     componentDidUpdate(){
