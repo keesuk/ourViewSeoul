@@ -31,6 +31,7 @@ const PosterDiv = styled.div`
       }
 `;
 
+
 class App extends Component {
 
     render() {
