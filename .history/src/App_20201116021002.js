@@ -48,7 +48,7 @@ class App extends Component {
         return (
             <>
                 {this.state.show ? 
-                    <div style={{backgroundColor:'white', boxSizing: 'border-box', width:'100vw', height:'100vh', position:'absolute', zIndex:'10000'}} onClick={()=> this.getOut()}>
+                    <div style={{backGroundColor:'white', width:'100vw', height:'100vh', position:'absolute', zIndex:'10000'}} onClick={()=> this.getOut()}>
                         <Link to='/:station'><img style={{width:'90%', padding: '4vw',}} src={require('./data/Logo.svg')}/>
                             <div style={{
                                 padding: '4vw',

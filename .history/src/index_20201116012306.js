@@ -16,7 +16,7 @@ createMuiTheme({
 
 ReactDOM.render(
   <HashRouter basename="/"><App /></HashRouter>
-  ,
+    ,
   document.getElementById('root')
 );
 

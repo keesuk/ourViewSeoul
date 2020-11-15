@@ -1,4 +1,5 @@
 11월 17일 오픈!  
+google-site-verification=LscD6mf3Bg--GTzytWrU4LR4WFb1WB0Xx2-nbv4TK9A
 drawSeoul() {
 
     const svgCanvas = d3.select(this.refs.canvas)

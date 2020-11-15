@@ -1,4 +1,5 @@
-  
+11월 17일 오픈!  
+google-site-verification=LscD6mf3Bg--GTzytWrU4LR4WFb1WB0Xx2-nbv4TK9A
 drawSeoul() {
 
     const svgCanvas = d3.select(this.refs.canvas)
@@ -1266,3 +1267,49 @@ onClick={()=>history.push(match.path.replace(':station', "NowonGu"))}
                 }
             ]
         },
+
+        ///---
+
+
+        whatsOk[0]= whatsOk[0].filter(ok => !whatsOk[1].includes(ok))
+        const downArrPush = [...downArr, arrNum-1]
+
+
+
+
+        {this.props.size < pinMiddle && this.state.locationTag ? 
+                    <g
+                        transform={`
+                            translate(${pinCor[0]+ 80}, ${pinCor[1] - 300})
+                            scale(${0.9/this.props.size})
+                        `}
+                    >
+                        <rect 
+                            width={'200px'} 
+                            height={'200px'}
+                            x={'20px'}
+                            y={'20px'}
+                            fill={'black'}
+                        />
+                        <rect 
+                            width={'200px'} 
+                            height={'200px'}
+                            x={'0px'}
+                            y={'0px'}
+                            style={{
+                                fill:'white', 
+                                strokeWidth:'6px', 
+                                stroke:'rgb(0,0,0)'}}
+                        >
+                        </rect> 
+                        <text 
+                                x={'50%'}
+                                y={'50%'}
+                                alignmentBaseline={'middle'}
+                                textAnchor={'middle'}
+                            >
+                                CLIPPED BORDER
+                        </text> 
+                    </g> 
+                    : null
+                }
