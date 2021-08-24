@@ -103,7 +103,7 @@ export class Triangle extends React.PureComponent {
             <TriangleText
                 style ={{ color : on.length !== 0
                     ? '#e5e5e5'
-                    : (getDown.length !== 0 ? '#087A0D' : '#333'),
+                    : (getDown.length !== 0 ? '#087A0D' : '#000'),
                     marginRight: right,
                     marginLeft: left,
                     fontSize: size,
@@ -133,7 +133,7 @@ export class Circle extends React.PureComponent {
             <div
                 style ={{ color: on.length !== 0
                     ? '#e5e5e5'
-                    : (getDown.length !== 0 ? '#E20000' : '#333'),
+                    : (getDown.length !== 0 ? '#E20000' : '#000'),
                     marginRight: right,
                     marginLeft: left,
                     fontSize: size,
@@ -161,7 +161,7 @@ export class Rhombus extends React.PureComponent {
         return(
             <div style ={{ color : on.length !== 0
                 ? '#e5e5e5'
-                : (getDown.length !== 0 ? '#e90087': '#333'),
+                : (getDown.length !== 0 ? '#e90087': '#000'),
                 marginRight: right,
                 marginLeft: left,
                 fontSize: size,
@@ -189,7 +189,7 @@ export class Rectangular extends React.PureComponent {
             <div
                 style ={{ color: on.length !== 0
                     ? '#e5e5e5'
-                    : (getDown.length !== 0 ? '#006CC4':'#333'),
+                    : (getDown.length !== 0 ? '#006CC4':'#000'),
                     marginRight: right,
                     marginLeft: left,
                     fontSize: size,
@@ -219,7 +219,7 @@ export class Ellipse extends React.PureComponent {
             <div
                 style ={{ color: on.length !== 0
                     ? '#e5e5e5'
-                    : (getDown.length !== 0 ? '#00bfb3':'#333'),
+                    : (getDown.length !== 0 ? '#00bfb3':'#000'),
                     marginRight: right,
                     marginLeft: left,
                     fontSize: size,
@@ -576,7 +576,7 @@ export class Pin extends React.PureComponent {
                             height={'100px'}
                             x={'15px'}
                             y={'15px'}
-                            fill={'#333'}
+                            fill={'#000'}
                         />
                         <rect 
                             width={'370px'} 
@@ -710,7 +710,7 @@ const DiceDiv = styled.div`
     span {
         width: 5px;
         height: 5px;
-        background: #333;
+        background: #000;
         border-radius: 50%;
         display: block;
         position: absolute;

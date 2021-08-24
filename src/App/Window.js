@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import axios from 'axios';
 import Img from './_Img.jsx';
+import Bulgwang from "../data/imgDB/Bulgwang.json";
+import Gyeongbokgung from "../data/imgDB/Gyeongbokgung.json";
+import SeoulStation from "../data/imgDB/SeoulStation.json";
+import HongikUniv from "../data/imgDB/HongikUniv.json";
 import { Circle, Triangle, Rhombus, Ellipse, Rectangular, randomize } from './_Diagram.jsx';
 import '../CSS/Window.css';
 
-const API = axios.create({baseURL: 'https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/station_image_data/station_image/'})
-const databaseURL = "https://station-db.firebaseio.com/";
+// const databaseURL = "https://station-db.firebaseio.com/";
 
 let i = 0;
 const textLimit = 6;
@@ -42,7 +44,6 @@ class Window extends Component {
             chooseHead : null,
             choosePage : null,
         }
-        this.getLocation();
         this.goBack = this.goBack.bind(this);
         this.show = this.show.bind(this);
         this.handleOk = this.handleOk.bind(this);
@@ -53,11 +54,17 @@ class Window extends Component {
         this.textInput = React.createRef();
     }
 
-    getLocation = async() => {
-        const data = await API
-            .get('/'+ this.props.station)
-            .then(({data}) => data)
-        this.setState({ imgLoaded : true })
+    componentDidMount(){
+        this.show()
+        let data
+
+        if(this.props.station === "Bulgwang") data = Bulgwang
+        else if(this.props.station === "Gyeongbokgung") data = Gyeongbokgung
+        else if(this.props.station === "SeoulStation") data = SeoulStation
+        else if(this.props.station === "HongikUniv") data = HongikUniv
+        else data = null
+
+        this.setState({imgLoaded : true})
 
         this.setState(state => ({ 
             arr : [...state.arr, data.list[state.arrNum]],
@@ -67,29 +74,25 @@ class Window extends Component {
         }))
     }
 
-    componentDidMount(){
-        this.show()
-    }
-
-    _post(okArray, filtered, value) {
+    // _post(okArray, filtered, value) {
         
-        const data = { 
-            stationName : this.props.station, 
-            okNumber : okArray[0],
-            whatIsOkay : filtered,
-            value : value
-        }
+    //     const data = { 
+    //         stationName : this.props.station, 
+    //         okNumber : okArray[0],
+    //         whatIsOkay : filtered,
+    //         value : value
+    //     }
 
-        return fetch(`${databaseURL}data/.json`, {
-            method : 'POST',
-            body: JSON.stringify(data)
-        }).then(res => {
-            if(res.status !==200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
-            }
-            return res.json()
-        })
-    }
+    //     return fetch(`${databaseURL}data/.json`, {
+    //         method : 'POST',
+    //         body: JSON.stringify(data)
+    //     }).then(res => {
+    //         if(res.status !==200){
+    //             throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
+    //         }
+    //         return res.json()
+    //     })
+    // }
 
     show(){
         this.setState(state => ({ show : !state.show }))
@@ -211,7 +214,7 @@ class Window extends Component {
         })
 
         this.props.whatsOk([okArray, filtered, value])
-        this._post(okArray, filtered, value)
+        // this._post(okArray, filtered, value)
         this.goBack()
     }
 
@@ -288,7 +291,7 @@ class Window extends Component {
                                 :<div style={{ 
                                     width:'100%', 
                                     height:'100vh', 
-                                    backgroundColor:'#333', 
+                                    backgroundColor:'#000', 
                                     color:'white',
                                     textAlign: 'center',
                                     fontWeight: '900',
@@ -325,9 +328,9 @@ class Window extends Component {
                             : this.handleSubmit
                         } 
                         className="content-next-button" style={{
-                        boxShadow: inputOn ? '3px 5px #333':(windowUp ? (textOn ? (nonPass ? '0px 0px red':'3px 5px'+ buttonColor ):'0px 0px #cccccc'):'0px 0px #cccccc'),
-                        color: inputOn ? '#333':(windowUp ? (textOn ? (nonPass ? 'red': buttonColor ):'#999'):'#999'),
-                        borderColor: inputOn ? '#333' : (windowUp ? (textOn ? (nonPass ? 'red':  buttonColor):'#cccccc'):'#cccccc'),
+                        boxShadow: inputOn ? '3px 5px #000':(windowUp ? (textOn ? (nonPass ? '0px 0px red':'3px 5px'+ buttonColor ):'0px 0px #cccccc'):'0px 0px #cccccc'),
+                        color: inputOn ? '#000':(windowUp ? (textOn ? (nonPass ? 'red': buttonColor ):'#999'):'#999'),
+                        borderColor: inputOn ? '#000' : (windowUp ? (textOn ? (nonPass ? 'red':  buttonColor):'#cccccc'):'#cccccc'),
                         transform: inputOn ? 'translate(-2px, -2px)':(windowUp ? (textOn ? (nonPass ? 'none':'translate(-2px, -2px)'):'none'):'none'),
                         cursor: inputOn ? 'pointer' : (windowUp ? (textOn ? (nonPass ? 'not-allowed':'pointer'):'not-allowed'):'not-allowed'),
                         }}

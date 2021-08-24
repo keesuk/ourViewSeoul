@@ -29,7 +29,7 @@ const IknowBtn = styled.button`
     outline: none;
     padding: 0;
     white-space:nowrap;
-    color: #333;
+    color: #000;
 
     @media all and (min-width:0px) and (max-width:1023px) {
         font-size: 9.2vw;
@@ -44,14 +44,14 @@ const IknowExplainDiv = styled.div`
         font-weight: 500;
         letter-spacing: -.15vw;
         padding: 12px 20px 15px 20px;
-        box-shadow: 5px 5px #333;
+        box-shadow: 5px 5px #000;
         box-sizing: border-box;
-        border: 2.1px solid #333;
+        border: 2.1px solid #000;
         background-color: white;
         left: 50%;
         cursor: pointer;
         transform: translateX(-50%);
-        color: #333;
+        color: #000;
         
         @media all and (min-width:0px) and (max-width:1023px) {
             width: 80vw;
@@ -69,7 +69,7 @@ const IknowExplainDiv = styled.div`
         width: 0;
         height: 0;
         border: 20px solid transparent;
-        border-bottom-color: #333;
+        border-bottom-color: #000;
         border-top: 0;
         border-right: 0;
         margin-left: 115px;

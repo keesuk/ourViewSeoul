@@ -1,0 +1,5871 @@
+{
+  "data" : {
+    "-MMBdayTqdO4w_9c05tX" : {
+      "stationName" : "Bulgwang",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Bulgwang",
+        "locationName" : "불광역 3호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "중화원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "횟집산이네",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "도원",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMBlM3zMwDlG8JYlOq2" : {
+      "okNumber" : 4,
+      "stationName" : "Bulgwang",
+      "value" : "불광이지",
+      "whatIsOkay" : [ {
+        "location" : "Bulgwang",
+        "locationName" : "불광역 3호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "중화원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "횟집산이네",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "도원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "지원가마솥해장국",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMBmWT2FiPEiBKw3ffh" : {
+      "okNumber" : 5,
+      "stationName" : "Bulgwang",
+      "value" : "집",
+      "whatIsOkay" : [ {
+        "location" : "Bulgwang",
+        "locationName" : "불광역 3호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "중화원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "횟집산이네",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "도원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "지원가마솥해장국",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "장충당 불광점",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMBmr5Lt4eBJL7aIU2b" : {
+      "stationName" : "Gusan",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Gusan",
+        "locationName" : "구산역 6호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Gusan",
+        "locationName" : "NC백화점 불광점",
+        "locationTagID" : 1
+      }, {
+        "location" : "Gusan",
+        "locationName" : "허니돈",
+        "locationTagID" : 4
+      }, {
+        "location" : "Gusan",
+        "locationName" : "포션씨푸드",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMBmurIeJrWM2Z0Ejo8" : {
+      "stationName" : "Bulgwang",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Bulgwang",
+        "locationName" : "불광역 3호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "중화원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "횟집산이네",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "도원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "지원가마솥해장국",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "장충당 불광점",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMFR-_ktohbfLoI7bLN" : {
+      "stationName" : "Gusan",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Gusan",
+        "locationName" : "구산역 6호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Gusan",
+        "locationName" : "NC백화점 불광점",
+        "locationTagID" : 1
+      }, {
+        "location" : "Gusan",
+        "locationName" : "허니돈",
+        "locationTagID" : 4
+      }, {
+        "location" : "Gusan",
+        "locationName" : "포션씨푸드",
+        "locationTagID" : 4
+      }, {
+        "location" : "Gusan",
+        "locationName" : "서울지짐이",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MML6fHD_kcKPGjKGs-i" : {
+      "stationName" : "Singeumho",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Singeumho",
+        "locationName" : "신금호역 5호선",
+        "locationTagID" : 0
+      } ]
+    },
+    "-MMOynmRFU1SFPfPP16Z" : {
+      "stationName" : "Bulgwang",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Bulgwang",
+        "locationName" : "불광역 3호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "중화원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "횟집산이네",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "도원",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "지원가마솥해장국",
+        "locationTagID" : 4
+      }, {
+        "location" : "Bulgwang",
+        "locationName" : "장충당 불광점",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMQGwr6g4ECwOm3TlA7" : {
+      "okNumber" : 0,
+      "stationName" : "Singeumho",
+      "value" : "뭐여",
+      "whatIsOkay" : [ {
+        "location" : "Singeumho",
+        "locationName" : "신금호역 5호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "Singeumho",
+        "locationName" : "하누에뜰",
+        "locationTagID" : 4
+      }, {
+        "location" : "Singeumho",
+        "locationName" : "하누에뜰",
+        "locationTagID" : 4
+      }, {
+        "location" : "Singeumho",
+        "locationName" : "만포막국수",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMWC7b50Q-rqs0N9IH_" : {
+      "stationName" : "HongikUniv",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 2호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 공항철도",
+        "locationTagID" : 0
+      } ]
+    },
+    "-MMWCCJczOyTd-Ob3QlK" : {
+      "okNumber" : 1,
+      "stationName" : "HongikUniv",
+      "value" : "재수학워",
+      "whatIsOkay" : [ {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 2호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 공항철도",
+        "locationTagID" : 0
+      } ]
+    },
+    "-MMWCVan51pV1ur7adVC" : {
+      "stationName" : "Hapjeong",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Hapjeong",
+        "locationName" : "합정역 2호선",
+        "locationTagID" : 0
+      } ]
+    },
+    "-MMWCfGbWwuHtd1pMO3n" : {
+      "okNumber" : 0,
+      "stationName" : "HongikUniv",
+      "value" : "민치에게고백해ㅛ던곳",
+      "whatIsOkay" : [ {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 2호선",
+        "locationTagID" : 0
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 공항철도",
+        "locationTagID" : 0
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "홍대입구역 경의중앙선",
+        "locationTagID" : 0
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "바다회사랑2호점",
+        "locationTagID" : 4
+      }, {
+        "location" : "HongikUniv",
+        "locationName" : "만동제과",
+        "locationTagID" : 4
+      } ]
+    },
+    "-MMchGrixMnrp6dox8jT" : {
+      "stationName" : "Mia",
+      "value" : "",
+      "whatIsOkay" : [ {
+        "location" : "Mia",
+        "locationName" : "미아역 4호선",
+        "locationTagID" : 0
+      } ]
+    }
+  },
+  "testWindow" : {
+    "Achasan" : {
+      "0" : 66,
+      "1" : 16,
+      "2" : 18,
+      "3" : 61,
+      "4" : 32,
+      "eng" : "Achasan",
+      "kor" : "아차산"
+    },
+    "Aeogae" : {
+      "0" : 27,
+      "1" : 47,
+      "2" : 70,
+      "3" : 97,
+      "4" : 98,
+      "eng" : "Aeogae",
+      "kor" : "애오개"
+    },
+    "Ahyeon" : {
+      "0" : 65,
+      "1" : 68,
+      "2" : 99,
+      "3" : 1,
+      "4" : 59,
+      "eng" : "Ahyeon",
+      "kor" : "아현"
+    },
+    "AirportMarket" : {
+      "0" : 45,
+      "1" : 92,
+      "2" : 58,
+      "3" : 19,
+      "4" : 8,
+      "eng" : "AirportMarket",
+      "kor" : "공항시장"
+    },
+    "Amsa" : {
+      "0" : 10,
+      "1" : 45,
+      "2" : 69,
+      "3" : 7,
+      "4" : 29,
+      "eng" : "Amsa",
+      "kor" : "암사"
+    },
+    "Anam" : {
+      "0" : 49,
+      "1" : 75,
+      "2" : 11,
+      "3" : 39,
+      "4" : 12,
+      "eng" : "Anam",
+      "kor" : "안암"
+    },
+    "Anguk" : {
+      "0" : 70,
+      "1" : 5,
+      "2" : 54,
+      "3" : 65,
+      "4" : 98,
+      "eng" : "Anguk",
+      "kor" : "안국"
+    },
+    "Ansan" : {
+      "0" : 62,
+      "1" : 31,
+      "2" : 41,
+      "3" : 22,
+      "4" : 77,
+      "eng" : "Ansan",
+      "kor" : "안산"
+    },
+    "Anyang" : {
+      "0" : 59,
+      "1" : 37,
+      "2" : 21,
+      "3" : 93,
+      "4" : 0,
+      "eng" : "Anyang",
+      "kor" : "안양"
+    },
+    "Apgujeong" : {
+      "0" : 0,
+      "1" : 26,
+      "2" : 8,
+      "3" : 73,
+      "4" : 14,
+      "eng" : "Apgujeong",
+      "kor" : "압구정"
+    },
+    "Apgujeongrodeo" : {
+      "0" : 40,
+      "1" : 38,
+      "2" : 95,
+      "3" : 29,
+      "4" : 80,
+      "eng" : "Apgujeongrodeo",
+      "kor" : "압구정로데오"
+    },
+    "April19thNationalCemetery" : {
+      "0" : 9,
+      "1" : 58,
+      "2" : 55,
+      "3" : 37,
+      "4" : 75,
+      "eng" : "April19thNationalCemetery",
+      "kor" : "4?19민주묘지"
+    },
+    "ArtsCenter" : {
+      "0" : 7,
+      "1" : 29,
+      "2" : 35,
+      "3" : 98,
+      "4" : 19,
+      "eng" : "ArtsCenter",
+      "kor" : "예술회관"
+    },
+    "Asan" : {
+      "0" : 35,
+      "1" : 71,
+      "2" : 22,
+      "3" : 3,
+      "4" : 94,
+      "eng" : "Asan",
+      "kor" : "아산"
+    },
+    "AsiadStadium" : {
+      "0" : 65,
+      "1" : 42,
+      "2" : 45,
+      "3" : 36,
+      "4" : 97,
+      "eng" : "AsiadStadium",
+      "kor" : "아시아드경기장"
+    },
+    "Asin" : {
+      "0" : 9,
+      "1" : 81,
+      "2" : 42,
+      "3" : 25,
+      "4" : 79,
+      "eng" : "Asin",
+      "kor" : "아신"
+    },
+    "BITZone" : {
+      "0" : 2,
+      "1" : 84,
+      "2" : 6,
+      "3" : 98,
+      "4" : 76,
+      "eng" : "BITZone",
+      "kor" : "지식정보단지"
+    },
+    "Baebang" : {
+      "0" : 2,
+      "1" : 47,
+      "2" : 88,
+      "3" : 22,
+      "4" : 19,
+      "eng" : "Baebang",
+      "kor" : "배방"
+    },
+    "Baegun" : {
+      "0" : 1,
+      "1" : 28,
+      "2" : 20,
+      "3" : 70,
+      "4" : 54,
+      "eng" : "Baegun",
+      "kor" : "백운"
+    },
+    "Baegyangri" : {
+      "0" : 12,
+      "1" : 82,
+      "2" : 93,
+      "3" : 80,
+      "4" : 19,
+      "eng" : "Baegyangri",
+      "kor" : "백양리"
+    },
+    "Baekseok" : {
+      "0" : 97,
+      "1" : 15,
+      "2" : 69,
+      "3" : 68,
+      "4" : 23,
+      "eng" : "Baekseok",
+      "kor" : "백석"
+    },
+    "Baengma" : {
+      "0" : 88,
+      "1" : 40,
+      "2" : 83,
+      "3" : 80,
+      "4" : 50,
+      "eng" : "Baengma",
+      "kor" : "백마"
+    },
+    "Bakchon" : {
+      "0" : 3,
+      "1" : 73,
+      "2" : 65,
+      "3" : 1,
+      "4" : 54,
+      "eng" : "Bakchon",
+      "kor" : "박촌"
+    },
+    "Balgok" : {
+      "0" : 97,
+      "1" : 57,
+      "2" : 96,
+      "3" : 42,
+      "4" : 11,
+      "eng" : "Balgok",
+      "kor" : "발곡"
+    },
+    "Balsan" : {
+      "0" : 83,
+      "1" : 37,
+      "2" : 29,
+      "3" : 11,
+      "4" : 91,
+      "eng" : "Balsan",
+      "kor" : "발산"
+    },
+    "Bangbae" : {
+      "0" : 1,
+      "1" : 33,
+      "2" : 72,
+      "3" : 78,
+      "4" : 10,
+      "eng" : "Bangbae",
+      "kor" : "방배"
+    },
+    "Banghak" : {
+      "0" : 32,
+      "1" : 72,
+      "2" : 6,
+      "3" : 72,
+      "4" : 8,
+      "eng" : "Banghak",
+      "kor" : "방학"
+    },
+    "Banghwa" : {
+      "0" : 94,
+      "1" : 11,
+      "2" : 80,
+      "3" : 28,
+      "4" : 32,
+      "eng" : "Banghwa",
+      "kor" : "방화"
+    },
+    "Bangi" : {
+      "0" : 35,
+      "1" : 96,
+      "2" : 42,
+      "3" : 31,
+      "4" : 92,
+      "eng" : "Bangi",
+      "kor" : "방이"
+    },
+    "Banpo" : {
+      "0" : 64,
+      "1" : 1,
+      "2" : 40,
+      "3" : 84,
+      "4" : 77,
+      "eng" : "Banpo",
+      "kor" : "반포"
+    },
+    "Banwol" : {
+      "0" : 20,
+      "1" : 43,
+      "2" : 72,
+      "3" : 46,
+      "4" : 21,
+      "eng" : "Banwol",
+      "kor" : "반월"
+    },
+    "Beomgol" : {
+      "0" : 10,
+      "1" : 71,
+      "2" : 18,
+      "3" : 26,
+      "4" : 82,
+      "eng" : "Beomgol",
+      "kor" : "범골"
+    },
+    "Beomgye" : {
+      "0" : 30,
+      "1" : 50,
+      "2" : 51,
+      "3" : 99,
+      "4" : 38,
+      "eng" : "Beomgye",
+      "kor" : "범계"
+    },
+    "Beotigogae" : {
+      "0" : 38,
+      "1" : 85,
+      "2" : 4,
+      "3" : 44,
+      "4" : 45,
+      "eng" : "Beotigogae",
+      "kor" : "버티고개"
+    },
+    "Bojeong" : {
+      "0" : 9,
+      "1" : 33,
+      "2" : 33,
+      "3" : 70,
+      "4" : 30,
+      "eng" : "Bojeong",
+      "kor" : "보정"
+    },
+    "Bokjeong" : {
+      "0" : 55,
+      "1" : 35,
+      "2" : 31,
+      "3" : 90,
+      "4" : 37,
+      "eng" : "Bokjeong",
+      "kor" : "복정"
+    },
+    "Bomun" : {
+      "0" : 73,
+      "1" : 88,
+      "2" : 16,
+      "3" : 64,
+      "4" : 91,
+      "eng" : "Bomun",
+      "kor" : "보문"
+    },
+    "Bongcheon" : {
+      "0" : 9,
+      "1" : 31,
+      "2" : 23,
+      "3" : 56,
+      "4" : 96,
+      "eng" : "Bongcheon",
+      "kor" : "봉천"
+    },
+    "Bongeunsa" : {
+      "0" : 92,
+      "1" : 56,
+      "2" : 46,
+      "3" : 93,
+      "4" : 53,
+      "eng" : "Bongeunsa",
+      "kor" : "봉은사"
+    },
+    "Bonghwasan" : {
+      "0" : 20,
+      "1" : 64,
+      "2" : 89,
+      "3" : 31,
+      "4" : 46,
+      "eng" : "Bonghwasan",
+      "kor" : "봉화산"
+    },
+    "Bongmyeong" : {
+      "0" : 65,
+      "1" : 61,
+      "2" : 43,
+      "3" : 21,
+      "4" : 94,
+      "eng" : "Bongmyeong",
+      "kor" : "봉명"
+    },
+    "Bopyeong" : {
+      "0" : 41,
+      "1" : 82,
+      "2" : 56,
+      "3" : 33,
+      "4" : 23,
+      "eng" : "Bopyeong",
+      "kor" : "보평"
+    },
+    "Boramae" : {
+      "0" : 33,
+      "1" : 37,
+      "2" : 14,
+      "3" : 18,
+      "4" : 88,
+      "eng" : "Boramae",
+      "kor" : "보라매"
+    },
+    "Bosan" : {
+      "0" : 89,
+      "1" : 4,
+      "2" : 48,
+      "3" : 83,
+      "4" : 54,
+      "eng" : "Bosan",
+      "kor" : "보산"
+    },
+    "Bubal" : {
+      "0" : 44,
+      "1" : 24,
+      "2" : 31,
+      "3" : 34,
+      "4" : 30,
+      "eng" : "Bubal",
+      "kor" : "부발"
+    },
+    "Bucheon" : {
+      "0" : 45,
+      "1" : 11,
+      "2" : 13,
+      "3" : 4,
+      "4" : 3,
+      "eng" : "Bucheon",
+      "kor" : "부천"
+    },
+    "BucheonCityHall" : {
+      "0" : 10,
+      "1" : 45,
+      "2" : 84,
+      "3" : 88,
+      "4" : 14,
+      "eng" : "BucheonCityHall",
+      "kor" : "부천시청"
+    },
+    "BucheonStadium" : {
+      "0" : 96,
+      "1" : 51,
+      "2" : 33,
+      "3" : 50,
+      "4" : 15,
+      "eng" : "BucheonStadium",
+      "kor" : "부천종합운동장"
+    },
+    "Bugae" : {
+      "0" : 17,
+      "1" : 76,
+      "2" : 73,
+      "3" : 32,
+      "4" : 15,
+      "eng" : "Bugae",
+      "kor" : "부개"
+    },
+    "BukhansanBogungmun" : {
+      "0" : 99,
+      "1" : 5,
+      "2" : 84,
+      "3" : 99,
+      "4" : 83,
+      "eng" : "BukhansanBogungmun",
+      "kor" : "북한산보국문"
+    },
+    "BukhansanUi" : {
+      "0" : 23,
+      "1" : 98,
+      "2" : 63,
+      "3" : 54,
+      "4" : 88,
+      "eng" : "BukhansanUi",
+      "kor" : "북한산우이"
+    },
+    "Bulgwang" : {
+      "0" : 11,
+      "1" : 20,
+      "2" : 40,
+      "3" : 97,
+      "4" : 56,
+      "eng" : "Bulgwang",
+      "kor" : "불광"
+    },
+    "Bupyeong" : {
+      "0" : 41,
+      "1" : 1,
+      "2" : 0,
+      "3" : 23,
+      "4" : 48,
+      "eng" : "Bupyeong",
+      "kor" : "부평"
+    },
+    "BupyeongMarket" : {
+      "0" : 19,
+      "1" : 11,
+      "2" : 48,
+      "3" : 28,
+      "4" : 43,
+      "eng" : "BupyeongMarket",
+      "kor" : "부평시장"
+    },
+    "BupyeongguOffice" : {
+      "0" : 97,
+      "1" : 73,
+      "2" : 4,
+      "3" : 78,
+      "4" : 24,
+      "eng" : "BupyeongguOffice",
+      "kor" : "부평구청"
+    },
+    "Bupyeongsamgeori" : {
+      "0" : 6,
+      "1" : 66,
+      "2" : 2,
+      "3" : 31,
+      "4" : 98,
+      "eng" : "Bupyeongsamgeori",
+      "kor" : "부평삼거리"
+    },
+    "Byeollae" : {
+      "0" : 20,
+      "1" : 58,
+      "2" : 67,
+      "3" : 96,
+      "4" : 57,
+      "eng" : "Byeollae",
+      "kor" : "별내"
+    },
+    "Byeongjeom" : {
+      "0" : 38,
+      "1" : 71,
+      "2" : 79,
+      "3" : 51,
+      "4" : 85,
+      "eng" : "Byeongjeom",
+      "kor" : "병점"
+    },
+    "CampusTown" : {
+      "0" : 31,
+      "1" : 5,
+      "2" : 50,
+      "3" : 77,
+      "4" : 84,
+      "eng" : "CampusTown",
+      "kor" : "캠퍼스타운"
+    },
+    "CentralPark" : {
+      "0" : 17,
+      "1" : 73,
+      "2" : 15,
+      "3" : 75,
+      "4" : 26,
+      "eng" : "CentralPark",
+      "kor" : "센트럴파크"
+    },
+    "Changdong" : {
+      "0" : 98,
+      "1" : 54,
+      "2" : 37,
+      "3" : 49,
+      "4" : 28,
+      "eng" : "Changdong",
+      "kor" : "창동"
+    },
+    "Changsin" : {
+      "0" : 51,
+      "1" : 50,
+      "2" : 86,
+      "3" : 69,
+      "4" : 52,
+      "eng" : "Changsin",
+      "kor" : "창신"
+    },
+    "Cheolsan" : {
+      "0" : 24,
+      "1" : 84,
+      "2" : 43,
+      "3" : 62,
+      "4" : 23,
+      "eng" : "Cheolsan",
+      "kor" : "철산"
+    },
+    "Cheonan" : {
+      "0" : 86,
+      "1" : 76,
+      "2" : 17,
+      "3" : 74,
+      "4" : 6,
+      "eng" : "Cheonan",
+      "kor" : "천안"
+    },
+    "Cheongdam" : {
+      "0" : 60,
+      "1" : 40,
+      "2" : 70,
+      "3" : 1,
+      "4" : 96,
+      "eng" : "Cheongdam",
+      "kor" : "청담"
+    },
+    "Cheonggu" : {
+      "0" : 75,
+      "1" : 13,
+      "2" : 94,
+      "3" : 39,
+      "4" : 89,
+      "eng" : "Cheonggu",
+      "kor" : "청구"
+    },
+    "Cheonggyesan" : {
+      "0" : 41,
+      "1" : 85,
+      "2" : 59,
+      "3" : 48,
+      "4" : 48,
+      "eng" : "Cheonggyesan",
+      "kor" : "청계산입구"
+    },
+    "Cheongmyeong" : {
+      "0" : 22,
+      "1" : 44,
+      "2" : 87,
+      "3" : 36,
+      "4" : 50,
+      "eng" : "Cheongmyeong",
+      "kor" : "청명"
+    },
+    "CheongnaIntlCityStation" : {
+      "0" : 7,
+      "1" : 94,
+      "2" : 50,
+      "3" : 99,
+      "4" : 33,
+      "eng" : "CheongnaIntlCityStation",
+      "kor" : "청라국제도시"
+    },
+    "Cheongnyangni" : {
+      "0" : 72,
+      "1" : 2,
+      "2" : 96,
+      "3" : 11,
+      "4" : 25,
+      "eng" : "Cheongnyangni",
+      "kor" : "청량리"
+    },
+    "Cheongpyeong" : {
+      "0" : 48,
+      "1" : 58,
+      "2" : 12,
+      "3" : 54,
+      "4" : 20,
+      "eng" : "Cheongpyeong",
+      "kor" : "청평"
+    },
+    "Cheonho" : {
+      "0" : 80,
+      "1" : 22,
+      "2" : 30,
+      "3" : 90,
+      "4" : 52,
+      "eng" : "Cheonho",
+      "kor" : "천호"
+    },
+    "Cheonmasan" : {
+      "0" : 99,
+      "1" : 47,
+      "2" : 65,
+      "3" : 45,
+      "4" : 77,
+      "eng" : "Cheonmasan",
+      "kor" : "천마산"
+    },
+    "Cheonwang" : {
+      "0" : 88,
+      "1" : 12,
+      "2" : 65,
+      "3" : 66,
+      "4" : 85,
+      "eng" : "Cheonwang",
+      "kor" : "천왕"
+    },
+    "ChildrensGrandPark" : {
+      "0" : 99,
+      "1" : 87,
+      "2" : 58,
+      "3" : 60,
+      "4" : 48,
+      "eng" : "ChildrensGrandPark",
+      "kor" : "어린이대공원"
+    },
+    "Chodang" : {
+      "0" : 92,
+      "1" : 95,
+      "2" : 80,
+      "3" : 70,
+      "4" : 84,
+      "eng" : "Chodang",
+      "kor" : "초당"
+    },
+    "Choji" : {
+      "0" : 79,
+      "1" : 86,
+      "2" : 71,
+      "3" : 32,
+      "4" : 66,
+      "eng" : "Choji",
+      "kor" : "초지"
+    },
+    "ChongshinUniv" : {
+      "0" : 4,
+      "1" : 0,
+      "2" : 76,
+      "3" : 9,
+      "4" : 16,
+      "eng" : "ChongshinUniv",
+      "kor" : "총신대입구"
+    },
+    "Chowol" : {
+      "0" : 38,
+      "1" : 65,
+      "2" : 41,
+      "3" : 50,
+      "4" : 5,
+      "eng" : "Chowol",
+      "kor" : "초월"
+    },
+    "Chuncheon" : {
+      "0" : 42,
+      "1" : 65,
+      "2" : 64,
+      "3" : 43,
+      "4" : 1,
+      "eng" : "Chuncheon",
+      "kor" : "춘천"
+    },
+    "Chungjeongno" : {
+      "0" : 83,
+      "1" : 80,
+      "2" : 0,
+      "3" : 68,
+      "4" : 25,
+      "eng" : "Chungjeongno",
+      "kor" : "충정로"
+    },
+    "Chungmuro" : {
+      "0" : 38,
+      "1" : 41,
+      "2" : 59,
+      "3" : 85,
+      "4" : 32,
+      "eng" : "Chungmuro",
+      "kor" : "충무로"
+    },
+    "Chunui" : {
+      "0" : 54,
+      "1" : 44,
+      "2" : 52,
+      "3" : 26,
+      "4" : 28,
+      "eng" : "Chunui",
+      "kor" : "춘의"
+    },
+    "CitizensPark" : {
+      "0" : 85,
+      "1" : 85,
+      "2" : 5,
+      "3" : 70,
+      "4" : 7,
+      "eng" : "CitizensPark",
+      "kor" : "시민공원"
+    },
+    "CityHall" : {
+      "0" : 52,
+      "1" : 70,
+      "2" : 9,
+      "3" : 64,
+      "4" : 63,
+      "eng" : "CityHall",
+      "kor" : "시청"
+    },
+    "CityHallYonginUniv" : {
+      "0" : 70,
+      "1" : 95,
+      "2" : 60,
+      "3" : 64,
+      "4" : 78,
+      "eng" : "CityHallYonginUniv",
+      "kor" : "시청용인대"
+    },
+    "Daebang" : {
+      "0" : 82,
+      "1" : 80,
+      "2" : 76,
+      "3" : 93,
+      "4" : 71,
+      "eng" : "Daebang",
+      "kor" : "대방"
+    },
+    "Daecheong" : {
+      "0" : 17,
+      "1" : 94,
+      "2" : 85,
+      "3" : 86,
+      "4" : 64,
+      "eng" : "Daecheong",
+      "kor" : "대청"
+    },
+    "Daechi" : {
+      "0" : 5,
+      "1" : 25,
+      "2" : 3,
+      "3" : 45,
+      "4" : 51,
+      "eng" : "Daechi",
+      "kor" : "대치"
+    },
+    "Daegok" : {
+      "0" : 35,
+      "1" : 94,
+      "2" : 24,
+      "3" : 49,
+      "4" : 23,
+      "eng" : "Daegok",
+      "kor" : "대곡"
+    },
+    "Daeheung" : {
+      "0" : 39,
+      "1" : 33,
+      "2" : 94,
+      "3" : 17,
+      "4" : 74,
+      "eng" : "Daeheung",
+      "kor" : "대흥"
+    },
+    "Daehwa" : {
+      "0" : 35,
+      "1" : 77,
+      "2" : 4,
+      "3" : 58,
+      "4" : 7,
+      "eng" : "Daehwa",
+      "kor" : "대화"
+    },
+    "Daemosan" : {
+      "0" : 13,
+      "1" : 51,
+      "2" : 59,
+      "3" : 16,
+      "4" : 84,
+      "eng" : "Daemosan",
+      "kor" : "대모산입구"
+    },
+    "Daerim" : {
+      "0" : 35,
+      "1" : 30,
+      "2" : 40,
+      "3" : 3,
+      "4" : 89,
+      "eng" : "Daerim",
+      "kor" : "대림"
+    },
+    "Daeseongri" : {
+      "0" : 14,
+      "1" : 95,
+      "2" : 41,
+      "3" : 28,
+      "4" : 95,
+      "eng" : "Daeseongri",
+      "kor" : "대성리"
+    },
+    "Daeyami" : {
+      "0" : 13,
+      "1" : 56,
+      "2" : 84,
+      "3" : 59,
+      "4" : 60,
+      "eng" : "Daeyami",
+      "kor" : "대야미"
+    },
+    "Dalmi" : {
+      "0" : 61,
+      "1" : 74,
+      "2" : 70,
+      "3" : 78,
+      "4" : 84,
+      "eng" : "Dalmi",
+      "kor" : "달미"
+    },
+    "Dalwol" : {
+      "0" : 72,
+      "1" : 65,
+      "2" : 43,
+      "3" : 35,
+      "4" : 19,
+      "eng" : "Dalwol",
+      "kor" : "달월"
+    },
+    "Dandaeogeori" : {
+      "0" : 87,
+      "1" : 80,
+      "2" : 91,
+      "3" : 94,
+      "4" : 35,
+      "eng" : "Dandaeogeori",
+      "kor" : "단대오거리"
+    },
+    "Danggogae" : {
+      "0" : 56,
+      "1" : 15,
+      "2" : 18,
+      "3" : 98,
+      "4" : 83,
+      "eng" : "Danggogae",
+      "kor" : "당고개"
+    },
+    "Dangjeong" : {
+      "0" : 42,
+      "1" : 88,
+      "2" : 60,
+      "3" : 77,
+      "4" : 42,
+      "eng" : "Dangjeong",
+      "kor" : "당정"
+    },
+    "Dangsan" : {
+      "0" : 21,
+      "1" : 98,
+      "2" : 20,
+      "3" : 13,
+      "4" : 41,
+      "eng" : "Dangsan",
+      "kor" : "당산"
+    },
+    "Dapsimni" : {
+      "0" : 44,
+      "1" : 33,
+      "2" : 42,
+      "3" : 31,
+      "4" : 87,
+      "eng" : "Dapsimni",
+      "kor" : "답십리"
+    },
+    "Deokgye" : {
+      "0" : 16,
+      "1" : 41,
+      "2" : 48,
+      "3" : 55,
+      "4" : 82,
+      "eng" : "Deokgye",
+      "kor" : "덕계"
+    },
+    "Deokjeong" : {
+      "0" : 84,
+      "1" : 90,
+      "2" : 39,
+      "3" : 55,
+      "4" : 1,
+      "eng" : "Deokjeong",
+      "kor" : "덕정"
+    },
+    "Deokso" : {
+      "0" : 57,
+      "1" : 73,
+      "2" : 13,
+      "3" : 0,
+      "4" : 80,
+      "eng" : "Deokso",
+      "kor" : "덕소"
+    },
+    "Deungchon" : {
+      "0" : 69,
+      "1" : 96,
+      "2" : 91,
+      "3" : 56,
+      "4" : 12,
+      "eng" : "Deungchon",
+      "kor" : "등촌"
+    },
+    "DigitalMediaCity" : {
+      "0" : 8,
+      "1" : 41,
+      "2" : 26,
+      "3" : 24,
+      "4" : 62,
+      "eng" : "DigitalMediaCity",
+      "kor" : "디지털미디어시티"
+    },
+    "Dobong" : {
+      "0" : 25,
+      "1" : 98,
+      "2" : 91,
+      "3" : 81,
+      "4" : 46,
+      "eng" : "Dobong",
+      "kor" : "도봉"
+    },
+    "Dobongsan" : {
+      "0" : 62,
+      "1" : 93,
+      "2" : 12,
+      "3" : 64,
+      "4" : 60,
+      "eng" : "Dobongsan",
+      "kor" : "도봉산"
+    },
+    "Dogok" : {
+      "0" : 98,
+      "1" : 9,
+      "2" : 6,
+      "3" : 3,
+      "4" : 9,
+      "eng" : "Dogok",
+      "kor" : "도곡"
+    },
+    "Dohwa" : {
+      "0" : 71,
+      "1" : 73,
+      "2" : 50,
+      "3" : 57,
+      "4" : 27,
+      "eng" : "Dohwa",
+      "kor" : "도화"
+    },
+    "Dokbawi" : {
+      "0" : 40,
+      "1" : 79,
+      "2" : 72,
+      "3" : 42,
+      "4" : 96,
+      "eng" : "Dokbawi",
+      "kor" : "독바위"
+    },
+    "Dokjeong" : {
+      "0" : 3,
+      "1" : 60,
+      "2" : 59,
+      "3" : 54,
+      "4" : 21,
+      "eng" : "Dokjeong",
+      "kor" : "독정"
+    },
+    "Doksan" : {
+      "0" : 32,
+      "1" : 82,
+      "2" : 67,
+      "3" : 90,
+      "4" : 4,
+      "eng" : "Doksan",
+      "kor" : "독산"
+    },
+    "Dolgoji" : {
+      "0" : 47,
+      "1" : 90,
+      "2" : 62,
+      "3" : 7,
+      "4" : 80,
+      "eng" : "Dolgoji",
+      "kor" : "돌곶이"
+    },
+    "Dongam" : {
+      "0" : 1,
+      "1" : 71,
+      "2" : 34,
+      "3" : 68,
+      "4" : 13,
+      "eng" : "Dongam",
+      "kor" : "동암"
+    },
+    "Dongbaek" : {
+      "0" : 8,
+      "1" : 20,
+      "2" : 31,
+      "3" : 56,
+      "4" : 73,
+      "eng" : "Dongbaek",
+      "kor" : "동백"
+    },
+    "Dongcheon" : {
+      "0" : 73,
+      "1" : 66,
+      "2" : 21,
+      "3" : 79,
+      "4" : 27,
+      "eng" : "Dongcheon",
+      "kor" : "동천"
+    },
+    "Dongchun" : {
+      "0" : 40,
+      "1" : 4,
+      "2" : 7,
+      "3" : 66,
+      "4" : 84,
+      "eng" : "Dongchun",
+      "kor" : "동춘"
+    },
+    "Dongdaemun" : {
+      "0" : 40,
+      "1" : 54,
+      "2" : 47,
+      "3" : 95,
+      "4" : 25,
+      "eng" : "Dongdaemun",
+      "kor" : "동대문"
+    },
+    "DongdaemunHistoryCulturePark" : {
+      "0" : 82,
+      "1" : 63,
+      "2" : 96,
+      "3" : 52,
+      "4" : 96,
+      "eng" : "DongdaemunHistoryCulturePark",
+      "kor" : "동대문역사문화공원"
+    },
+    "Dongducheon" : {
+      "0" : 82,
+      "1" : 65,
+      "2" : 84,
+      "3" : 73,
+      "4" : 46,
+      "eng" : "Dongducheon",
+      "kor" : "동두천"
+    },
+    "Dongducheonjungang" : {
+      "0" : 39,
+      "1" : 94,
+      "2" : 89,
+      "3" : 53,
+      "4" : 5,
+      "eng" : "Dongducheonjungang",
+      "kor" : "동두천중앙"
+    },
+    "DonggukUniv" : {
+      "0" : 75,
+      "1" : 2,
+      "2" : 28,
+      "3" : 80,
+      "4" : 68,
+      "eng" : "DonggukUniv",
+      "kor" : "동대입구"
+    },
+    "Dongincheon" : {
+      "0" : 29,
+      "1" : 53,
+      "2" : 42,
+      "3" : 57,
+      "4" : 68,
+      "eng" : "Dongincheon",
+      "kor" : "동인천"
+    },
+    "Dongjak" : {
+      "0" : 78,
+      "1" : 34,
+      "2" : 65,
+      "3" : 63,
+      "4" : 28,
+      "eng" : "Dongjak",
+      "kor" : "동작"
+    },
+    "Dongmak" : {
+      "0" : 76,
+      "1" : 42,
+      "2" : 14,
+      "3" : 74,
+      "4" : 49,
+      "eng" : "Dongmak",
+      "kor" : "동막"
+    },
+    "Dongmyo" : {
+      "0" : 67,
+      "1" : 18,
+      "2" : 45,
+      "3" : 4,
+      "4" : 95,
+      "eng" : "Dongmyo",
+      "kor" : "동묘앞"
+    },
+    "Dongnimmun" : {
+      "0" : 29,
+      "1" : 53,
+      "2" : 29,
+      "3" : 58,
+      "4" : 28,
+      "eng" : "Dongnimmun",
+      "kor" : "독립문"
+    },
+    "Dongo" : {
+      "0" : 54,
+      "1" : 4,
+      "2" : 40,
+      "3" : 2,
+      "4" : 70,
+      "eng" : "Dongo",
+      "kor" : "동오"
+    },
+    "Dongsu" : {
+      "0" : 64,
+      "1" : 62,
+      "2" : 79,
+      "3" : 57,
+      "4" : 33,
+      "eng" : "Dongsu",
+      "kor" : "동수"
+    },
+    "Donong" : {
+      "0" : 77,
+      "1" : 55,
+      "2" : 29,
+      "3" : 16,
+      "4" : 45,
+      "eng" : "Donong",
+      "kor" : "도농"
+    },
+    "Dorimcheon" : {
+      "0" : 62,
+      "1" : 23,
+      "2" : 36,
+      "3" : 81,
+      "4" : 77,
+      "eng" : "Dorimcheon",
+      "kor" : "도림천"
+    },
+    "Dosim" : {
+      "0" : 20,
+      "1" : 42,
+      "2" : 86,
+      "3" : 98,
+      "4" : 67,
+      "eng" : "Dosim",
+      "kor" : "도심"
+    },
+    "Dowon" : {
+      "0" : 37,
+      "1" : 61,
+      "2" : 16,
+      "3" : 32,
+      "4" : 2,
+      "eng" : "Dowon",
+      "kor" : "도원"
+    },
+    "Dujeong" : {
+      "0" : 22,
+      "1" : 23,
+      "2" : 98,
+      "3" : 61,
+      "4" : 31,
+      "eng" : "Dujeong",
+      "kor" : "두정"
+    },
+    "DunchonOryun" : {
+      "0" : 86,
+      "1" : 64,
+      "2" : 84,
+      "3" : 83,
+      "4" : 95,
+      "eng" : "DunchonOryun",
+      "kor" : "둔촌오륜"
+    },
+    "Dunchondong" : {
+      "0" : 12,
+      "1" : 12,
+      "2" : 19,
+      "3" : 31,
+      "4" : 14,
+      "eng" : "Dunchondong",
+      "kor" : "둔촌동"
+    },
+    "Dunjeon" : {
+      "0" : 21,
+      "1" : 26,
+      "2" : 91,
+      "3" : 94,
+      "4" : 55,
+      "eng" : "Dunjeon",
+      "kor" : "둔전"
+    },
+    "Eojeong" : {
+      "0" : 43,
+      "1" : 52,
+      "2" : 63,
+      "3" : 20,
+      "4" : 62,
+      "eng" : "Eojeong",
+      "kor" : "어정"
+    },
+    "Eonju" : {
+      "0" : 31,
+      "1" : 30,
+      "2" : 26,
+      "3" : 70,
+      "4" : 60,
+      "eng" : "Eonju",
+      "kor" : "언주"
+    },
+    "Euljiro1ilga" : {
+      "0" : 86,
+      "1" : 41,
+      "2" : 6,
+      "3" : 40,
+      "4" : 90,
+      "eng" : "Euljiro1ilga",
+      "kor" : "을지로입구"
+    },
+    "Euljiro3samga" : {
+      "0" : 41,
+      "1" : 7,
+      "2" : 32,
+      "3" : 71,
+      "4" : 43,
+      "eng" : "Euljiro3samga",
+      "kor" : "을지로3가"
+    },
+    "Euljiro4saga" : {
+      "0" : 31,
+      "1" : 63,
+      "2" : 6,
+      "3" : 5,
+      "4" : 49,
+      "eng" : "Euljiro4saga",
+      "kor" : "을지로4가"
+    },
+    "Eungam" : {
+      "0" : 26,
+      "1" : 65,
+      "2" : 18,
+      "3" : 24,
+      "4" : 89,
+      "eng" : "Eungam",
+      "kor" : "응암"
+    },
+    "Eungbong" : {
+      "0" : 59,
+      "1" : 73,
+      "2" : 31,
+      "3" : 79,
+      "4" : 15,
+      "eng" : "Eungbong",
+      "kor" : "응봉"
+    },
+    "EwhaWomansUniv" : {
+      "0" : 14,
+      "1" : 35,
+      "2" : 91,
+      "3" : 57,
+      "4" : 84,
+      "eng" : "EwhaWomansUniv",
+      "kor" : "이대"
+    },
+    "ExpressBusTerminal" : {
+      "0" : 70,
+      "1" : 65,
+      "2" : 69,
+      "3" : 55,
+      "4" : 39,
+      "eng" : "ExpressBusTerminal",
+      "kor" : "고속터미널"
+    },
+    "GachonUniv" : {
+      "0" : 83,
+      "1" : 99,
+      "2" : 20,
+      "3" : 81,
+      "4" : 31,
+      "eng" : "GachonUniv",
+      "kor" : "가천대"
+    },
+    "Gaebong" : {
+      "0" : 9,
+      "1" : 18,
+      "2" : 99,
+      "3" : 94,
+      "4" : 59,
+      "eng" : "Gaebong",
+      "kor" : "개봉"
+    },
+    "Gaehwa" : {
+      "0" : 89,
+      "1" : 98,
+      "2" : 42,
+      "3" : 36,
+      "4" : 11,
+      "eng" : "Gaehwa",
+      "kor" : "개화"
+    },
+    "Gaehwasan" : {
+      "0" : 7,
+      "1" : 29,
+      "2" : 63,
+      "3" : 96,
+      "4" : 17,
+      "eng" : "Gaehwasan",
+      "kor" : "개화산"
+    },
+    "Gaepodong" : {
+      "0" : 35,
+      "1" : 29,
+      "2" : 25,
+      "3" : 43,
+      "4" : 86,
+      "eng" : "Gaepodong",
+      "kor" : "개포동"
+    },
+    "Gaerong" : {
+      "0" : 95,
+      "1" : 32,
+      "2" : 80,
+      "3" : 27,
+      "4" : 87,
+      "eng" : "Gaerong",
+      "kor" : "개롱"
+    },
+    "Gajaeul" : {
+      "0" : 3,
+      "1" : 30,
+      "2" : 84,
+      "3" : 90,
+      "4" : 50,
+      "eng" : "Gajaeul",
+      "kor" : "가재울"
+    },
+    "Gajeong" : {
+      "0" : 51,
+      "1" : 23,
+      "2" : 75,
+      "3" : 45,
+      "4" : 48,
+      "eng" : "Gajeong",
+      "kor" : "가정"
+    },
+    "GajeongJungangMarket" : {
+      "0" : 45,
+      "1" : 14,
+      "2" : 71,
+      "3" : 74,
+      "4" : 73,
+      "eng" : "GajeongJungangMarket",
+      "kor" : "가정중앙시장"
+    },
+    "Gajwa" : {
+      "0" : 63,
+      "1" : 19,
+      "2" : 27,
+      "3" : 49,
+      "4" : 35,
+      "eng" : "Gajwa",
+      "kor" : "가좌"
+    },
+    "Galmae" : {
+      "0" : 47,
+      "1" : 95,
+      "2" : 52,
+      "3" : 68,
+      "4" : 17,
+      "eng" : "Galmae",
+      "kor" : "갈매"
+    },
+    "Galsan" : {
+      "0" : 91,
+      "1" : 0,
+      "2" : 77,
+      "3" : 59,
+      "4" : 50,
+      "eng" : "Galsan",
+      "kor" : "갈산"
+    },
+    "Ganeung" : {
+      "0" : 68,
+      "1" : 71,
+      "2" : 53,
+      "3" : 8,
+      "4" : 9,
+      "eng" : "Ganeung",
+      "kor" : "가능"
+    },
+    "Gangbyeon" : {
+      "0" : 77,
+      "1" : 93,
+      "2" : 19,
+      "3" : 38,
+      "4" : 37,
+      "eng" : "Gangbyeon",
+      "kor" : "강변"
+    },
+    "Gangchon" : {
+      "0" : 99,
+      "1" : 76,
+      "2" : 15,
+      "3" : 7,
+      "4" : 92,
+      "eng" : "Gangchon",
+      "kor" : "강촌"
+    },
+    "Gangdong" : {
+      "0" : 52,
+      "1" : 9,
+      "2" : 71,
+      "3" : 48,
+      "4" : 89,
+      "eng" : "Gangdong",
+      "kor" : "강동"
+    },
+    "GangdongguOffice" : {
+      "0" : 45,
+      "1" : 22,
+      "2" : 95,
+      "3" : 91,
+      "4" : 72,
+      "eng" : "GangdongguOffice",
+      "kor" : "강동구청"
+    },
+    "Gangmae" : {
+      "0" : 31,
+      "1" : 0,
+      "2" : 18,
+      "3" : 2,
+      "4" : 13,
+      "eng" : "Gangmae",
+      "kor" : "강매"
+    },
+    "Gangnam" : {
+      "0" : 35,
+      "1" : 66,
+      "2" : 4,
+      "3" : 86,
+      "4" : 88,
+      "eng" : "Gangnam",
+      "kor" : "강남"
+    },
+    "GangnamguOffice" : {
+      "0" : 64,
+      "1" : 27,
+      "2" : 19,
+      "3" : 33,
+      "4" : 29,
+      "eng" : "GangnamguOffice",
+      "kor" : "강남구청"
+    },
+    "Ganseogogeori" : {
+      "0" : 84,
+      "1" : 30,
+      "2" : 78,
+      "3" : 2,
+      "4" : 88,
+      "eng" : "Ganseogogeori",
+      "kor" : "간석오거리"
+    },
+    "Ganseok" : {
+      "0" : 46,
+      "1" : 9,
+      "2" : 51,
+      "3" : 67,
+      "4" : 0,
+      "eng" : "Ganseok",
+      "kor" : "간석"
+    },
+    "Gaori" : {
+      "0" : 46,
+      "1" : 43,
+      "2" : 94,
+      "3" : 69,
+      "4" : 93,
+      "eng" : "Gaori",
+      "kor" : "가오리"
+    },
+    "Gapyeong" : {
+      "0" : 3,
+      "1" : 42,
+      "2" : 1,
+      "3" : 43,
+      "4" : 95,
+      "eng" : "Gapyeong",
+      "kor" : "가평"
+    },
+    "GarakMarket" : {
+      "0" : 22,
+      "1" : 43,
+      "2" : 31,
+      "3" : 39,
+      "4" : 57,
+      "eng" : "GarakMarket",
+      "kor" : "가락시장"
+    },
+    "GasanDigitalComplex" : {
+      "0" : 41,
+      "1" : 88,
+      "2" : 4,
+      "3" : 37,
+      "4" : 6,
+      "eng" : "GasanDigitalComplex",
+      "kor" : "가산디지털단지"
+    },
+    "Gayang" : {
+      "0" : 4,
+      "1" : 79,
+      "2" : 53,
+      "3" : 75,
+      "4" : 64,
+      "eng" : "Gayang",
+      "kor" : "가양"
+    },
+    "GeolpoBukbyeon" : {
+      "0" : 13,
+      "1" : 11,
+      "2" : 97,
+      "3" : 47,
+      "4" : 92,
+      "eng" : "GeolpoBukbyeon",
+      "kor" : "걸포북변"
+    },
+    "Geomam" : {
+      "0" : 78,
+      "1" : 26,
+      "2" : 53,
+      "3" : 93,
+      "4" : 65,
+      "eng" : "Geomam",
+      "kor" : "검암"
+    },
+    "Geombawi" : {
+      "0" : 71,
+      "1" : 97,
+      "2" : 81,
+      "3" : 28,
+      "4" : 99,
+      "eng" : "Geombawi",
+      "kor" : "검바위"
+    },
+    "GeomdanOryu" : {
+      "0" : 29,
+      "1" : 70,
+      "2" : 94,
+      "3" : 44,
+      "4" : 17,
+      "eng" : "GeomdanOryu",
+      "kor" : "검단오류"
+    },
+    "GeomdanSageori" : {
+      "0" : 49,
+      "1" : 0,
+      "2" : 18,
+      "3" : 28,
+      "4" : 96,
+      "eng" : "GeomdanSageori",
+      "kor" : "검단사거리"
+    },
+    "Geoyeo" : {
+      "0" : 24,
+      "1" : 72,
+      "2" : 53,
+      "3" : 89,
+      "4" : 92,
+      "eng" : "Geoyeo",
+      "kor" : "거여"
+    },
+    "GeumcheonGuOffice" : {
+      "0" : 5,
+      "1" : 73,
+      "2" : 97,
+      "3" : 84,
+      "4" : 15,
+      "eng" : "GeumcheonGuOffice",
+      "kor" : "금천구청"
+    },
+    "Geumchon" : {
+      "0" : 58,
+      "1" : 98,
+      "2" : 20,
+      "3" : 65,
+      "4" : 42,
+      "eng" : "Geumchon",
+      "kor" : "금촌"
+    },
+    "Geumgok" : {
+      "0" : 24,
+      "1" : 56,
+      "2" : 21,
+      "3" : 6,
+      "4" : 47,
+      "eng" : "Geumgok",
+      "kor" : "금곡"
+    },
+    "Geumho" : {
+      "0" : 6,
+      "1" : 58,
+      "2" : 66,
+      "3" : 18,
+      "4" : 43,
+      "eng" : "Geumho",
+      "kor" : "금호"
+    },
+    "Geumjeong" : {
+      "0" : 49,
+      "1" : 7,
+      "2" : 19,
+      "3" : 81,
+      "4" : 97,
+      "eng" : "Geumjeong",
+      "kor" : "금정"
+    },
+    "Geumneung" : {
+      "0" : 47,
+      "1" : 65,
+      "2" : 94,
+      "3" : 40,
+      "4" : 4,
+      "eng" : "Geumneung",
+      "kor" : "금릉"
+    },
+    "Giheung" : {
+      "0" : 39,
+      "1" : 85,
+      "2" : 24,
+      "3" : 69,
+      "4" : 71,
+      "eng" : "Giheung",
+      "kor" : "기흥"
+    },
+    "Gildong" : {
+      "0" : 2,
+      "1" : 14,
+      "2" : 35,
+      "3" : 43,
+      "4" : 31,
+      "eng" : "Gildong",
+      "kor" : "길동"
+    },
+    "Gimnyangjang" : {
+      "0" : 1,
+      "1" : 44,
+      "2" : 94,
+      "3" : 44,
+      "4" : 72,
+      "eng" : "Gimnyangjang",
+      "kor" : "김량장"
+    },
+    "GimpoIntlAirport" : {
+      "0" : 2,
+      "1" : 33,
+      "2" : 22,
+      "3" : 40,
+      "4" : 27,
+      "eng" : "GimpoIntlAirport",
+      "kor" : "김포공항"
+    },
+    "Gimyujeong" : {
+      "0" : 35,
+      "1" : 11,
+      "2" : 56,
+      "3" : 67,
+      "4" : 7,
+      "eng" : "Gimyujeong",
+      "kor" : "김유정"
+    },
+    "Gireum" : {
+      "0" : 81,
+      "1" : 79,
+      "2" : 2,
+      "3" : 87,
+      "4" : 2,
+      "eng" : "Gireum",
+      "kor" : "길음"
+    },
+    "Gochon" : {
+      "0" : 82,
+      "1" : 60,
+      "2" : 33,
+      "3" : 19,
+      "4" : 85,
+      "eng" : "Gochon",
+      "kor" : "고촌"
+    },
+    "Godeok" : {
+      "0" : 46,
+      "1" : 28,
+      "2" : 47,
+      "3" : 31,
+      "4" : 28,
+      "eng" : "Godeok",
+      "kor" : "고덕"
+    },
+    "Gojan" : {
+      "0" : 64,
+      "1" : 35,
+      "2" : 75,
+      "3" : 54,
+      "4" : 8,
+      "eng" : "Gojan",
+      "kor" : "고잔"
+    },
+    "Gojin" : {
+      "0" : 79,
+      "1" : 44,
+      "2" : 75,
+      "3" : 13,
+      "4" : 56,
+      "eng" : "Gojin",
+      "kor" : "고진"
+    },
+    "Goksan" : {
+      "0" : 86,
+      "1" : 29,
+      "2" : 16,
+      "3" : 80,
+      "4" : 15,
+      "eng" : "Goksan",
+      "kor" : "곡산"
+    },
+    "Gongdeok" : {
+      "0" : 17,
+      "1" : 13,
+      "2" : 53,
+      "3" : 78,
+      "4" : 86,
+      "eng" : "Gongdeok",
+      "kor" : "공덕"
+    },
+    "Gongneung" : {
+      "0" : 44,
+      "1" : 60,
+      "2" : 49,
+      "3" : 85,
+      "4" : 43,
+      "eng" : "Gongneung",
+      "kor" : "공릉"
+    },
+    "Gonjiam" : {
+      "0" : 72,
+      "1" : 84,
+      "2" : 96,
+      "3" : 15,
+      "4" : 0,
+      "eng" : "Gonjiam",
+      "kor" : "곤지암"
+    },
+    "GovernmentComplexGwacheon" : {
+      "0" : 9,
+      "1" : 53,
+      "2" : 64,
+      "3" : 89,
+      "4" : 65,
+      "eng" : "GovernmentComplexGwacheon",
+      "kor" : "과천정부청사"
+    },
+    "Gubanpo" : {
+      "0" : 70,
+      "1" : 94,
+      "2" : 28,
+      "3" : 95,
+      "4" : 32,
+      "eng" : "Gubanpo",
+      "kor" : "구반포"
+    },
+    "Gubeundari" : {
+      "0" : 25,
+      "1" : 5,
+      "2" : 99,
+      "3" : 71,
+      "4" : 66,
+      "eng" : "Gubeundari",
+      "kor" : "굽은다리"
+    },
+    "Guil" : {
+      "0" : 87,
+      "1" : 21,
+      "2" : 56,
+      "3" : 93,
+      "4" : 16,
+      "eng" : "Guil",
+      "kor" : "구일"
+    },
+    "Guksu" : {
+      "0" : 84,
+      "1" : 66,
+      "2" : 88,
+      "3" : 49,
+      "4" : 26,
+      "eng" : "Guksu",
+      "kor" : "국수"
+    },
+    "Gulbongsan" : {
+      "0" : 88,
+      "1" : 93,
+      "2" : 60,
+      "3" : 35,
+      "4" : 14,
+      "eng" : "Gulbongsan",
+      "kor" : "굴봉산"
+    },
+    "Gulpocheon" : {
+      "0" : 26,
+      "1" : 38,
+      "2" : 48,
+      "3" : 92,
+      "4" : 16,
+      "eng" : "Gulpocheon",
+      "kor" : "굴포천"
+    },
+    "Gunja" : {
+      "0" : 20,
+      "1" : 46,
+      "2" : 84,
+      "3" : 57,
+      "4" : 31,
+      "eng" : "Gunja",
+      "kor" : "군자"
+    },
+    "Gunpo" : {
+      "0" : 0,
+      "1" : 25,
+      "2" : 28,
+      "3" : 29,
+      "4" : 22,
+      "eng" : "Gunpo",
+      "kor" : "군포"
+    },
+    "Gupabal" : {
+      "0" : 12,
+      "1" : 52,
+      "2" : 12,
+      "3" : 4,
+      "4" : 78,
+      "eng" : "Gupabal",
+      "kor" : "구파발"
+    },
+    "Gurae" : {
+      "0" : 0,
+      "1" : 94,
+      "2" : 7,
+      "3" : 86,
+      "4" : 40,
+      "eng" : "Gurae",
+      "kor" : "구래"
+    },
+    "Guri" : {
+      "0" : 41,
+      "1" : 60,
+      "2" : 0,
+      "3" : 37,
+      "4" : 75,
+      "eng" : "Guri",
+      "kor" : "구리"
+    },
+    "Guro" : {
+      "0" : 34,
+      "1" : 28,
+      "2" : 60,
+      "3" : 48,
+      "4" : 0,
+      "eng" : "Guro",
+      "kor" : "구로"
+    },
+    "GuroDigitalComplex" : {
+      "0" : 36,
+      "1" : 85,
+      "2" : 62,
+      "3" : 30,
+      "4" : 52,
+      "eng" : "GuroDigitalComplex",
+      "kor" : "구로디지털단지"
+    },
+    "Guryong" : {
+      "0" : 66,
+      "1" : 67,
+      "2" : 69,
+      "3" : 13,
+      "4" : 3,
+      "eng" : "Guryong",
+      "kor" : "구룡"
+    },
+    "Gusan" : {
+      "0" : 54,
+      "1" : 58,
+      "2" : 70,
+      "3" : 73,
+      "4" : 19,
+      "eng" : "Gusan",
+      "kor" : "구산"
+    },
+    "Guseong" : {
+      "0" : 18,
+      "1" : 78,
+      "2" : 71,
+      "3" : 86,
+      "4" : 5,
+      "eng" : "Guseong",
+      "kor" : "구성"
+    },
+    "Guui" : {
+      "0" : 52,
+      "1" : 53,
+      "2" : 9,
+      "3" : 17,
+      "4" : 21,
+      "eng" : "Guui",
+      "kor" : "구의"
+    },
+    "Gwacheon" : {
+      "0" : 85,
+      "1" : 58,
+      "2" : 81,
+      "3" : 15,
+      "4" : 17,
+      "eng" : "Gwacheon",
+      "kor" : "과천"
+    },
+    "Gwanak" : {
+      "0" : 5,
+      "1" : 65,
+      "2" : 92,
+      "3" : 83,
+      "4" : 22,
+      "eng" : "Gwanak",
+      "kor" : "관악"
+    },
+    "Gwanggyo" : {
+      "0" : 1,
+      "1" : 53,
+      "2" : 94,
+      "3" : 3,
+      "4" : 90,
+      "eng" : "Gwanggyo",
+      "kor" : "광교"
+    },
+    "GwanggyoJungang" : {
+      "0" : 97,
+      "1" : 12,
+      "2" : 69,
+      "3" : 1,
+      "4" : 88,
+      "eng" : "GwanggyoJungang",
+      "kor" : "광교중앙"
+    },
+    "Gwangheungchang" : {
+      "0" : 64,
+      "1" : 8,
+      "2" : 39,
+      "3" : 88,
+      "4" : 52,
+      "eng" : "Gwangheungchang",
+      "kor" : "광흥창"
+    },
+    "Gwanghwamun" : {
+      "0" : 44,
+      "1" : 11,
+      "2" : 28,
+      "3" : 61,
+      "4" : 33,
+      "eng" : "Gwanghwamun",
+      "kor" : "광화문"
+    },
+    "Gwangmyeong" : {
+      "0" : 6,
+      "1" : 43,
+      "2" : 26,
+      "3" : 26,
+      "4" : 96,
+      "eng" : "Gwangmyeong",
+      "kor" : "광명"
+    },
+    "Gwangmyeongsageori" : {
+      "0" : 87,
+      "1" : 36,
+      "2" : 33,
+      "3" : 6,
+      "4" : 88,
+      "eng" : "Gwangmyeongsageori",
+      "kor" : "광명사거리"
+    },
+    "Gwangnaru" : {
+      "0" : 36,
+      "1" : 8,
+      "2" : 54,
+      "3" : 51,
+      "4" : 13,
+      "eng" : "Gwangnaru",
+      "kor" : "광나루"
+    },
+    "Gyeongbokgung" : {
+      "0" : 14,
+      "1" : 42,
+      "2" : 82,
+      "3" : 41,
+      "4" : 0,
+      "eng" : "Gyeongbokgung",
+      "kor" : "경복궁"
+    },
+    "GyeonggiGwangju" : {
+      "0" : 94,
+      "1" : 34,
+      "2" : 84,
+      "3" : 21,
+      "4" : 6,
+      "eng" : "GyeonggiGwangju",
+      "kor" : "경기광주"
+    },
+    "GyeonggiProvincialGovernmentNorthernOffice" : {
+      "0" : 22,
+      "1" : 94,
+      "2" : 38,
+      "3" : 64,
+      "4" : 8,
+      "eng" : "GyeonggiProvincialGovernmentNorthernOffice",
+      "kor" : "경기도청북부청사"
+    },
+    "GyeonginNatlUnivofEducation" : {
+      "0" : 93,
+      "1" : 37,
+      "2" : 3,
+      "3" : 81,
+      "4" : 12,
+      "eng" : "GyeonginNatlUnivofEducation",
+      "kor" : "경인교대입구"
+    },
+    "Gyesan" : {
+      "0" : 28,
+      "1" : 54,
+      "2" : 93,
+      "3" : 89,
+      "4" : 71,
+      "eng" : "Gyesan",
+      "kor" : "계산"
+    },
+    "Gyeyang" : {
+      "0" : 14,
+      "1" : 83,
+      "2" : 38,
+      "3" : 31,
+      "4" : 19,
+      "eng" : "Gyeyang",
+      "kor" : "계양"
+    },
+    "Gyulhyeon" : {
+      "0" : 27,
+      "1" : 80,
+      "2" : 81,
+      "3" : 75,
+      "4" : 44,
+      "eng" : "Gyulhyeon",
+      "kor" : "귤현"
+    },
+    "Haengdang" : {
+      "0" : 61,
+      "1" : 71,
+      "2" : 80,
+      "3" : 92,
+      "4" : 28,
+      "eng" : "Haengdang",
+      "kor" : "행당"
+    },
+    "Haengsin" : {
+      "0" : 22,
+      "1" : 74,
+      "2" : 74,
+      "3" : 81,
+      "4" : 39,
+      "eng" : "Haengsin",
+      "kor" : "행신"
+    },
+    "Hagye" : {
+      "0" : 24,
+      "1" : 35,
+      "2" : 54,
+      "3" : 55,
+      "4" : 38,
+      "eng" : "Hagye",
+      "kor" : "하계"
+    },
+    "Hakdong" : {
+      "0" : 3,
+      "1" : 28,
+      "2" : 23,
+      "3" : 27,
+      "4" : 56,
+      "eng" : "Hakdong",
+      "kor" : "학동"
+    },
+    "HanamPungsan" : {
+      "0" : 79,
+      "1" : 46,
+      "2" : 80,
+      "3" : 82,
+      "4" : 37,
+      "eng" : "HanamPungsan",
+      "kor" : "하남풍산"
+    },
+    "Hangangjin" : {
+      "0" : 2,
+      "1" : 36,
+      "2" : 24,
+      "3" : 21,
+      "4" : 3,
+      "eng" : "Hangangjin",
+      "kor" : "한강진"
+    },
+    "Hangnyeoul" : {
+      "0" : 67,
+      "1" : 62,
+      "2" : 56,
+      "3" : 91,
+      "4" : 70,
+      "eng" : "Hangnyeoul",
+      "kor" : "학여울"
+    },
+    "HankukUnivofForeignStudies" : {
+      "0" : 61,
+      "1" : 31,
+      "2" : 55,
+      "3" : 51,
+      "4" : 90,
+      "eng" : "HankukUnivofForeignStudies",
+      "kor" : "외대앞"
+    },
+    "Hannam" : {
+      "0" : 68,
+      "1" : 78,
+      "2" : 88,
+      "3" : 44,
+      "4" : 98,
+      "eng" : "Hannam",
+      "kor" : "한남"
+    },
+    "HanseongBaekje" : {
+      "0" : 82,
+      "1" : 25,
+      "2" : 18,
+      "3" : 53,
+      "4" : 53,
+      "eng" : "HanseongBaekje",
+      "kor" : "한성백제"
+    },
+    "HansungUniv" : {
+      "0" : 44,
+      "1" : 37,
+      "2" : 26,
+      "3" : 50,
+      "4" : 90,
+      "eng" : "HansungUniv",
+      "kor" : "한성대입구"
+    },
+    "Hanti" : {
+      "0" : 96,
+      "1" : 26,
+      "2" : 31,
+      "3" : 3,
+      "4" : 63,
+      "eng" : "Hanti",
+      "kor" : "한티"
+    },
+    "HanyangUniv" : {
+      "0" : 56,
+      "1" : 24,
+      "2" : 29,
+      "3" : 46,
+      "4" : 20,
+      "eng" : "HanyangUniv",
+      "kor" : "한양대"
+    },
+    "HanyangUnivatAnsan" : {
+      "0" : 27,
+      "1" : 84,
+      "2" : 39,
+      "3" : 69,
+      "4" : 24,
+      "eng" : "HanyangUnivatAnsan",
+      "kor" : "한대앞"
+    },
+    "Hapjeong" : {
+      "0" : 62,
+      "1" : 80,
+      "2" : 92,
+      "3" : 31,
+      "4" : 95,
+      "eng" : "Hapjeong",
+      "kor" : "합정"
+    },
+    "Heukseok" : {
+      "0" : 32,
+      "1" : 24,
+      "2" : 43,
+      "3" : 45,
+      "4" : 80,
+      "eng" : "Heukseok",
+      "kor" : "흑석"
+    },
+    "Heungseon" : {
+      "0" : 83,
+      "1" : 57,
+      "2" : 25,
+      "3" : 94,
+      "4" : 90,
+      "eng" : "Heungseon",
+      "kor" : "흥선"
+    },
+    "Hoegi" : {
+      "0" : 52,
+      "1" : 32,
+      "2" : 89,
+      "3" : 5,
+      "4" : 68,
+      "eng" : "Hoegi",
+      "kor" : "회기"
+    },
+    "Hoehyeon" : {
+      "0" : 66,
+      "1" : 97,
+      "2" : 87,
+      "3" : 70,
+      "4" : 24,
+      "eng" : "Hoehyeon",
+      "kor" : "회현"
+    },
+    "Hoeryong" : {
+      "0" : 23,
+      "1" : 16,
+      "2" : 72,
+      "3" : 44,
+      "4" : 71,
+      "eng" : "Hoeryong",
+      "kor" : "회룡"
+    },
+    "Hogupo" : {
+      "0" : 87,
+      "1" : 98,
+      "2" : 39,
+      "3" : 53,
+      "4" : 14,
+      "eng" : "Hogupo",
+      "kor" : "호구포"
+    },
+    "HongikUniv" : {
+      "0" : 19,
+      "1" : 11,
+      "2" : 58,
+      "3" : 67,
+      "4" : 91,
+      "eng" : "HongikUniv",
+      "kor" : "홍대입구"
+    },
+    "Hongje" : {
+      "0" : 6,
+      "1" : 70,
+      "2" : 10,
+      "3" : 61,
+      "4" : 80,
+      "eng" : "Hongje",
+      "kor" : "홍제"
+    },
+    "Hwagok" : {
+      "0" : 40,
+      "1" : 49,
+      "2" : 35,
+      "3" : 24,
+      "4" : 71,
+      "eng" : "Hwagok",
+      "kor" : "화곡"
+    },
+    "Hwagye" : {
+      "0" : 2,
+      "1" : 18,
+      "2" : 39,
+      "3" : 96,
+      "4" : 6,
+      "eng" : "Hwagye",
+      "kor" : "화계"
+    },
+    "Hwajeon" : {
+      "0" : 3,
+      "1" : 65,
+      "2" : 62,
+      "3" : 16,
+      "4" : 67,
+      "eng" : "Hwajeon",
+      "kor" : "화전"
+    },
+    "Hwajeong" : {
+      "0" : 1,
+      "1" : 52,
+      "2" : 97,
+      "3" : 38,
+      "4" : 99,
+      "eng" : "Hwajeong",
+      "kor" : "화정"
+    },
+    "Hwarangdae" : {
+      "0" : 33,
+      "1" : 4,
+      "2" : 48,
+      "3" : 83,
+      "4" : 11,
+      "eng" : "Hwarangdae",
+      "kor" : "화랑대"
+    },
+    "Hwaseo" : {
+      "0" : 32,
+      "1" : 41,
+      "2" : 11,
+      "3" : 30,
+      "4" : 95,
+      "eng" : "Hwaseo",
+      "kor" : "화서"
+    },
+    "Hyehwa" : {
+      "0" : 26,
+      "1" : 28,
+      "2" : 23,
+      "3" : 6,
+      "4" : 97,
+      "eng" : "Hyehwa",
+      "kor" : "혜화"
+    },
+    "HyochangPark" : {
+      "0" : 74,
+      "1" : 17,
+      "2" : 88,
+      "3" : 18,
+      "4" : 67,
+      "eng" : "HyochangPark",
+      "kor" : "효창공원앞"
+    },
+    "Icheon" : {
+      "0" : 48,
+      "1" : 70,
+      "2" : 79,
+      "3" : 77,
+      "4" : 31,
+      "eng" : "Icheon",
+      "kor" : "이천"
+    },
+    "Ichon" : {
+      "0" : 17,
+      "1" : 6,
+      "2" : 79,
+      "3" : 80,
+      "4" : 32,
+      "eng" : "Ichon",
+      "kor" : "이촌"
+    },
+    "Ilsan" : {
+      "0" : 9,
+      "1" : 10,
+      "2" : 33,
+      "3" : 9,
+      "4" : 0,
+      "eng" : "Ilsan",
+      "kor" : "일산"
+    },
+    "Imae" : {
+      "0" : 32,
+      "1" : 92,
+      "2" : 28,
+      "3" : 51,
+      "4" : 35,
+      "eng" : "Imae",
+      "kor" : "이매"
+    },
+    "Imhak" : {
+      "0" : 19,
+      "1" : 17,
+      "2" : 78,
+      "3" : 2,
+      "4" : 82,
+      "eng" : "Imhak",
+      "kor" : "임학"
+    },
+    "Imjingang" : {
+      "0" : 17,
+      "1" : 88,
+      "2" : 96,
+      "3" : 98,
+      "4" : 31,
+      "eng" : "Imjingang",
+      "kor" : "임진강"
+    },
+    "Incheon" : {
+      "0" : 89,
+      "1" : 75,
+      "2" : 16,
+      "3" : 63,
+      "4" : 38,
+      "eng" : "Incheon",
+      "kor" : "인천"
+    },
+    "IncheonBusTerminal" : {
+      "0" : 71,
+      "1" : 59,
+      "2" : 8,
+      "3" : 27,
+      "4" : 22,
+      "eng" : "IncheonBusTerminal",
+      "kor" : "인천터미널"
+    },
+    "IncheonCityHall" : {
+      "0" : 53,
+      "1" : 30,
+      "2" : 59,
+      "3" : 53,
+      "4" : 93,
+      "eng" : "IncheonCityHall",
+      "kor" : "인천시청"
+    },
+    "IncheonGajwa" : {
+      "0" : 74,
+      "1" : 86,
+      "2" : 53,
+      "3" : 73,
+      "4" : 95,
+      "eng" : "IncheonGajwa",
+      "kor" : "인천가좌"
+    },
+    "IncheonGrandPark" : {
+      "0" : 44,
+      "1" : 80,
+      "2" : 45,
+      "3" : 9,
+      "4" : 76,
+      "eng" : "IncheonGrandPark",
+      "kor" : "인천대공원"
+    },
+    "IncheonIntlAirport" : {
+      "0" : 89,
+      "1" : 46,
+      "2" : 36,
+      "3" : 18,
+      "4" : 89,
+      "eng" : "IncheonIntlAirport",
+      "kor" : "인천공항1터미널"
+    },
+    "IncheonIntlAirportCargoTerminal" : {
+      "0" : 88,
+      "1" : 56,
+      "2" : 86,
+      "3" : 61,
+      "4" : 10,
+      "eng" : "IncheonIntlAirportCargoTerminal",
+      "kor" : "공항화물청사"
+    },
+    "IncheonIntlAirportTerminal2" : {
+      "0" : 15,
+      "1" : 91,
+      "2" : 77,
+      "3" : 58,
+      "4" : 37,
+      "eng" : "IncheonIntlAirportTerminal2",
+      "kor" : "인천공항2터미널"
+    },
+    "IncheonNatlUniv" : {
+      "0" : 95,
+      "1" : 37,
+      "2" : 88,
+      "3" : 92,
+      "4" : 86,
+      "eng" : "IncheonNatlUniv",
+      "kor" : "인천대입구"
+    },
+    "IncheonNonhyeon" : {
+      "0" : 76,
+      "1" : 89,
+      "2" : 91,
+      "3" : 11,
+      "4" : 81,
+      "eng" : "IncheonNonhyeon",
+      "kor" : "인천논현"
+    },
+    "InchonCityHall" : {
+      "0" : 44,
+      "1" : 1,
+      "2" : 69,
+      "3" : 51,
+      "4" : 10,
+      "eng" : "InchonCityHall",
+      "kor" : "인천시청"
+    },
+    "Indeogwon" : {
+      "0" : 54,
+      "1" : 76,
+      "2" : 76,
+      "3" : 4,
+      "4" : 20,
+      "eng" : "Indeogwon",
+      "kor" : "인덕원"
+    },
+    "InhaUniv" : {
+      "0" : 91,
+      "1" : 10,
+      "2" : 23,
+      "3" : 55,
+      "4" : 25,
+      "eng" : "InhaUniv",
+      "kor" : "인하대"
+    },
+    "IntlBusinessDistrict" : {
+      "0" : 51,
+      "1" : 15,
+      "2" : 47,
+      "3" : 84,
+      "4" : 28,
+      "eng" : "IntlBusinessDistrict",
+      "kor" : "국제업무지구"
+    },
+    "Irwon" : {
+      "0" : 40,
+      "1" : 60,
+      "2" : 47,
+      "3" : 95,
+      "4" : 99,
+      "eng" : "Irwon",
+      "kor" : "일원"
+    },
+    "Isu" : {
+      "0" : 11,
+      "1" : 89,
+      "2" : 86,
+      "3" : 59,
+      "4" : 45,
+      "eng" : "Isu",
+      "kor" : "이수"
+    },
+    "Itaewon" : {
+      "0" : 65,
+      "1" : 20,
+      "2" : 2,
+      "3" : 6,
+      "4" : 18,
+      "eng" : "Itaewon",
+      "kor" : "이태원"
+    },
+    "Jakjeon" : {
+      "0" : 58,
+      "1" : 80,
+      "2" : 53,
+      "3" : 55,
+      "4" : 46,
+      "eng" : "Jakjeon",
+      "kor" : "작전"
+    },
+    "Jamsil" : {
+      "0" : 42,
+      "1" : 50,
+      "2" : 99,
+      "3" : 54,
+      "4" : 66,
+      "eng" : "Jamsil",
+      "kor" : "잠실"
+    },
+    "Jamsillaru" : {
+      "0" : 38,
+      "1" : 61,
+      "2" : 34,
+      "3" : 69,
+      "4" : 99,
+      "eng" : "Jamsillaru",
+      "kor" : "잠실나루"
+    },
+    "Jamsilsaenae" : {
+      "0" : 8,
+      "1" : 7,
+      "2" : 0,
+      "3" : 74,
+      "4" : 19,
+      "eng" : "Jamsilsaenae",
+      "kor" : "잠실새내"
+    },
+    "Jamwon" : {
+      "0" : 85,
+      "1" : 94,
+      "2" : 58,
+      "3" : 28,
+      "4" : 30,
+      "eng" : "Jamwon",
+      "kor" : "잠원"
+    },
+    "Jangam" : {
+      "0" : 67,
+      "1" : 99,
+      "2" : 4,
+      "3" : 13,
+      "4" : 90,
+      "eng" : "Jangam",
+      "kor" : "장암"
+    },
+    "Janggi" : {
+      "0" : 96,
+      "1" : 9,
+      "2" : 6,
+      "3" : 97,
+      "4" : 22,
+      "eng" : "Janggi",
+      "kor" : "장기"
+    },
+    "Janghanpyeong" : {
+      "0" : 13,
+      "1" : 26,
+      "2" : 77,
+      "3" : 61,
+      "4" : 91,
+      "eng" : "Janghanpyeong",
+      "kor" : "장한평"
+    },
+    "Jangji" : {
+      "0" : 61,
+      "1" : 31,
+      "2" : 21,
+      "3" : 93,
+      "4" : 51,
+      "eng" : "Jangji",
+      "kor" : "장지"
+    },
+    "Jangseungbaegi" : {
+      "0" : 14,
+      "1" : 75,
+      "2" : 36,
+      "3" : 62,
+      "4" : 94,
+      "eng" : "Jangseungbaegi",
+      "kor" : "장승배기"
+    },
+    "Jegidong" : {
+      "0" : 57,
+      "1" : 50,
+      "2" : 56,
+      "3" : 0,
+      "4" : 37,
+      "eng" : "Jegidong",
+      "kor" : "제기동"
+    },
+    "Jemulpo" : {
+      "0" : 1,
+      "1" : 69,
+      "2" : 61,
+      "3" : 76,
+      "4" : 18,
+      "eng" : "Jemulpo",
+      "kor" : "제물포"
+    },
+    "JeondaeEverland" : {
+      "0" : 57,
+      "1" : 22,
+      "2" : 36,
+      "3" : 63,
+      "4" : 39,
+      "eng" : "JeondaeEverland",
+      "kor" : "전대에버랜드"
+    },
+    "Jeongbalsan" : {
+      "0" : 36,
+      "1" : 29,
+      "2" : 81,
+      "3" : 65,
+      "4" : 29,
+      "eng" : "Jeongbalsan",
+      "kor" : "정발산"
+    },
+    "Jeongja" : {
+      "0" : 59,
+      "1" : 34,
+      "2" : 42,
+      "3" : 10,
+      "4" : 82,
+      "eng" : "Jeongja",
+      "kor" : "정자"
+    },
+    "Jeongneung" : {
+      "0" : 43,
+      "1" : 0,
+      "2" : 74,
+      "3" : 78,
+      "4" : 87,
+      "eng" : "Jeongneung",
+      "kor" : "정릉"
+    },
+    "Jeongwang" : {
+      "0" : 79,
+      "1" : 57,
+      "2" : 25,
+      "3" : 20,
+      "4" : 45,
+      "eng" : "Jeongwang",
+      "kor" : "정왕"
+    },
+    "Jeungmi" : {
+      "0" : 85,
+      "1" : 85,
+      "2" : 50,
+      "3" : 84,
+      "4" : 10,
+      "eng" : "Jeungmi",
+      "kor" : "증미"
+    },
+    "Jeungsan" : {
+      "0" : 30,
+      "1" : 83,
+      "2" : 82,
+      "3" : 85,
+      "4" : 1,
+      "eng" : "Jeungsan",
+      "kor" : "증산"
+    },
+    "Jichuk" : {
+      "0" : 31,
+      "1" : 81,
+      "2" : 89,
+      "3" : 96,
+      "4" : 29,
+      "eng" : "Jichuk",
+      "kor" : "지축"
+    },
+    "Jihaeng" : {
+      "0" : 16,
+      "1" : 62,
+      "2" : 93,
+      "3" : 64,
+      "4" : 3,
+      "eng" : "Jihaeng",
+      "kor" : "지행"
+    },
+    "Jije" : {
+      "0" : 68,
+      "1" : 50,
+      "2" : 2,
+      "3" : 84,
+      "4" : 96,
+      "eng" : "Jije",
+      "kor" : "지제"
+    },
+    "Jiksan" : {
+      "0" : 28,
+      "1" : 11,
+      "2" : 68,
+      "3" : 10,
+      "4" : 95,
+      "eng" : "Jiksan",
+      "kor" : "직산"
+    },
+    "Jinwi" : {
+      "0" : 93,
+      "1" : 32,
+      "2" : 2,
+      "3" : 50,
+      "4" : 61,
+      "eng" : "Jinwi",
+      "kor" : "진위"
+    },
+    "Jipyeong" : {
+      "0" : 12,
+      "1" : 72,
+      "2" : 93,
+      "3" : 24,
+      "4" : 51,
+      "eng" : "Jipyeong",
+      "kor" : "지평"
+    },
+    "Jiseok" : {
+      "0" : 51,
+      "1" : 45,
+      "2" : 66,
+      "3" : 54,
+      "4" : 94,
+      "eng" : "Jiseok",
+      "kor" : "지석"
+    },
+    "Jonggak" : {
+      "0" : 22,
+      "1" : 95,
+      "2" : 12,
+      "3" : 94,
+      "4" : 4,
+      "eng" : "Jonggak",
+      "kor" : "종각"
+    },
+    "Jongno3samga" : {
+      "0" : 43,
+      "1" : 36,
+      "2" : 83,
+      "3" : 33,
+      "4" : 93,
+      "eng" : "Jongno3samga",
+      "kor" : "종로3가"
+    },
+    "Jongno5oga" : {
+      "0" : 26,
+      "1" : 30,
+      "2" : 31,
+      "3" : 23,
+      "4" : 1,
+      "eng" : "Jongno5oga",
+      "kor" : "종로5가"
+    },
+    "Juan" : {
+      "0" : 91,
+      "1" : 88,
+      "2" : 45,
+      "3" : 94,
+      "4" : 19,
+      "eng" : "Juan",
+      "kor" : "주안"
+    },
+    "JuanNationalIndustrialComplex" : {
+      "0" : 20,
+      "1" : 86,
+      "2" : 81,
+      "3" : 24,
+      "4" : 79,
+      "eng" : "JuanNationalIndustrialComplex",
+      "kor" : "주안국가산단"
+    },
+    "Jukjeon" : {
+      "0" : 84,
+      "1" : 66,
+      "2" : 93,
+      "3" : 4,
+      "4" : 72,
+      "eng" : "Jukjeon",
+      "kor" : "죽전"
+    },
+    "Jungang" : {
+      "0" : 89,
+      "1" : 97,
+      "2" : 87,
+      "3" : 6,
+      "4" : 69,
+      "eng" : "Jungang",
+      "kor" : "중앙"
+    },
+    "Jungdong" : {
+      "0" : 23,
+      "1" : 48,
+      "2" : 35,
+      "3" : 14,
+      "4" : 71,
+      "eng" : "Jungdong",
+      "kor" : "중동"
+    },
+    "Junggok" : {
+      "0" : 51,
+      "1" : 79,
+      "2" : 31,
+      "3" : 14,
+      "4" : 11,
+      "eng" : "Junggok",
+      "kor" : "중곡"
+    },
+    "Junggye" : {
+      "0" : 52,
+      "1" : 14,
+      "2" : 23,
+      "3" : 39,
+      "4" : 18,
+      "eng" : "Junggye",
+      "kor" : "중계"
+    },
+    "Junghwa" : {
+      "0" : 70,
+      "1" : 38,
+      "2" : 6,
+      "3" : 15,
+      "4" : 67,
+      "eng" : "Junghwa",
+      "kor" : "중화"
+    },
+    "Jungnang" : {
+      "0" : 1,
+      "1" : 0,
+      "2" : 49,
+      "3" : 76,
+      "4" : 28,
+      "eng" : "Jungnang",
+      "kor" : "중랑"
+    },
+    "Juyeop" : {
+      "0" : 94,
+      "1" : 52,
+      "2" : 0,
+      "3" : 94,
+      "4" : 21,
+      "eng" : "Juyeop",
+      "kor" : "주엽"
+    },
+    "KangnamUniv" : {
+      "0" : 30,
+      "1" : 18,
+      "2" : 13,
+      "3" : 69,
+      "4" : 81,
+      "eng" : "KangnamUniv",
+      "kor" : "강남대"
+    },
+    "Kkachisan" : {
+      "0" : 14,
+      "1" : 19,
+      "2" : 10,
+      "3" : 63,
+      "4" : 51,
+      "eng" : "Kkachisan",
+      "kor" : "까치산"
+    },
+    "Kkachiul" : {
+      "0" : 88,
+      "1" : 45,
+      "2" : 37,
+      "3" : 52,
+      "4" : 52,
+      "eng" : "Kkachiul",
+      "kor" : "까치울"
+    },
+    "KonkukUniv" : {
+      "0" : 82,
+      "1" : 76,
+      "2" : 96,
+      "3" : 43,
+      "4" : 45,
+      "eng" : "KonkukUniv",
+      "kor" : "건대입구"
+    },
+    "KoreaUniv" : {
+      "0" : 81,
+      "1" : 34,
+      "2" : 78,
+      "3" : 37,
+      "4" : 91,
+      "eng" : "KoreaUniv",
+      "kor" : "고려대"
+    },
+    "KwangwoonUniv" : {
+      "0" : 75,
+      "1" : 61,
+      "2" : 2,
+      "3" : 54,
+      "4" : 52,
+      "eng" : "KwangwoonUniv",
+      "kor" : "광운대"
+    },
+    "LrtUijeongbu" : {
+      "0" : 13,
+      "1" : 53,
+      "2" : 7,
+      "3" : 0,
+      "4" : 53,
+      "eng" : "LrtUijeongbu",
+      "kor" : "경전철의정부"
+    },
+    "Macheon" : {
+      "0" : 3,
+      "1" : 32,
+      "2" : 25,
+      "3" : 14,
+      "4" : 1,
+      "eng" : "Macheon",
+      "kor" : "마천"
+    },
+    "Madeul" : {
+      "0" : 61,
+      "1" : 65,
+      "2" : 68,
+      "3" : 49,
+      "4" : 83,
+      "eng" : "Madeul",
+      "kor" : "마들"
+    },
+    "Madu" : {
+      "0" : 4,
+      "1" : 52,
+      "2" : 2,
+      "3" : 2,
+      "4" : 10,
+      "eng" : "Madu",
+      "kor" : "마두"
+    },
+    "Maebong" : {
+      "0" : 88,
+      "1" : 20,
+      "2" : 73,
+      "3" : 66,
+      "4" : 23,
+      "eng" : "Maebong",
+      "kor" : "매봉"
+    },
+    "Maegyo" : {
+      "0" : 18,
+      "1" : 57,
+      "2" : 43,
+      "3" : 24,
+      "4" : 17,
+      "eng" : "Maegyo",
+      "kor" : "매교"
+    },
+    "MaetanGwonseon" : {
+      "0" : 82,
+      "1" : 49,
+      "2" : 43,
+      "3" : 65,
+      "4" : 34,
+      "eng" : "MaetanGwonseon",
+      "kor" : "매탄권선"
+    },
+    "Magok" : {
+      "0" : 82,
+      "1" : 86,
+      "2" : 22,
+      "3" : 74,
+      "4" : 50,
+      "eng" : "Magok",
+      "kor" : "마곡"
+    },
+    "Magongnaru" : {
+      "0" : 47,
+      "1" : 92,
+      "2" : 73,
+      "3" : 70,
+      "4" : 62,
+      "eng" : "Magongnaru",
+      "kor" : "마곡나루"
+    },
+    "Majang" : {
+      "0" : 40,
+      "1" : 41,
+      "2" : 20,
+      "3" : 34,
+      "4" : 73,
+      "eng" : "Majang",
+      "kor" : "마장"
+    },
+    "Majeon" : {
+      "0" : 3,
+      "1" : 57,
+      "2" : 41,
+      "3" : 49,
+      "4" : 59,
+      "eng" : "Majeon",
+      "kor" : "마전"
+    },
+    "Mangpo" : {
+      "0" : 64,
+      "1" : 76,
+      "2" : 20,
+      "3" : 17,
+      "4" : 90,
+      "eng" : "Mangpo",
+      "kor" : "망포"
+    },
+    "Mangu" : {
+      "0" : 43,
+      "1" : 74,
+      "2" : 30,
+      "3" : 8,
+      "4" : 1,
+      "eng" : "Mangu",
+      "kor" : "망우"
+    },
+    "Mangwolsa" : {
+      "0" : 24,
+      "1" : 25,
+      "2" : 90,
+      "3" : 22,
+      "4" : 52,
+      "eng" : "Mangwolsa",
+      "kor" : "망월사"
+    },
+    "Mangwon" : {
+      "0" : 35,
+      "1" : 11,
+      "2" : 83,
+      "3" : 73,
+      "4" : 61,
+      "eng" : "Mangwon",
+      "kor" : "망원"
+    },
+    "Mansu" : {
+      "0" : 4,
+      "1" : 80,
+      "2" : 4,
+      "3" : 80,
+      "4" : 96,
+      "eng" : "Mansu",
+      "kor" : "만수"
+    },
+    "Mapo" : {
+      "0" : 20,
+      "1" : 40,
+      "2" : 70,
+      "3" : 96,
+      "4" : 13,
+      "eng" : "Mapo",
+      "kor" : "마포"
+    },
+    "MapoguOffice" : {
+      "0" : 87,
+      "1" : 94,
+      "2" : 4,
+      "3" : 33,
+      "4" : 20,
+      "eng" : "MapoguOffice",
+      "kor" : "마포구청"
+    },
+    "Masan" : {
+      "0" : 69,
+      "1" : 98,
+      "2" : 34,
+      "3" : 54,
+      "4" : 23,
+      "eng" : "Masan",
+      "kor" : "마산"
+    },
+    "Maseok" : {
+      "0" : 40,
+      "1" : 18,
+      "2" : 28,
+      "3" : 5,
+      "4" : 91,
+      "eng" : "Maseok",
+      "kor" : "마석"
+    },
+    "Meokgol" : {
+      "0" : 84,
+      "1" : 6,
+      "2" : 17,
+      "3" : 96,
+      "4" : 40,
+      "eng" : "Meokgol",
+      "kor" : "먹골"
+    },
+    "Mia" : {
+      "0" : 41,
+      "1" : 80,
+      "2" : 48,
+      "3" : 91,
+      "4" : 44,
+      "eng" : "Mia",
+      "kor" : "미아"
+    },
+    "Miasamgeori" : {
+      "0" : 68,
+      "1" : 76,
+      "2" : 52,
+      "3" : 89,
+      "4" : 44,
+      "eng" : "Miasamgeori",
+      "kor" : "미아사거리"
+    },
+    "Migeum" : {
+      "0" : 77,
+      "1" : 4,
+      "2" : 55,
+      "3" : 58,
+      "4" : 42,
+      "eng" : "Migeum",
+      "kor" : "미금"
+    },
+    "Misa" : {
+      "0" : 41,
+      "1" : 38,
+      "2" : 52,
+      "3" : 34,
+      "4" : 27,
+      "eng" : "Misa",
+      "kor" : "미사"
+    },
+    "Mokdong" : {
+      "0" : 54,
+      "1" : 6,
+      "2" : 2,
+      "3" : 55,
+      "4" : 92,
+      "eng" : "Mokdong",
+      "kor" : "목동"
+    },
+    "Mongchontoseong" : {
+      "0" : 34,
+      "1" : 34,
+      "2" : 69,
+      "3" : 91,
+      "4" : 14,
+      "eng" : "Mongchontoseong",
+      "kor" : "몽촌토성"
+    },
+    "MoraenaeMarket" : {
+      "0" : 8,
+      "1" : 4,
+      "2" : 98,
+      "3" : 91,
+      "4" : 31,
+      "eng" : "MoraenaeMarket",
+      "kor" : "모래내시장"
+    },
+    "Moran" : {
+      "0" : 81,
+      "1" : 16,
+      "2" : 93,
+      "3" : 71,
+      "4" : 85,
+      "eng" : "Moran",
+      "kor" : "모란"
+    },
+    "Muakjae" : {
+      "0" : 91,
+      "1" : 4,
+      "2" : 69,
+      "3" : 45,
+      "4" : 31,
+      "eng" : "Muakjae",
+      "kor" : "무악재"
+    },
+    "Mullae" : {
+      "0" : 45,
+      "1" : 8,
+      "2" : 60,
+      "3" : 60,
+      "4" : 36,
+      "eng" : "Mullae",
+      "kor" : "문래"
+    },
+    "MunhakSportsComplex" : {
+      "0" : 34,
+      "1" : 38,
+      "2" : 81,
+      "3" : 48,
+      "4" : 24,
+      "eng" : "MunhakSportsComplex",
+      "kor" : "문학경기장"
+    },
+    "Munjeong" : {
+      "0" : 33,
+      "1" : 70,
+      "2" : 29,
+      "3" : 72,
+      "4" : 26,
+      "eng" : "Munjeong",
+      "kor" : "문정"
+    },
+    "Munsan" : {
+      "0" : 64,
+      "1" : 81,
+      "2" : 48,
+      "3" : 17,
+      "4" : 39,
+      "eng" : "Munsan",
+      "kor" : "문산"
+    },
+    "Myeongdong" : {
+      "0" : 1,
+      "1" : 75,
+      "2" : 95,
+      "3" : 89,
+      "4" : 19,
+      "eng" : "Myeongdong",
+      "kor" : "명동"
+    },
+    "Myeonghak" : {
+      "0" : 98,
+      "1" : 68,
+      "2" : 5,
+      "3" : 40,
+      "4" : 25,
+      "eng" : "Myeonghak",
+      "kor" : "명학"
+    },
+    "Myeongil" : {
+      "0" : 21,
+      "1" : 29,
+      "2" : 36,
+      "3" : 58,
+      "4" : 42,
+      "eng" : "Myeongil",
+      "kor" : "명일"
+    },
+    "Myeonmok" : {
+      "0" : 48,
+      "1" : 40,
+      "2" : 20,
+      "3" : 93,
+      "4" : 90,
+      "eng" : "Myeonmok",
+      "kor" : "면목"
+    },
+    "MyongjiUniv" : {
+      "0" : 55,
+      "1" : 36,
+      "2" : 16,
+      "3" : 31,
+      "4" : 21,
+      "eng" : "MyongjiUniv",
+      "kor" : "명지대"
+    },
+    "Naebang" : {
+      "0" : 30,
+      "1" : 49,
+      "2" : 77,
+      "3" : 0,
+      "4" : 48,
+      "eng" : "Naebang",
+      "kor" : "내방"
+    },
+    "Nakseongdae" : {
+      "0" : 7,
+      "1" : 73,
+      "2" : 46,
+      "3" : 95,
+      "4" : 44,
+      "eng" : "Nakseongdae",
+      "kor" : "낙성대"
+    },
+    "NambuBusTerminal" : {
+      "0" : 68,
+      "1" : 50,
+      "2" : 29,
+      "3" : 87,
+      "4" : 20,
+      "eng" : "NambuBusTerminal",
+      "kor" : "남부터미널"
+    },
+    "Namchuncheon" : {
+      "0" : 83,
+      "1" : 15,
+      "2" : 32,
+      "3" : 67,
+      "4" : 37,
+      "eng" : "Namchuncheon",
+      "kor" : "남춘천"
+    },
+    "NamdongInduspark" : {
+      "0" : 92,
+      "1" : 80,
+      "2" : 55,
+      "3" : 59,
+      "4" : 93,
+      "eng" : "NamdongInduspark",
+      "kor" : "남동인더스파크"
+    },
+    "NamdongguOffice" : {
+      "0" : 3,
+      "1" : 79,
+      "2" : 49,
+      "3" : 53,
+      "4" : 29,
+      "eng" : "NamdongguOffice",
+      "kor" : "남동구청"
+    },
+    "Namguro" : {
+      "0" : 79,
+      "1" : 10,
+      "2" : 82,
+      "3" : 26,
+      "4" : 96,
+      "eng" : "Namguro",
+      "kor" : "남구로"
+    },
+    "Namhansanseong" : {
+      "0" : 53,
+      "1" : 25,
+      "2" : 89,
+      "3" : 26,
+      "4" : 67,
+      "eng" : "Namhansanseong",
+      "kor" : "남한산성입구"
+    },
+    "Namseong" : {
+      "0" : 28,
+      "1" : 99,
+      "2" : 30,
+      "3" : 59,
+      "4" : 48,
+      "eng" : "Namseong",
+      "kor" : "남성"
+    },
+    "Namtaeryeong" : {
+      "0" : 1,
+      "1" : 26,
+      "2" : 32,
+      "3" : 13,
+      "4" : 67,
+      "eng" : "Namtaeryeong",
+      "kor" : "남태령"
+    },
+    "Namyeong" : {
+      "0" : 22,
+      "1" : 14,
+      "2" : 16,
+      "3" : 36,
+      "4" : 10,
+      "eng" : "Namyeong",
+      "kor" : "남영"
+    },
+    "NationalAssembly" : {
+      "0" : 71,
+      "1" : 19,
+      "2" : 41,
+      "3" : 91,
+      "4" : 98,
+      "eng" : "NationalAssembly",
+      "kor" : "국회의사당"
+    },
+    "NationalPoliceHospital" : {
+      "0" : 64,
+      "1" : 68,
+      "2" : 95,
+      "3" : 71,
+      "4" : 35,
+      "eng" : "NationalPoliceHospital",
+      "kor" : "경찰병원"
+    },
+    "Neunggok" : {
+      "0" : 81,
+      "1" : 40,
+      "2" : 51,
+      "3" : 32,
+      "4" : 32,
+      "eng" : "Neunggok",
+      "kor" : "능곡"
+    },
+    "Nodeul" : {
+      "0" : 47,
+      "1" : 0,
+      "2" : 62,
+      "3" : 81,
+      "4" : 8,
+      "eng" : "Nodeul",
+      "kor" : "노들"
+    },
+    "Nogyang" : {
+      "0" : 49,
+      "1" : 77,
+      "2" : 49,
+      "3" : 35,
+      "4" : 96,
+      "eng" : "Nogyang",
+      "kor" : "녹양"
+    },
+    "Nokbeon" : {
+      "0" : 27,
+      "1" : 79,
+      "2" : 84,
+      "3" : 0,
+      "4" : 15,
+      "eng" : "Nokbeon",
+      "kor" : "녹번"
+    },
+    "Nokcheon" : {
+      "0" : 8,
+      "1" : 64,
+      "2" : 48,
+      "3" : 85,
+      "4" : 86,
+      "eng" : "Nokcheon",
+      "kor" : "녹천"
+    },
+    "Noksapyeong" : {
+      "0" : 14,
+      "1" : 51,
+      "2" : 72,
+      "3" : 23,
+      "4" : 42,
+      "eng" : "Noksapyeong",
+      "kor" : "녹사평"
+    },
+    "Nonhyeon" : {
+      "0" : 27,
+      "1" : 73,
+      "2" : 5,
+      "3" : 32,
+      "4" : 53,
+      "eng" : "Nonhyeon",
+      "kor" : "논현"
+    },
+    "Noryangjin" : {
+      "0" : 62,
+      "1" : 85,
+      "2" : 37,
+      "3" : 34,
+      "4" : 65,
+      "eng" : "Noryangjin",
+      "kor" : "노량진"
+    },
+    "Nowon" : {
+      "0" : 25,
+      "1" : 21,
+      "2" : 32,
+      "3" : 28,
+      "4" : 31,
+      "eng" : "Nowon",
+      "kor" : "노원"
+    },
+    "Obin" : {
+      "0" : 27,
+      "1" : 3,
+      "2" : 19,
+      "3" : 65,
+      "4" : 4,
+      "eng" : "Obin",
+      "kor" : "오빈"
+    },
+    "Ogeum" : {
+      "0" : 4,
+      "1" : 71,
+      "2" : 0,
+      "3" : 73,
+      "4" : 94,
+      "eng" : "Ogeum",
+      "kor" : "오금"
+    },
+    "Oido" : {
+      "0" : 47,
+      "1" : 47,
+      "2" : 39,
+      "3" : 56,
+      "4" : 29,
+      "eng" : "Oido",
+      "kor" : "오이도"
+    },
+    "Oksu" : {
+      "0" : 41,
+      "1" : 97,
+      "2" : 76,
+      "3" : 32,
+      "4" : 76,
+      "eng" : "Oksu",
+      "kor" : "옥수"
+    },
+    "OlympicPark" : {
+      "0" : 60,
+      "1" : 36,
+      "2" : 58,
+      "3" : 64,
+      "4" : 42,
+      "eng" : "OlympicPark",
+      "kor" : "올림픽공원"
+    },
+    "Omokgyo" : {
+      "0" : 43,
+      "1" : 92,
+      "2" : 62,
+      "3" : 84,
+      "4" : 45,
+      "eng" : "Omokgyo",
+      "kor" : "오목교"
+    },
+    "Onsu" : {
+      "0" : 9,
+      "1" : 54,
+      "2" : 71,
+      "3" : 75,
+      "4" : 80,
+      "eng" : "Onsu",
+      "kor" : "온수"
+    },
+    "Onyangoncheon" : {
+      "0" : 81,
+      "1" : 8,
+      "2" : 79,
+      "3" : 4,
+      "4" : 21,
+      "eng" : "Onyangoncheon",
+      "kor" : "온양온천"
+    },
+    "Ori" : {
+      "0" : 40,
+      "1" : 17,
+      "2" : 76,
+      "3" : 90,
+      "4" : 56,
+      "eng" : "Ori",
+      "kor" : "오리"
+    },
+    "Oryudong" : {
+      "0" : 51,
+      "1" : 88,
+      "2" : 57,
+      "3" : 1,
+      "4" : 1,
+      "eng" : "Oryudong",
+      "kor" : "오류동"
+    },
+    "Osan" : {
+      "0" : 94,
+      "1" : 85,
+      "2" : 20,
+      "3" : 49,
+      "4" : 87,
+      "eng" : "Osan",
+      "kor" : "오산"
+    },
+    "OsanCollege" : {
+      "0" : 78,
+      "1" : 17,
+      "2" : 92,
+      "3" : 43,
+      "4" : 93,
+      "eng" : "OsanCollege",
+      "kor" : "오산대"
+    },
+    "Paju" : {
+      "0" : 12,
+      "1" : 97,
+      "2" : 94,
+      "3" : 52,
+      "4" : 12,
+      "eng" : "Paju",
+      "kor" : "파주"
+    },
+    "Paldang" : {
+      "0" : 80,
+      "1" : 5,
+      "2" : 39,
+      "3" : 16,
+      "4" : 21,
+      "eng" : "Paldang",
+      "kor" : "팔당"
+    },
+    "Pangyo" : {
+      "0" : 19,
+      "1" : 1,
+      "2" : 78,
+      "3" : 61,
+      "4" : 66,
+      "eng" : "Pangyo",
+      "kor" : "판교"
+    },
+    "Pungmu" : {
+      "0" : 10,
+      "1" : 14,
+      "2" : 34,
+      "3" : 54,
+      "4" : 49,
+      "eng" : "Pungmu",
+      "kor" : "풍무"
+    },
+    "Pungsan" : {
+      "0" : 13,
+      "1" : 20,
+      "2" : 78,
+      "3" : 91,
+      "4" : 77,
+      "eng" : "Pungsan",
+      "kor" : "풍산"
+    },
+    "Pyeongchon" : {
+      "0" : 18,
+      "1" : 74,
+      "2" : 27,
+      "3" : 33,
+      "4" : 65,
+      "eng" : "Pyeongchon",
+      "kor" : "평촌"
+    },
+    "PyeongnaeHopyeong" : {
+      "0" : 43,
+      "1" : 69,
+      "2" : 81,
+      "3" : 75,
+      "4" : 41,
+      "eng" : "PyeongnaeHopyeong",
+      "kor" : "평내호평"
+    },
+    "Pyeongtaek" : {
+      "0" : 98,
+      "1" : 98,
+      "2" : 7,
+      "3" : 25,
+      "4" : 88,
+      "eng" : "Pyeongtaek",
+      "kor" : "평택"
+    },
+    "Sadang" : {
+      "0" : 2,
+      "1" : 76,
+      "2" : 14,
+      "3" : 4,
+      "4" : 87,
+      "eng" : "Sadang",
+      "kor" : "사당"
+    },
+    "Saejeol" : {
+      "0" : 97,
+      "1" : 17,
+      "2" : 93,
+      "3" : 77,
+      "4" : 60,
+      "eng" : "Saejeol",
+      "kor" : "새절"
+    },
+    "Saetgang" : {
+      "0" : 81,
+      "1" : 76,
+      "2" : 50,
+      "3" : 49,
+      "4" : 29,
+      "eng" : "Saetgang",
+      "kor" : "샛강"
+    },
+    "Sagajeong" : {
+      "0" : 74,
+      "1" : 58,
+      "2" : 43,
+      "3" : 62,
+      "4" : 68,
+      "eng" : "Sagajeong",
+      "kor" : "사가정"
+    },
+    "Samdong" : {
+      "0" : 63,
+      "1" : 91,
+      "2" : 40,
+      "3" : 12,
+      "4" : 97,
+      "eng" : "Samdong",
+      "kor" : "삼동"
+    },
+    "Samga" : {
+      "0" : 0,
+      "1" : 7,
+      "2" : 6,
+      "3" : 64,
+      "4" : 80,
+      "eng" : "Samga",
+      "kor" : "삼가"
+    },
+    "Samgakji" : {
+      "0" : 43,
+      "1" : 4,
+      "2" : 91,
+      "3" : 77,
+      "4" : 6,
+      "eng" : "Samgakji",
+      "kor" : "삼각지"
+    },
+    "Samjeon" : {
+      "0" : 9,
+      "1" : 73,
+      "2" : 77,
+      "3" : 7,
+      "4" : 50,
+      "eng" : "Samjeon",
+      "kor" : "삼전"
+    },
+    "SamsanGymnasium" : {
+      "0" : 81,
+      "1" : 42,
+      "2" : 13,
+      "3" : 91,
+      "4" : 32,
+      "eng" : "SamsanGymnasium",
+      "kor" : "삼산체육관"
+    },
+    "Samseong" : {
+      "0" : 91,
+      "1" : 84,
+      "2" : 68,
+      "3" : 7,
+      "4" : 21,
+      "eng" : "Samseong",
+      "kor" : "삼성"
+    },
+    "SamseongJungang" : {
+      "0" : 80,
+      "1" : 7,
+      "2" : 3,
+      "3" : 84,
+      "4" : 87,
+      "eng" : "SamseongJungang",
+      "kor" : "삼성중앙"
+    },
+    "Samsong" : {
+      "0" : 45,
+      "1" : 35,
+      "2" : 49,
+      "3" : 28,
+      "4" : 26,
+      "eng" : "Samsong",
+      "kor" : "삼송"
+    },
+    "Samyang" : {
+      "0" : 47,
+      "1" : 19,
+      "2" : 26,
+      "3" : 12,
+      "4" : 13,
+      "eng" : "Samyang",
+      "kor" : "삼양"
+    },
+    "SamyangSageori" : {
+      "0" : 68,
+      "1" : 65,
+      "2" : 67,
+      "3" : 30,
+      "4" : 93,
+      "eng" : "SamyangSageori",
+      "kor" : "삼양사거리"
+    },
+    "Sanbon" : {
+      "0" : 27,
+      "1" : 31,
+      "2" : 84,
+      "3" : 0,
+      "4" : 85,
+      "eng" : "Sanbon",
+      "kor" : "산본"
+    },
+    "Sangbong" : {
+      "0" : 35,
+      "1" : 97,
+      "2" : 90,
+      "3" : 19,
+      "4" : 48,
+      "eng" : "Sangbong",
+      "kor" : "상봉"
+    },
+    "Sangcheon" : {
+      "0" : 31,
+      "1" : 2,
+      "2" : 0,
+      "3" : 33,
+      "4" : 37,
+      "eng" : "Sangcheon",
+      "kor" : "상천"
+    },
+    "Sangdo" : {
+      "0" : 15,
+      "1" : 77,
+      "2" : 47,
+      "3" : 86,
+      "4" : 56,
+      "eng" : "Sangdo",
+      "kor" : "상도"
+    },
+    "Sangdong" : {
+      "0" : 76,
+      "1" : 37,
+      "2" : 77,
+      "3" : 23,
+      "4" : 42,
+      "eng" : "Sangdong",
+      "kor" : "상동"
+    },
+    "Sanggal" : {
+      "0" : 60,
+      "1" : 35,
+      "2" : 13,
+      "3" : 21,
+      "4" : 39,
+      "eng" : "Sanggal",
+      "kor" : "상갈"
+    },
+    "Sanggye" : {
+      "0" : 26,
+      "1" : 30,
+      "2" : 7,
+      "3" : 24,
+      "4" : 53,
+      "eng" : "Sanggye",
+      "kor" : "상계"
+    },
+    "Sanghyeon" : {
+      "0" : 20,
+      "1" : 60,
+      "2" : 66,
+      "3" : 56,
+      "4" : 48,
+      "eng" : "Sanghyeon",
+      "kor" : "상현"
+    },
+    "Sangildong" : {
+      "0" : 66,
+      "1" : 76,
+      "2" : 71,
+      "3" : 96,
+      "4" : 4,
+      "eng" : "Sangildong",
+      "kor" : "상일동"
+    },
+    "Sangnoksu" : {
+      "0" : 89,
+      "1" : 44,
+      "2" : 87,
+      "3" : 47,
+      "4" : 5,
+      "eng" : "Sangnoksu",
+      "kor" : "상록수"
+    },
+    "Sangsu" : {
+      "0" : 60,
+      "1" : 32,
+      "2" : 92,
+      "3" : 78,
+      "4" : 61,
+      "eng" : "Sangsu",
+      "kor" : "상수"
+    },
+    "Sangwangsimni" : {
+      "0" : 11,
+      "1" : 65,
+      "2" : 95,
+      "3" : 67,
+      "4" : 77,
+      "eng" : "Sangwangsimni",
+      "kor" : "상왕십리"
+    },
+    "Sangwolgok" : {
+      "0" : 33,
+      "1" : 25,
+      "2" : 35,
+      "3" : 7,
+      "4" : 76,
+      "eng" : "Sangwolgok",
+      "kor" : "상월곡"
+    },
+    "Sanseong" : {
+      "0" : 50,
+      "1" : 85,
+      "2" : 60,
+      "3" : 92,
+      "4" : 71,
+      "eng" : "Sanseong",
+      "kor" : "산성"
+    },
+    "Sapyeong" : {
+      "0" : 83,
+      "1" : 23,
+      "2" : 46,
+      "3" : 32,
+      "4" : 7,
+      "eng" : "Sapyeong",
+      "kor" : "사평"
+    },
+    "Sareung" : {
+      "0" : 50,
+      "1" : 63,
+      "2" : 37,
+      "3" : 89,
+      "4" : 77,
+      "eng" : "Sareung",
+      "kor" : "사릉"
+    },
+    "Sau" : {
+      "0" : 69,
+      "1" : 54,
+      "2" : 74,
+      "3" : 38,
+      "4" : 92,
+      "eng" : "Sau",
+      "kor" : "사우"
+    },
+    "Sejongdaewangneung" : {
+      "0" : 88,
+      "1" : 42,
+      "2" : 61,
+      "3" : 50,
+      "4" : 60,
+      "eng" : "Sejongdaewangneung",
+      "kor" : "세종대왕릉"
+    },
+    "Sema" : {
+      "0" : 55,
+      "1" : 83,
+      "2" : 74,
+      "3" : 69,
+      "4" : 77,
+      "eng" : "Sema",
+      "kor" : "세마"
+    },
+    "Seobinggo" : {
+      "0" : 62,
+      "1" : 20,
+      "2" : 21,
+      "3" : 23,
+      "4" : 11,
+      "eng" : "Seobinggo",
+      "kor" : "서빙고"
+    },
+    "Seocho" : {
+      "0" : 28,
+      "1" : 80,
+      "2" : 10,
+      "3" : 28,
+      "4" : 50,
+      "eng" : "Seocho",
+      "kor" : "서초"
+    },
+    "Seodaemun" : {
+      "0" : 17,
+      "1" : 64,
+      "2" : 19,
+      "3" : 34,
+      "4" : 77,
+      "eng" : "Seodaemun",
+      "kor" : "서대문"
+    },
+    "Seodongtan" : {
+      "0" : 59,
+      "1" : 65,
+      "2" : 57,
+      "3" : 50,
+      "4" : 86,
+      "eng" : "Seodongtan",
+      "kor" : "서동탄"
+    },
+    "SeoguOffice" : {
+      "0" : 79,
+      "1" : 5,
+      "2" : 36,
+      "3" : 40,
+      "4" : 97,
+      "eng" : "SeoguOffice",
+      "kor" : "서구청"
+    },
+    "Seohyeon" : {
+      "0" : 29,
+      "1" : 52,
+      "2" : 99,
+      "3" : 62,
+      "4" : 37,
+      "eng" : "Seohyeon",
+      "kor" : "서현"
+    },
+    "Seojeongri" : {
+      "0" : 93,
+      "1" : 49,
+      "2" : 76,
+      "3" : 8,
+      "4" : 39,
+      "eng" : "Seojeongri",
+      "kor" : "서정리"
+    },
+    "SeokbawiMarket" : {
+      "0" : 49,
+      "1" : 75,
+      "2" : 80,
+      "3" : 94,
+      "4" : 62,
+      "eng" : "SeokbawiMarket",
+      "kor" : "석바위시장"
+    },
+    "SeokcheonSageori" : {
+      "0" : 72,
+      "1" : 88,
+      "2" : 18,
+      "3" : 56,
+      "4" : 18,
+      "eng" : "SeokcheonSageori",
+      "kor" : "석천사거리"
+    },
+    "Seokchon" : {
+      "0" : 77,
+      "1" : 43,
+      "2" : 61,
+      "3" : 30,
+      "4" : 20,
+      "eng" : "Seokchon",
+      "kor" : "석촌"
+    },
+    "SeokchonGobun" : {
+      "0" : 18,
+      "1" : 82,
+      "2" : 62,
+      "3" : 27,
+      "4" : 32,
+      "eng" : "SeokchonGobun",
+      "kor" : "석촌고분"
+    },
+    "SeokchonHansolHospital" : {
+      "0" : 8,
+      "1" : 24,
+      "2" : 65,
+      "3" : 97,
+      "4" : 9,
+      "eng" : "SeokchonHansolHospital",
+      "kor" : "석촌"
+    },
+    "Seokgye" : {
+      "0" : 11,
+      "1" : 62,
+      "2" : 98,
+      "3" : 57,
+      "4" : 23,
+      "eng" : "Seokgye",
+      "kor" : "석계"
+    },
+    "Seoksu" : {
+      "0" : 85,
+      "1" : 23,
+      "2" : 96,
+      "3" : 16,
+      "4" : 64,
+      "eng" : "Seoksu",
+      "kor" : "석수"
+    },
+    "Seolleung" : {
+      "0" : 95,
+      "1" : 15,
+      "2" : 39,
+      "3" : 59,
+      "4" : 55,
+      "eng" : "Seolleung",
+      "kor" : "선릉"
+    },
+    "Seonbawi" : {
+      "0" : 70,
+      "1" : 88,
+      "2" : 83,
+      "3" : 25,
+      "4" : 25,
+      "eng" : "Seonbawi",
+      "kor" : "선바위"
+    },
+    "Seonbu" : {
+      "0" : 87,
+      "1" : 2,
+      "2" : 9,
+      "3" : 94,
+      "4" : 46,
+      "eng" : "Seonbu",
+      "kor" : "선부"
+    },
+    "Seongbok" : {
+      "0" : 78,
+      "1" : 23,
+      "2" : 35,
+      "3" : 39,
+      "4" : 66,
+      "eng" : "Seongbok",
+      "kor" : "성복"
+    },
+    "Seonghwan" : {
+      "0" : 23,
+      "1" : 43,
+      "2" : 46,
+      "3" : 32,
+      "4" : 33,
+      "eng" : "Seonghwan",
+      "kor" : "성환"
+    },
+    "Seongnam" : {
+      "0" : 42,
+      "1" : 30,
+      "2" : 25,
+      "3" : 47,
+      "4" : 57,
+      "eng" : "Seongnam",
+      "kor" : "석남"
+    },
+    "Seongsu" : {
+      "0" : 54,
+      "1" : 34,
+      "2" : 54,
+      "3" : 39,
+      "4" : 17,
+      "eng" : "Seongsu",
+      "kor" : "성수"
+    },
+    "Seonhak" : {
+      "0" : 7,
+      "1" : 93,
+      "2" : 67,
+      "3" : 11,
+      "4" : 18,
+      "eng" : "Seonhak",
+      "kor" : "선학"
+    },
+    "Seonjeongneung" : {
+      "0" : 8,
+      "1" : 11,
+      "2" : 58,
+      "3" : 29,
+      "4" : 5,
+      "eng" : "Seonjeongneung",
+      "kor" : "선정릉"
+    },
+    "Seonyudo" : {
+      "0" : 75,
+      "1" : 61,
+      "2" : 80,
+      "3" : 72,
+      "4" : 87,
+      "eng" : "Seonyudo",
+      "kor" : "선유도"
+    },
+    "SeoulGrandPark" : {
+      "0" : 2,
+      "1" : 58,
+      "2" : 19,
+      "3" : 25,
+      "4" : 33,
+      "eng" : "SeoulGrandPark",
+      "kor" : "대공원"
+    },
+    "SeoulNatlUniv" : {
+      "0" : 74,
+      "1" : 48,
+      "2" : 99,
+      "3" : 99,
+      "4" : 34,
+      "eng" : "SeoulNatlUniv",
+      "kor" : "서울대입구"
+    },
+    "SeoulNatlUnivofEducation" : {
+      "0" : 50,
+      "1" : 67,
+      "2" : 87,
+      "3" : 29,
+      "4" : 41,
+      "eng" : "SeoulNatlUnivofEducation",
+      "kor" : "교대"
+    },
+    "SeoulRacecoursePark" : {
+      "0" : 10,
+      "1" : 14,
+      "2" : 32,
+      "3" : 91,
+      "4" : 32,
+      "eng" : "SeoulRacecoursePark",
+      "kor" : "경마공원"
+    },
+    "SeoulStation" : {
+      "0" : 3,
+      "1" : 52,
+      "2" : 74,
+      "3" : 58,
+      "4" : 56,
+      "eng" : "SeoulStation",
+      "kor" : "서울역"
+    },
+    "Seoulforest" : {
+      "0" : 6,
+      "1" : 86,
+      "2" : 3,
+      "3" : 29,
+      "4" : 95,
+      "eng" : "Seoulforest",
+      "kor" : "서울숲"
+    },
+    "Seryu" : {
+      "0" : 26,
+      "1" : 84,
+      "2" : 59,
+      "3" : 19,
+      "4" : 19,
+      "eng" : "Seryu",
+      "kor" : "세류"
+    },
+    "SiheungCityHall" : {
+      "0" : 12,
+      "1" : 36,
+      "2" : 84,
+      "3" : 21,
+      "4" : 28,
+      "eng" : "SiheungCityHall",
+      "kor" : "시흥시청"
+    },
+    "SiheungDaeya" : {
+      "0" : 22,
+      "1" : 80,
+      "2" : 37,
+      "3" : 15,
+      "4" : 43,
+      "eng" : "SiheungDaeya",
+      "kor" : "시흥대야"
+    },
+    "SiheungNeunggok" : {
+      "0" : 82,
+      "1" : 60,
+      "2" : 69,
+      "3" : 71,
+      "4" : 17,
+      "eng" : "SiheungNeunggok",
+      "kor" : "시흥능곡"
+    },
+    "Sillim" : {
+      "0" : 7,
+      "1" : 33,
+      "2" : 21,
+      "3" : 33,
+      "4" : 0,
+      "eng" : "Sillim",
+      "kor" : "신림"
+    },
+    "Sinbanghwa" : {
+      "0" : 31,
+      "1" : 49,
+      "2" : 89,
+      "3" : 45,
+      "4" : 47,
+      "eng" : "Sinbanghwa",
+      "kor" : "신방화"
+    },
+    "Sinbanpo" : {
+      "0" : 28,
+      "1" : 7,
+      "2" : 81,
+      "3" : 63,
+      "4" : 67,
+      "eng" : "Sinbanpo",
+      "kor" : "신반포"
+    },
+    "Sinchang" : {
+      "0" : 5,
+      "1" : 99,
+      "2" : 10,
+      "3" : 76,
+      "4" : 74,
+      "eng" : "Sinchang",
+      "kor" : "신창"
+    },
+    "Sincheon" : {
+      "0" : 59,
+      "1" : 81,
+      "2" : 14,
+      "3" : 64,
+      "4" : 53,
+      "eng" : "Sincheon",
+      "kor" : "신천"
+    },
+    "Sinchon" : {
+      "0" : 0,
+      "1" : 59,
+      "2" : 5,
+      "3" : 8,
+      "4" : 3,
+      "eng" : "Sinchon",
+      "kor" : "신촌"
+    },
+    "Sindaebang" : {
+      "0" : 63,
+      "1" : 74,
+      "2" : 32,
+      "3" : 14,
+      "4" : 20,
+      "eng" : "Sindaebang",
+      "kor" : "신대방"
+    },
+    "Sindaebangsamgeori" : {
+      "0" : 85,
+      "1" : 36,
+      "2" : 31,
+      "3" : 73,
+      "4" : 80,
+      "eng" : "Sindaebangsamgeori",
+      "kor" : "신대방삼거리"
+    },
+    "Sindang" : {
+      "0" : 18,
+      "1" : 38,
+      "2" : 38,
+      "3" : 18,
+      "4" : 63,
+      "eng" : "Sindang",
+      "kor" : "신당"
+    },
+    "Sindap" : {
+      "0" : 40,
+      "1" : 90,
+      "2" : 68,
+      "3" : 54,
+      "4" : 61,
+      "eng" : "Sindap",
+      "kor" : "신답"
+    },
+    "Sindorim" : {
+      "0" : 47,
+      "1" : 31,
+      "2" : 82,
+      "3" : 81,
+      "4" : 72,
+      "eng" : "Sindorim",
+      "kor" : "신도림"
+    },
+    "Sindundoyechon" : {
+      "0" : 19,
+      "1" : 93,
+      "2" : 48,
+      "3" : 60,
+      "4" : 92,
+      "eng" : "Sindundoyechon",
+      "kor" : "신둔도예촌"
+    },
+    "Singal" : {
+      "0" : 69,
+      "1" : 67,
+      "2" : 56,
+      "3" : 40,
+      "4" : 94,
+      "eng" : "Singal",
+      "kor" : "신갈"
+    },
+    "Singeumho" : {
+      "0" : 72,
+      "1" : 73,
+      "2" : 67,
+      "3" : 98,
+      "4" : 31,
+      "eng" : "Singeumho",
+      "kor" : "신금호"
+    },
+    "Singil" : {
+      "0" : 95,
+      "1" : 35,
+      "2" : 44,
+      "3" : 20,
+      "4" : 29,
+      "eng" : "Singil",
+      "kor" : "신길"
+    },
+    "Singiloncheon" : {
+      "0" : 6,
+      "1" : 66,
+      "2" : 65,
+      "3" : 38,
+      "4" : 7,
+      "eng" : "Singiloncheon",
+      "kor" : "신길온천"
+    },
+    "Sinheung" : {
+      "0" : 17,
+      "1" : 18,
+      "2" : 50,
+      "3" : 63,
+      "4" : 14,
+      "eng" : "Sinheung",
+      "kor" : "신흥"
+    },
+    "Sinhyeon" : {
+      "0" : 18,
+      "1" : 22,
+      "2" : 31,
+      "3" : 68,
+      "4" : 28,
+      "eng" : "Sinhyeon",
+      "kor" : "신현"
+    },
+    "Sinimun" : {
+      "0" : 19,
+      "1" : 18,
+      "2" : 30,
+      "3" : 28,
+      "4" : 42,
+      "eng" : "Sinimun",
+      "kor" : "신이문"
+    },
+    "Sinjeong" : {
+      "0" : 58,
+      "1" : 94,
+      "2" : 89,
+      "3" : 95,
+      "4" : 99,
+      "eng" : "Sinjeong",
+      "kor" : "신정"
+    },
+    "Sinjeongnegeori" : {
+      "0" : 16,
+      "1" : 88,
+      "2" : 58,
+      "3" : 86,
+      "4" : 94,
+      "eng" : "Sinjeongnegeori",
+      "kor" : "신정네거리"
+    },
+    "Sinjungdong" : {
+      "0" : 47,
+      "1" : 23,
+      "2" : 10,
+      "3" : 89,
+      "4" : 4,
+      "eng" : "Sinjungdong",
+      "kor" : "신중동"
+    },
+    "Sinmokdong" : {
+      "0" : 4,
+      "1" : 17,
+      "2" : 7,
+      "3" : 54,
+      "4" : 63,
+      "eng" : "Sinmokdong",
+      "kor" : "신목동"
+    },
+    "Sinnae" : {
+      "0" : 52,
+      "1" : 70,
+      "2" : 80,
+      "3" : 8,
+      "4" : 19,
+      "eng" : "Sinnae",
+      "kor" : "신내"
+    },
+    "Sinnonhyeon" : {
+      "0" : 42,
+      "1" : 54,
+      "2" : 69,
+      "3" : 71,
+      "4" : 74,
+      "eng" : "Sinnonhyeon",
+      "kor" : "신논현"
+    },
+    "Sinpo" : {
+      "0" : 80,
+      "1" : 61,
+      "2" : 24,
+      "3" : 61,
+      "4" : 10,
+      "eng" : "Sinpo",
+      "kor" : "신포"
+    },
+    "Sinpung" : {
+      "0" : 92,
+      "1" : 80,
+      "2" : 87,
+      "3" : 40,
+      "4" : 96,
+      "eng" : "Sinpung",
+      "kor" : "신풍"
+    },
+    "Sinsa" : {
+      "0" : 63,
+      "1" : 3,
+      "2" : 36,
+      "3" : 80,
+      "4" : 86,
+      "eng" : "Sinsa",
+      "kor" : "신사"
+    },
+    "Sinseoldong" : {
+      "0" : 49,
+      "1" : 25,
+      "2" : 11,
+      "3" : 19,
+      "4" : 22,
+      "eng" : "Sinseoldong",
+      "kor" : "신설동"
+    },
+    "Sinwon" : {
+      "0" : 58,
+      "1" : 59,
+      "2" : 77,
+      "3" : 87,
+      "4" : 96,
+      "eng" : "Sinwon",
+      "kor" : "신원"
+    },
+    "Sinyeonsu" : {
+      "0" : 82,
+      "1" : 67,
+      "2" : 23,
+      "3" : 15,
+      "4" : 66,
+      "eng" : "Sinyeonsu",
+      "kor" : "신연수"
+    },
+    "Sinyongsan" : {
+      "0" : 65,
+      "1" : 61,
+      "2" : 42,
+      "3" : 35,
+      "4" : 35,
+      "eng" : "Sinyongsan",
+      "kor" : "신용산"
+    },
+    "SogangUniv" : {
+      "0" : 7,
+      "1" : 45,
+      "2" : 87,
+      "3" : 61,
+      "4" : 32,
+      "eng" : "SogangUniv",
+      "kor" : "서강대"
+    },
+    "SolbatPark" : {
+      "0" : 80,
+      "1" : 91,
+      "2" : 6,
+      "3" : 19,
+      "4" : 86,
+      "eng" : "SolbatPark",
+      "kor" : "솔밭공원"
+    },
+    "Solsaem" : {
+      "0" : 63,
+      "1" : 37,
+      "2" : 98,
+      "3" : 2,
+      "4" : 0,
+      "eng" : "Solsaem",
+      "kor" : "솔샘"
+    },
+    "Songdo" : {
+      "0" : 78,
+      "1" : 49,
+      "2" : 94,
+      "3" : 37,
+      "4" : 82,
+      "eng" : "Songdo",
+      "kor" : "송도"
+    },
+    "Songjeong" : {
+      "0" : 77,
+      "1" : 7,
+      "2" : 64,
+      "3" : 48,
+      "4" : 30,
+      "eng" : "Songjeong",
+      "kor" : "송정"
+    },
+    "Songnae" : {
+      "0" : 81,
+      "1" : 34,
+      "2" : 54,
+      "3" : 52,
+      "4" : 28,
+      "eng" : "Songnae",
+      "kor" : "송내"
+    },
+    "Songpa" : {
+      "0" : 23,
+      "1" : 90,
+      "2" : 69,
+      "3" : 3,
+      "4" : 16,
+      "eng" : "Songpa",
+      "kor" : "송파"
+    },
+    "Songpanaru" : {
+      "0" : 29,
+      "1" : 32,
+      "2" : 54,
+      "3" : 73,
+      "4" : 77,
+      "eng" : "Songpanaru",
+      "kor" : "송파나루"
+    },
+    "Songsan" : {
+      "0" : 53,
+      "1" : 29,
+      "2" : 58,
+      "3" : 67,
+      "4" : 4,
+      "eng" : "Songsan",
+      "kor" : "송산"
+    },
+    "Songtan" : {
+      "0" : 52,
+      "1" : 49,
+      "2" : 19,
+      "3" : 71,
+      "4" : 2,
+      "eng" : "Songtan",
+      "kor" : "송탄"
+    },
+    "SookmyungWomensUniv" : {
+      "0" : 61,
+      "1" : 94,
+      "2" : 55,
+      "3" : 72,
+      "4" : 26,
+      "eng" : "SookmyungWomensUniv",
+      "kor" : "숙대입구"
+    },
+    "SoongsilUniv" : {
+      "0" : 20,
+      "1" : 19,
+      "2" : 49,
+      "3" : 65,
+      "4" : 92,
+      "eng" : "SoongsilUniv",
+      "kor" : "숭실대입구"
+    },
+    "Soraepogu" : {
+      "0" : 10,
+      "1" : 46,
+      "2" : 69,
+      "3" : 94,
+      "4" : 58,
+      "eng" : "Soraepogu",
+      "kor" : "소래포구"
+    },
+    "Sosa" : {
+      "0" : 67,
+      "1" : 54,
+      "2" : 52,
+      "3" : 54,
+      "4" : 94,
+      "eng" : "Sosa",
+      "kor" : "소사"
+    },
+    "Sosaeul" : {
+      "0" : 95,
+      "1" : 58,
+      "2" : 86,
+      "3" : 86,
+      "4" : 99,
+      "eng" : "Sosaeul",
+      "kor" : "소새울"
+    },
+    "Soyosan" : {
+      "0" : 72,
+      "1" : 25,
+      "2" : 44,
+      "3" : 62,
+      "4" : 78,
+      "eng" : "Soyosan",
+      "kor" : "소요산"
+    },
+    "SportsComplex" : {
+      "0" : 21,
+      "1" : 14,
+      "2" : 92,
+      "3" : 80,
+      "4" : 55,
+      "eng" : "SportsComplex",
+      "kor" : "종합운동장"
+    },
+    "Ssangmun" : {
+      "0" : 87,
+      "1" : 87,
+      "2" : 0,
+      "3" : 27,
+      "4" : 80,
+      "eng" : "Ssangmun",
+      "kor" : "쌍문"
+    },
+    "Ssangyong" : {
+      "0" : 18,
+      "1" : 36,
+      "2" : 97,
+      "3" : 65,
+      "4" : 21,
+      "eng" : "Ssangyong",
+      "kor" : "쌍용"
+    },
+    "StadiumSongdamCollege" : {
+      "0" : 40,
+      "1" : 87,
+      "2" : 55,
+      "3" : 30,
+      "4" : 17,
+      "eng" : "StadiumSongdamCollege",
+      "kor" : "운동장송담대"
+    },
+    "Sujiguoffice" : {
+      "0" : 79,
+      "1" : 38,
+      "2" : 7,
+      "3" : 16,
+      "4" : 67,
+      "eng" : "Sujiguoffice",
+      "kor" : "수지구청"
+    },
+    "Sujin" : {
+      "0" : 14,
+      "1" : 93,
+      "2" : 85,
+      "3" : 58,
+      "4" : 64,
+      "eng" : "Sujin",
+      "kor" : "수진"
+    },
+    "Sunae" : {
+      "0" : 54,
+      "1" : 31,
+      "2" : 99,
+      "3" : 5,
+      "4" : 91,
+      "eng" : "Sunae",
+      "kor" : "수내"
+    },
+    "SungkyunkwanUniv" : {
+      "0" : 62,
+      "1" : 78,
+      "2" : 45,
+      "3" : 96,
+      "4" : 96,
+      "eng" : "SungkyunkwanUniv",
+      "kor" : "성균관대"
+    },
+    "SungshinWomensUniv" : {
+      "0" : 29,
+      "1" : 75,
+      "2" : 43,
+      "3" : 18,
+      "4" : 20,
+      "eng" : "SungshinWomensUniv",
+      "kor" : "성신여대입구"
+    },
+    "Sungui" : {
+      "0" : 60,
+      "1" : 99,
+      "2" : 35,
+      "3" : 75,
+      "4" : 94,
+      "eng" : "Sungui",
+      "kor" : "숭의"
+    },
+    "Suraksan" : {
+      "0" : 6,
+      "1" : 39,
+      "2" : 89,
+      "3" : 10,
+      "4" : 95,
+      "eng" : "Suraksan",
+      "kor" : "수락산"
+    },
+    "Surisan" : {
+      "0" : 80,
+      "1" : 81,
+      "2" : 43,
+      "3" : 42,
+      "4" : 80,
+      "eng" : "Surisan",
+      "kor" : "수리산"
+    },
+    "Susaek" : {
+      "0" : 47,
+      "1" : 99,
+      "2" : 60,
+      "3" : 50,
+      "4" : 37,
+      "eng" : "Susaek",
+      "kor" : "수색"
+    },
+    "Suseo" : {
+      "0" : 7,
+      "1" : 97,
+      "2" : 47,
+      "3" : 0,
+      "4" : 66,
+      "eng" : "Suseo",
+      "kor" : "수서"
+    },
+    "Suwon" : {
+      "0" : 31,
+      "1" : 71,
+      "2" : 48,
+      "3" : 91,
+      "4" : 3,
+      "eng" : "Suwon",
+      "kor" : "수원"
+    },
+    "SuwonCityHall" : {
+      "0" : 59,
+      "1" : 57,
+      "2" : 83,
+      "3" : 21,
+      "4" : 88,
+      "eng" : "SuwonCityHall",
+      "kor" : "수원시청"
+    },
+    "Suyu" : {
+      "0" : 88,
+      "1" : 16,
+      "2" : 97,
+      "3" : 95,
+      "4" : 87,
+      "eng" : "Suyu",
+      "kor" : "수유"
+    },
+    "Taepyeong" : {
+      "0" : 29,
+      "1" : 3,
+      "2" : 22,
+      "3" : 94,
+      "4" : 84,
+      "eng" : "Taepyeong",
+      "kor" : "태평"
+    },
+    "Taereung" : {
+      "0" : 16,
+      "1" : 79,
+      "2" : 2,
+      "3" : 88,
+      "4" : 45,
+      "eng" : "Taereung",
+      "kor" : "태릉입구"
+    },
+    "Tanhyeon" : {
+      "0" : 68,
+      "1" : 51,
+      "2" : 94,
+      "3" : 22,
+      "4" : 73,
+      "eng" : "Tanhyeon",
+      "kor" : "탄현"
+    },
+    "Tapseok" : {
+      "0" : 28,
+      "1" : 45,
+      "2" : 17,
+      "3" : 96,
+      "4" : 58,
+      "eng" : "Tapseok",
+      "kor" : "탑석"
+    },
+    "Technopark" : {
+      "0" : 88,
+      "1" : 18,
+      "2" : 42,
+      "3" : 18,
+      "4" : 6,
+      "eng" : "Technopark",
+      "kor" : "테크노파크"
+    },
+    "Toegyewon" : {
+      "0" : 88,
+      "1" : 63,
+      "2" : 2,
+      "3" : 6,
+      "4" : 86,
+      "eng" : "Toegyewon",
+      "kor" : "퇴계원"
+    },
+    "Ttukseom" : {
+      "0" : 79,
+      "1" : 57,
+      "2" : 86,
+      "3" : 40,
+      "4" : 16,
+      "eng" : "Ttukseom",
+      "kor" : "뚝섬"
+    },
+    "TtukseomPark" : {
+      "0" : 10,
+      "1" : 16,
+      "2" : 31,
+      "3" : 41,
+      "4" : 46,
+      "eng" : "TtukseomPark",
+      "kor" : "뚝섬유원지"
+    },
+    "Uijeongbu" : {
+      "0" : 36,
+      "1" : 11,
+      "2" : 44,
+      "3" : 48,
+      "4" : 62,
+      "eng" : "Uijeongbu",
+      "kor" : "의정부"
+    },
+    "UijeongbuCityHall" : {
+      "0" : 52,
+      "1" : 51,
+      "2" : 72,
+      "3" : 88,
+      "4" : 50,
+      "eng" : "UijeongbuCityHall",
+      "kor" : "의정부시청"
+    },
+    "UijeongbuJungang" : {
+      "0" : 71,
+      "1" : 97,
+      "2" : 88,
+      "3" : 12,
+      "4" : 12,
+      "eng" : "UijeongbuJungang",
+      "kor" : "의정부중앙"
+    },
+    "Uiwang" : {
+      "0" : 76,
+      "1" : 85,
+      "2" : 36,
+      "3" : 14,
+      "4" : 60,
+      "eng" : "Uiwang",
+      "kor" : "의왕"
+    },
+    "Ujangsan" : {
+      "0" : 93,
+      "1" : 10,
+      "2" : 47,
+      "3" : 39,
+      "4" : 34,
+      "eng" : "Ujangsan",
+      "kor" : "우장산"
+    },
+    "Ungilsan" : {
+      "0" : 86,
+      "1" : 18,
+      "2" : 64,
+      "3" : 45,
+      "4" : 66,
+      "eng" : "Ungilsan",
+      "kor" : "운길산"
+    },
+    "Unjeong" : {
+      "0" : 58,
+      "1" : 18,
+      "2" : 64,
+      "3" : 11,
+      "4" : 40,
+      "eng" : "Unjeong",
+      "kor" : "운정"
+    },
+    "Unseo" : {
+      "0" : 36,
+      "1" : 26,
+      "2" : 28,
+      "3" : 73,
+      "4" : 49,
+      "eng" : "Unseo",
+      "kor" : "운서"
+    },
+    "Unyang" : {
+      "0" : 89,
+      "1" : 14,
+      "2" : 76,
+      "3" : 98,
+      "4" : 8,
+      "eng" : "Unyang",
+      "kor" : "운양"
+    },
+    "Unyeon" : {
+      "0" : 5,
+      "1" : 90,
+      "2" : 80,
+      "3" : 52,
+      "4" : 61,
+      "eng" : "Unyeon",
+      "kor" : "운연"
+    },
+    "VHSMedicalCenter" : {
+      "0" : 33,
+      "1" : 54,
+      "2" : 22,
+      "3" : 86,
+      "4" : 39,
+      "eng" : "VHSMedicalCenter",
+      "kor" : "중앙보훈병원"
+    },
+    "Wanggil" : {
+      "0" : 65,
+      "1" : 14,
+      "2" : 70,
+      "3" : 44,
+      "4" : 41,
+      "eng" : "Wanggil",
+      "kor" : "왕길"
+    },
+    "Wangsimni" : {
+      "0" : 27,
+      "1" : 60,
+      "2" : 55,
+      "3" : 55,
+      "4" : 57,
+      "eng" : "Wangsimni",
+      "kor" : "왕십리"
+    },
+    "Wanjeong" : {
+      "0" : 47,
+      "1" : 94,
+      "2" : 78,
+      "3" : 46,
+      "4" : 22,
+      "eng" : "Wanjeong",
+      "kor" : "완정"
+    },
+    "WestWomansCommunityCenter" : {
+      "0" : 97,
+      "1" : 14,
+      "2" : 41,
+      "3" : 89,
+      "4" : 33,
+      "eng" : "WestWomansCommunityCenter",
+      "kor" : "서부여성회관"
+    },
+    "Wolgok" : {
+      "0" : 31,
+      "1" : 30,
+      "2" : 14,
+      "3" : 28,
+      "4" : 49,
+      "eng" : "Wolgok",
+      "kor" : "월곡"
+    },
+    "Wolgot" : {
+      "0" : 35,
+      "1" : 10,
+      "2" : 93,
+      "3" : 7,
+      "4" : 19,
+      "eng" : "Wolgot",
+      "kor" : "월곶"
+    },
+    "Wolgye" : {
+      "0" : 71,
+      "1" : 57,
+      "2" : 91,
+      "3" : 34,
+      "4" : 98,
+      "eng" : "Wolgye",
+      "kor" : "월계"
+    },
+    "Wollong" : {
+      "0" : 59,
+      "1" : 19,
+      "2" : 33,
+      "3" : 13,
+      "4" : 52,
+      "eng" : "Wollong",
+      "kor" : "월롱"
+    },
+    "Wondang" : {
+      "0" : 83,
+      "1" : 56,
+      "2" : 76,
+      "3" : 28,
+      "4" : 47,
+      "eng" : "Wondang",
+      "kor" : "원당"
+    },
+    "Wondeok" : {
+      "0" : 17,
+      "1" : 21,
+      "2" : 35,
+      "3" : 49,
+      "4" : 62,
+      "eng" : "Wondeok",
+      "kor" : "원덕"
+    },
+    "Wongok" : {
+      "0" : 75,
+      "1" : 86,
+      "2" : 49,
+      "3" : 69,
+      "4" : 10,
+      "eng" : "Wongok",
+      "kor" : "원곡"
+    },
+    "Wonheung" : {
+      "0" : 63,
+      "1" : 57,
+      "2" : 18,
+      "3" : 68,
+      "4" : 55,
+      "eng" : "Wonheung",
+      "kor" : "원흥"
+    },
+    "Woninjae" : {
+      "0" : 71,
+      "1" : 17,
+      "2" : 61,
+      "3" : 4,
+      "4" : 42,
+      "eng" : "Woninjae",
+      "kor" : "원인재"
+    },
+    "Wonsi" : {
+      "0" : 63,
+      "1" : 34,
+      "2" : 37,
+      "3" : 11,
+      "4" : 11,
+      "eng" : "Wonsi",
+      "kor" : "원시"
+    },
+    "WorldCupStadium" : {
+      "0" : 27,
+      "1" : 26,
+      "2" : 36,
+      "3" : 77,
+      "4" : 4,
+      "eng" : "WorldCupStadium",
+      "kor" : "월드컵경기장"
+    },
+    "Yadang" : {
+      "0" : 77,
+      "1" : 35,
+      "2" : 84,
+      "3" : 3,
+      "4" : 30,
+      "eng" : "Yadang",
+      "kor" : "야당"
+    },
+    "Yaksu" : {
+      "0" : 2,
+      "1" : 36,
+      "2" : 71,
+      "3" : 97,
+      "4" : 30,
+      "eng" : "Yaksu",
+      "kor" : "약수"
+    },
+    "YangcheonHyanggyo" : {
+      "0" : 50,
+      "1" : 51,
+      "2" : 69,
+      "3" : 28,
+      "4" : 82,
+      "eng" : "YangcheonHyanggyo",
+      "kor" : "양천향교"
+    },
+    "YangcheonguOffice" : {
+      "0" : 78,
+      "1" : 69,
+      "2" : 26,
+      "3" : 41,
+      "4" : 45,
+      "eng" : "YangcheonguOffice",
+      "kor" : "양천구청"
+    },
+    "Yangchon" : {
+      "0" : 97,
+      "1" : 64,
+      "2" : 52,
+      "3" : 36,
+      "4" : 76,
+      "eng" : "Yangchon",
+      "kor" : "양촌"
+    },
+    "Yangjae" : {
+      "0" : 60,
+      "1" : 91,
+      "2" : 49,
+      "3" : 62,
+      "4" : 86,
+      "eng" : "Yangjae",
+      "kor" : "양재"
+    },
+    "YangjaeCitizensForest" : {
+      "0" : 56,
+      "1" : 44,
+      "2" : 62,
+      "3" : 64,
+      "4" : 61,
+      "eng" : "YangjaeCitizensForest",
+      "kor" : "양재시민의숲"
+    },
+    "Yangjeong" : {
+      "0" : 27,
+      "1" : 46,
+      "2" : 99,
+      "3" : 10,
+      "4" : 10,
+      "eng" : "Yangjeong",
+      "kor" : "양정"
+    },
+    "Yangju" : {
+      "0" : 92,
+      "1" : 81,
+      "2" : 17,
+      "3" : 30,
+      "4" : 78,
+      "eng" : "Yangju",
+      "kor" : "양주"
+    },
+    "Yangpyeong" : {
+      "0" : 42,
+      "1" : 35,
+      "2" : 27,
+      "3" : 9,
+      "4" : 71,
+      "eng" : "Yangpyeong",
+      "kor" : "양평"
+    },
+    "Yangsu" : {
+      "0" : 68,
+      "1" : 94,
+      "2" : 50,
+      "3" : 39,
+      "4" : 79,
+      "eng" : "Yangsu",
+      "kor" : "양수"
+    },
+    "Yangwon" : {
+      "0" : 85,
+      "1" : 86,
+      "2" : 26,
+      "3" : 93,
+      "4" : 91,
+      "eng" : "Yangwon",
+      "kor" : "양원"
+    },
+    "Yatap" : {
+      "0" : 98,
+      "1" : 90,
+      "2" : 5,
+      "3" : 70,
+      "4" : 42,
+      "eng" : "Yatap",
+      "kor" : "야탑"
+    },
+    "Yeoju" : {
+      "0" : 99,
+      "1" : 95,
+      "2" : 83,
+      "3" : 41,
+      "4" : 45,
+      "eng" : "Yeoju",
+      "kor" : "여주"
+    },
+    "Yeokchon" : {
+      "0" : 51,
+      "1" : 78,
+      "2" : 78,
+      "3" : 36,
+      "4" : 10,
+      "eng" : "Yeokchon",
+      "kor" : "역촌"
+    },
+    "Yeokgok" : {
+      "0" : 86,
+      "1" : 35,
+      "2" : 65,
+      "3" : 29,
+      "4" : 16,
+      "eng" : "Yeokgok",
+      "kor" : "역곡"
+    },
+    "Yeoksam" : {
+      "0" : 42,
+      "1" : 74,
+      "2" : 70,
+      "3" : 25,
+      "4" : 2,
+      "eng" : "Yeoksam",
+      "kor" : "역삼"
+    },
+    "Yeomchang" : {
+      "0" : 28,
+      "1" : 7,
+      "2" : 79,
+      "3" : 76,
+      "4" : 69,
+      "eng" : "Yeomchang",
+      "kor" : "염창"
+    },
+    "Yeongdeungpo" : {
+      "0" : 66,
+      "1" : 79,
+      "2" : 75,
+      "3" : 5,
+      "4" : 27,
+      "eng" : "Yeongdeungpo",
+      "kor" : "영등포"
+    },
+    "YeongdeungpoMarket" : {
+      "0" : 11,
+      "1" : 6,
+      "2" : 12,
+      "3" : 78,
+      "4" : 84,
+      "eng" : "YeongdeungpoMarket",
+      "kor" : "영등포시장"
+    },
+    "YeongdeungpoguOffice" : {
+      "0" : 22,
+      "1" : 6,
+      "2" : 85,
+      "3" : 0,
+      "4" : 78,
+      "eng" : "YeongdeungpoguOffice",
+      "kor" : "영등포구청"
+    },
+    "Yeongjong" : {
+      "0" : 2,
+      "1" : 14,
+      "2" : 5,
+      "3" : 11,
+      "4" : 24,
+      "eng" : "Yeongjong",
+      "kor" : "영종"
+    },
+    "Yeongtong" : {
+      "0" : 84,
+      "1" : 84,
+      "2" : 41,
+      "3" : 35,
+      "4" : 7,
+      "eng" : "Yeongtong",
+      "kor" : "영통"
+    },
+    "Yeonsinnae" : {
+      "0" : 35,
+      "1" : 51,
+      "2" : 13,
+      "3" : 50,
+      "4" : 4,
+      "eng" : "Yeonsinnae",
+      "kor" : "연신내"
+    },
+    "Yeonsu" : {
+      "0" : 25,
+      "1" : 91,
+      "2" : 86,
+      "3" : 56,
+      "4" : 48,
+      "eng" : "Yeonsu",
+      "kor" : "연수"
+    },
+    "Yeouido" : {
+      "0" : 7,
+      "1" : 11,
+      "2" : 91,
+      "3" : 26,
+      "4" : 38,
+      "eng" : "Yeouido",
+      "kor" : "여의도"
+    },
+    "Yeouinaru" : {
+      "0" : 25,
+      "1" : 11,
+      "2" : 44,
+      "3" : 60,
+      "4" : 20,
+      "eng" : "Yeouinaru",
+      "kor" : "여의나루"
+    },
+    "Yongdap" : {
+      "0" : 32,
+      "1" : 86,
+      "2" : 42,
+      "3" : 55,
+      "4" : 57,
+      "eng" : "Yongdap",
+      "kor" : "용답"
+    },
+    "Yongdu" : {
+      "0" : 20,
+      "1" : 71,
+      "2" : 50,
+      "3" : 93,
+      "4" : 27,
+      "eng" : "Yongdu",
+      "kor" : "용두"
+    },
+    "Yongmasan" : {
+      "0" : 57,
+      "1" : 67,
+      "2" : 6,
+      "3" : 30,
+      "4" : 31,
+      "eng" : "Yongmasan",
+      "kor" : "용마산"
+    },
+    "Yongmun" : {
+      "0" : 54,
+      "1" : 61,
+      "2" : 43,
+      "3" : 71,
+      "4" : 56,
+      "eng" : "Yongmun",
+      "kor" : "용문"
+    },
+    "Yongsan" : {
+      "0" : 57,
+      "1" : 62,
+      "2" : 4,
+      "3" : 74,
+      "4" : 71,
+      "eng" : "Yongsan",
+      "kor" : "용산"
+    },
+    "eoryong" : {
+      "0" : 42,
+      "1" : 36,
+      "2" : 36,
+      "3" : 44,
+      "4" : 68,
+      "eng" : "eoryong",
+      "kor" : "어룡"
+    },
+    "gonjae" : {
+      "0" : 48,
+      "1" : 38,
+      "2" : 94,
+      "3" : 33,
+      "4" : 19,
+      "eng" : "gonjae",
+      "kor" : "곤제"
+    },
+    "hyoja" : {
+      "0" : 62,
+      "1" : 43,
+      "2" : 90,
+      "3" : 8,
+      "4" : 63,
+      "eng" : "hyoja",
+      "kor" : "효자"
+    },
+    "saemal" : {
+      "0" : 33,
+      "1" : 80,
+      "2" : 63,
+      "3" : 34,
+      "4" : 83,
+      "eng" : "saemal",
+      "kor" : "새말"
+    }
+  }
+}

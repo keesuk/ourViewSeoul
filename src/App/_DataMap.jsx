@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { pxStringfier, colorChooser, randomize, mapDrawer, infoGraphic, randomProp, percentage, slicer } from "./_Diagram.jsx";
 
-const databaseURL = "https://station-db.firebaseio.com/";
+import databaseURL from "../data/station-db-export.json"
 
 const ExplainDiv = styled.div`
     position: absolute;
     z-index: 1000;
     margin-top: 2vw;
-    box-shadow: 5px 5px #333;
+    box-shadow: 5px 5px #000;
     box-sizing: border-box;
-    border: 2.3px solid #333;
+    border: 2.3px solid #000;
     background-color: white;
     
     @media all and (min-width:0px) and (max-width:1023px) {
@@ -25,7 +25,7 @@ const ExplainTitle = styled.div`
     margin-top: 1vw;
     letter-spacing: -.2vw;
     font-weight: 900;
-    color: #333;
+    color: #000;
 `;
 const ExplainNumber = styled.div`
     font-size: 3.6vw;
@@ -162,7 +162,7 @@ class MapShow extends PureComponent {
     }
 
     getLocation(value){
-        let spot = this.state.dataLocation[value]
+        let spot = databaseURL.testWindow[value]
         if(!spot)spot['kor'] = '값이 없습니다'
         if(spot){
             const total = spot['0'] + spot['1'] + spot['2'] + spot['3'] + spot['4']
@@ -178,16 +178,8 @@ class MapShow extends PureComponent {
     }
 
     _get(go) {
-        fetch(`${databaseURL}testWindow/.json`).then(res => {
-            if(res.status !== 200){
-                throw new Error('에러가 났어요, 새로고침 부탁드립니다.')
-            }
-            return res.json()
-        }).then(data => {
-            this.setState({dataLocation : data})
-            if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
-            else this.getLocation(this.props.posterPin)
-        })
+        if(go === 'rerender')setTimeout(()=> {this.posterUpdate()}, 100)
+        else this.getLocation(this.props.posterPin)
     }
 
     componentDidUpdate(){
@@ -197,7 +189,7 @@ class MapShow extends PureComponent {
     }
     
     posterUpdate(){
-        const dataLocation = this.state.dataLocation
+        const dataLocation = databaseURL.testWindow
 
         let zero = randomProp(dataLocation)
         let one = randomProp(dataLocation)

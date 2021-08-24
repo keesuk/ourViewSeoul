@@ -13,9 +13,9 @@ const OutputWrapper = styled.div`
         z-index: 1000;
         height: 200vh;
         box-sizing: border-box;
-        border-left: 2px solid #333;
-        border-right: 2px solid #333;
-        border-top: 2px solid #333;
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        border-top: 2px solid #000;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -23,7 +23,7 @@ const OutputWrapper = styled.div`
         transition: all .5s ease;
         position:fixed;
         overflow:auto;
-        box-shadow: 5px 5px #333;
+        box-shadow: 5px 5px #000;
         font-weight: 900;
         letter-spacing: -.6px;
         font-size: 2vw;
@@ -54,6 +54,7 @@ const CategoryText = styled.div`
     flex-direction:row;
     white-space: nowrap;
     margin-left: 4vw;
+    font-size: 12px;
 `;
 const PseudoWrapTwo = styled.div`  
     width: 100vw;
@@ -103,7 +104,7 @@ class Output extends Component {
                     <OutputButton
                         onClick={this.posterPageUp}
                         style={{
-                            color: pageUp ? (scrolling ? '#333' : 'white') : '#333'
+                            color: pageUp ? (scrolling ? '#000' : 'white') : '#000'
                         }}
                     >
                         ￣
@@ -125,17 +126,9 @@ class Output extends Component {
                             <>
                             <CategoryText>
                                 <Rhombus size={'3.1vw'}right={'1vw'}/><div style={{color:'#e90087'}}>박물관 갤러리</div>
-                            </CategoryText>
-                            <CategoryText>
                                 <Triangle size={'3vw'} right={'1vw'} top={'-0.5px'}/><div style={{color:'#087A0D'}}>자연 휴양지</div>
-                            </CategoryText>
-                            <CategoryText>
                                 <Rectangular size={'3vw'} right={'1vw'}/><div style={{color:'#006CC4'}}>쇼핑 마켓</div>
-                            </CategoryText>
-                            <CategoryText>
                                 <Circle size={'3vw'} right={'1vw'}/><div style={{color:'#E20000'}}>랜드마크</div>
-                            </CategoryText>
-                            <CategoryText>
                                 <Ellipse left={'1vw'} size={'4vw'} right={'1vw'} top={'-4.5px'}/><div style={{color:'#00bfb3'}}>음식점</div>
                             </CategoryText>
                             </>
